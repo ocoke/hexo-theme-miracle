@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<!-- 引入页面头部文件 -->
+<%- partial('_partial/head') %>
+
+    <body>
+        <header>
+            <%- partial('_partial/nav.ejs') %>
+        </header>
+        <div id="page-main">
+
+            <%- body %>
+
+        </div>
+
+        <!-- 引入页脚文件 -->
+        <%- partial('_partial/foot') %>
+    </body>
+
+</html>

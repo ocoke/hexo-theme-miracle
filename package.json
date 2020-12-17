@@ -1,0 +1,21 @@
+{
+  "name": "@hifun-team/hexo-theme-paperx",
+  "version": "0.1.4",
+  "description": "A concise Hexo theme.",
+  "main": "README.md",
+  "keywords": [
+    "hifun",
+    "ocoke",
+    "hexo",
+    "hexo-theme",
+    "hexo-theme-paperx",
+    "paperx",
+    "yfun"
+  ],
+  "author": "oCoke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hifun-team/hexo-theme-paperx/issues"
+  },
+  "homepage": "https://github.com/hifun-team/hexo-theme-paperx#readme"
+}

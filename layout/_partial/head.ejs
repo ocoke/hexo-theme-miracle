@@ -1,0 +1,19 @@
+<%
+<!-- 组合页面标题 -->
+var joinStr = theme.global.title_join_string
+var title = config.title
+if (page.title) {
+    title = [page.title, title].join(joinStr)
+}
+%>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <!-- 引入 CSS 样式文件 -->
+    <%- css('/css/dist/main.css') %>
+    <%- css('/css/dist/icon.css') %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+</head>

@@ -1,0 +1,56 @@
+#---------------------------
+# Hexo Theme Miracle
+# Author: HiFun Team
+# GitHub: https://github.com/hifun-team/hexo-theme-miracle
+#---------------------------
+
+#---------------------------
+# 全局
+# Global
+#---------------------------
+
+global:
+
+    # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
+    # Title separator in browser tab, eg: article - site
+    title_join_string: " - "
+
+
+
+#---------------------------
+# 主页
+# Homepage
+#---------------------------
+index:
+    # Banner Slogan
+    # 输出在 Banner 标题下方的文字
+    # The text below banner title
+    banner_slogan: Write the miracle in your heart.
+
+    # 为 Slogan 添加打字机效果
+    # Typing animation for slogan
+    slogan_typing:
+        enable: true
+
+        # 打印速度，数字越大越慢
+        # Typing speed, the larger the number, the slower
+        typeSpeed: 100
+
+        # 游标字符
+        # Cursor character
+        cursorChar: "|"
+
+navbar:
+    # 模糊像素，只能为数字，数字越大模糊度越高
+    # Number of blurred pixel. the larger the number, the higher the blur
+    blur: 3
+
+    # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
+    # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
+    menu:
+        - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+        - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+        - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+        - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+        # - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+        - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
