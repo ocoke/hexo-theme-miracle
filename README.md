@@ -1,3 +1,3 @@
-# Miracle
+# Hexo Theme Miracle
 
-> Miracle is still under development.
+> Hexo Theme Miracle is still under development.
