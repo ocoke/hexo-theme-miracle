@@ -6,3 +6,58 @@
     </h3>
     </div>
 </div>
+<div class="post-card-center">
+<div class="post-card-main">
+<!-- 循环输出文章列表 -->
+<% page.posts.each(function (post) { %>
+    <div class="index-card">
+      <% var post_url = url_for(post.path)%>
+      <article class="index-card-info">
+        <h3 class="index-header">
+          <% if (theme.index.post_sticky && theme.index.post_sticky.enable && post.sticky > 0) { %>
+            <i class="index-pin <%= theme.index.post_sticky && theme.index.post_sticky.icon %>" title="Pin on top"></i>
+          <% } %>
+          <a href="<%- post_url %>"><%= post.title %></a>
+        </h3>
+        <p class="index-excerpt">
+          <a href="<%- post_url %>">
+            <% var excerpt = '' %>
+            <% if(post.excerpt) { %>
+              <% excerpt = strip_html(post.excerpt).substr(0, 200) %>
+            <% } else if(theme.index.auto_excerpt.enable){ %>
+              <% excerpt = strip_html(post.content).substr(0, 200) %>
+            <% } %>
+            <%- excerpt %>
+          </a>
+        </p>
+        <div class="index-btm post-metas">
+          <% if(theme.index.post_meta.date ) { %>
+            
+              <i class="fa fa-clock-o"></i>
+              <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
+                <%- date(post.date, config.date_format) %>
+              </time>
+            
+          <% } %>
+          <% if(theme.index.post_meta.category && post.categories.length > 0) { %>
+            &nbsp;|&nbsp;
+              <i class="fa fa-folder"></i>
+              <% post.categories.each(function(cate){ %>
+                <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+              <% }) %>
+            
+          <% } %>
+          <% if(theme.index.post_meta.tag && post.tags.length > 0) { %>
+            &nbsp;|&nbsp;
+              <i class="fa fa-tags"></i>
+              <% post.tags.each(function(tag){ %>
+                <a href="<%= url_for(tag.path) %>"><%- tag.name %></a>
+              <% }) %>
+            
+          <% } %>
+        </div>
+      </article>
+    </div>
+  <% }) %>
+</div>
+</div>

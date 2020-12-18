@@ -1,21 +1,24 @@
 {
-  "name": "@hifun-team/hexo-theme-paperx",
-  "version": "0.1.4",
-  "description": "A concise Hexo theme.",
-  "main": "README.md",
+  "name": "hexo-theme-miracle",
+  "version": "0.0.2",
+  "description": "Write the miracle in your heart.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hifun-team/hexo-theme-miracle.git"
+  },
   "keywords": [
-    "hifun",
-    "ocoke",
     "hexo",
     "hexo-theme",
-    "hexo-theme-paperx",
-    "paperx",
-    "yfun"
+    "oCoke",
+    "hexo-theme-miracle",
+    "miracle",
+    "hifun-team",
+    "hifun"
   ],
   "author": "oCoke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hifun-team/hexo-theme-paperx/issues"
+    "url": "https://github.com/hifun-team/hexo-theme-miracle/issues"
   },
-  "homepage": "https://github.com/hifun-team/hexo-theme-paperx#readme"
+  "homepage": "https://github.com/hifun-team/hexo-theme-miracle#readme"
 }

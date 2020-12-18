@@ -1,3 +1,15 @@
+// 设置相关变量
+
+shadow-color = rgba(0,0,0,0.2);
+shadow-hover-color = rgba(0,0,0,0.28);
+first-text-color = #484848;
+second-text-color = #4c4c4c;
+third-text-color = #858585;
+default-text-color = #505050;
+link-color = #000000;
+second-link-color = #4F9BFA;
+
+
 html,body{
     margin: 0;
     padding: 0;
@@ -5,7 +17,7 @@ html,body{
     height: 100%;
 }
 nav{
-    display: none;
+    display: none; // This is just for test
 }
 .text-center{
     text-align: center!important;
@@ -22,12 +34,11 @@ nav{
     justify-content: center;
     height: 100%;
 }
+
 /* Page Style */
 #page-main{
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
 }
 #index-banner{
     z-index: 0;
@@ -38,8 +49,68 @@ nav{
     overflow: hidden;
     cursor: default;
     overflow-wrap: break-word;
+    margin: 0!important;
 }
 
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover{
+    color: second-link-color;
+}
+/* 响应式判断页面尺寸 */
+.main-content,.post-card-main{
+    margin: 30px;
+}
+
+@media (min-width: 576px){
+    .main-content,.post-card-main{
+        margin: 45px;
+    }
+}
+@media (min-width: 768px){
+    .main-content,.post-card-main{
+        margin: 55px;
+    }
+}
+@media (min-width: 992px){
+    .main-content,.post-card-main{
+        margin: 4%;
+    }
+}
+@media (min-width: 1300px){
+    .main-content,.post-card-main{
+        margin: 6%;
+    }
+}
+
+@media (max-width: 780px){ 
+    h3{
+        font-size: 1.4rem;
+        line-height: 1.5em;
+    }
+}
+
+@media (min-width: 780px){ 
+    h3{
+        font-size: 1.5rem;
+        line-height: 1.5em;
+    }
+}
+@media (min-width: 1280px){ 
+    h3{
+        font-size: 1.7rem;
+        line-height: 1.5em;
+    }
+}
+@media (min-width: 2096px){ 
+    h3{
+        font-size: 1.8rem;
+        line-height: 1.5em;
+    }
+}
 /* 
 ---
 index style
@@ -49,9 +120,54 @@ index style
 #index-banner h1{
     font-size: 4rem;
     line-height: 1.85em;
+    
 }
 #index-banner h3{
     font-size: 2rem;
     line-height: 1.5em;
-    font-family: 'Noto Sans SC', sans-serif;
+    color: first-text-color;
+}
+
+.index-card{
+    box-shadow: 2px 2px 6px shadow-color;
+
+    a{
+        color: first-text-color;
+    }
+    a:hover{
+        color: second-link-color;
+    }
+    padding: 28px;
+    margin-bottom: 38px;
+    padding-top: 5px; 
+}
+
+
+.index-card:hover{
+    box-shadow: 2px 2px 6px shadow-hover-color;
+}
+.post-card-main{
+    max-width: 920px;
+    position: relative;
+    width: 100%;
+}
+.post-card-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.index-pin{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 1.2rem;
+    transform: rotate(45deg);
+    color: third-text-color;
+}
+footer{
+    margin: 0;
+    padding: 0;
+    color: second-text-color;
+    padding: 5px;
 }

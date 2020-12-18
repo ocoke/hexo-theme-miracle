@@ -1,0 +1,8 @@
+
+<script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
+<!-- 引入 JS 文件 -->
+<%- js('/js/main.js') %>
+
+<% if(theme.index.slogan_typing.enable == true){ %>
+    <%- partial('_partial/plugins/index-type.ejs') %>
+<% } %>

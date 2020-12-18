@@ -13,7 +13,12 @@ if (page.title) {
     <title><%= title %></title>
     <!-- 引入 CSS 样式文件 -->
     <%- css('/css/dist/main.css') %>
-    <%- css('/css/dist/icon.css') %>
+    <%- css('/icon/css/icon.css') %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <link href="<%- theme.static_prefix.font %>" rel="stylesheet">
+    <style>
+        body{
+            font-family: <%- theme.global.font_family %>;
+        }
+    </style>
 </head>

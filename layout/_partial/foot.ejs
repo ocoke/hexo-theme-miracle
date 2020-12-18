@@ -1,25 +1,8 @@
-<!-- 引入 JS 文件 -->
-<%- js('/js/main.js') %>
+<footer class="text-center">
+    
+    <p><%- theme.global.footer.content %></p>
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/hifun-team/hexo-theme-miracle" target="_blank">Miracle</a></p>
+</footer>
+<!-- SCRIPTS -->
+<%- partial('_partial/scripts.ejs') %>
 
-<% if(theme.index.slogan_typing.enable == true){ %>
-<!-- Slogan 打字机效果 -->
-<script>
-    let divTyping = document.getElementById('index-slogan')
-    let i = 0,
-        timer = 0,
-        str = '<%= theme.index.banner_slogan %>'
-
-    function typing() {
-        if (i <= str.length) {
-            divTyping.innerHTML = str.slice(0, i++) + '<%= theme.index.slogan_typing.cursorChar %>'
-            timer = setTimeout(typing, <%= theme.index.slogan_typing.typeSpeed %>)
-        }
-        else {
-            divTyping.innerHTML = str //结束打字,移除光标
-            clearTimeout(timer)
-        }
-    }
-
-    typing()
-</script>
-<% } %>
