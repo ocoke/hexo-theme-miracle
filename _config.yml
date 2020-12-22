@@ -22,7 +22,9 @@ global:
     
     # 主题字体设置
     # Theme font settings
-    font_family: "'Noto Sans SC', sans-serif"
+    font:
+        family: "'Noto Sans SC', sans-serif"
+        css: 
 
     # 每次生成页面后，检测主题是否为最新版本
     # Every time the page is generated, detect whether the theme is the latest version
@@ -45,7 +47,7 @@ index:
 
         # 打印速度，数字越大越慢
         # Typing speed, the larger the number, the slower
-        typeSpeed: 100
+        typeSpeed: 55
 
         # 游标字符
         # Cursor character
@@ -101,3 +103,4 @@ static_prefix:
 
     font: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
+    typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
