@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-miracle",
-  "version": "0.0.2",
-  "description": "Write the miracle in your heart.",
+  "version": "0.0.5",
+  "description": "A simple single-column theme for Hexo.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hifun-team/hexo-theme-miracle.git"
