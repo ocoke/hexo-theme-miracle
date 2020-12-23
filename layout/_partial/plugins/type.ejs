@@ -1,0 +1,11 @@
+<script src="<%- theme.static_prefix.typed %>typed.min.js"></script>
+<!-- Slogan 打字机效果 -->
+<script>
+    var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: <%= theme.global.typing.typeSpeed %>,
+        showCursor: true,
+        cursorChar: '<%= theme.global.typing.cursorChar %>',
+        autoInsertCss: true,
+    });
+</script>

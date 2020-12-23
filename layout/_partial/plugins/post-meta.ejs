@@ -1,0 +1,36 @@
+<div class="post-meta" id="post-meta">
+  <h3><%= page.title %></h3>
+    <% if (theme.post.meta.author && (page.author || config.author)) { %>
+      <span class="post-meta-label">
+        <i class="fa fa-user meta-icon" aria-hidden="true"></i>
+        <%- page.author || config.author %>
+      </span>
+    <% } %>
+    <% if (theme.post.meta.date) { %>
+      <span class="post-meta-label ml-10">
+        <i class="fa fa-calendar meta-icon" aria-hidden="true"></i>
+        <time datetime="<%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
+          <%= full_date(page.date, theme.post.meta.date_format) %>
+        </time>
+      </span>
+    <% } %>
+    <% if (theme.post.wordcount.enable) { %>
+      <% var wordcount_texts = theme.post.wordcount.format.split('{}') %>
+      <span class="post-meta ml-10">
+        <i class="fa fa-file-word-o meta-icon"></i>
+        <%- wordcount_texts[0] %><%- wordcount(page.content) %><%- wordcount_texts[1] %>
+      </span>
+    <% } %>
+    <% if (theme.post.min2read.enable) { %>
+      <% var min2read_texts = theme.post.min2read.format.split('{}') %>
+      <span class="post-meta ml-10">
+        <i class="fa fa-clock-o meta-icon"></i>
+        <% var words = parseInt(theme.post.min2read.words) %>
+        <%- min2read_texts[0] %>
+        <%- min2read(page.content, {cn: words, en: words / 2}) %>
+        <%- min2read_texts[1] %>
+      </span>
+    <% } %>
+  </div>
+  
+  

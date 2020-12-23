@@ -12,6 +12,7 @@ hexo.log.info(`
    | #     # # #    # #    #  ####  ###### ######  |
    |                                               |
    |       Thank you for using Miracle theme !     |
+   |              Author: HiFun Team               |
    |                 License : MIT                 |
    |_______________________________________________|
 

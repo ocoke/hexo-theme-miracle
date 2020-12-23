@@ -1,3 +1,19 @@
+/*!
+_________________________________________________
+|                                               |
+| ##   ## # #####    ##    ####  #      ######  |
+| # # # # # #    #  #  #  #    # #      #       |
+| #  #  # # #    # #    # #      #      #####   |
+| #     # # #####  ###### #      #      #       |
+| #     # # #   #  #    # #    # #      #       |
+| #     # # #    # #    #  ####  ###### ######  |
+|                                               |
+|       Thank you for using Miracle theme !     |
+|              Author: HiFun Team               |
+|                 License : MIT                 |
+|_______________________________________________|
+*/
+
 // 设置相关变量
 
 shadow-color = rgba(0,0,0,0.2);
@@ -8,7 +24,7 @@ third-text-color = #858585;
 default-text-color = #505050;
 link-color = #000000;
 second-link-color = #4F9BFA;
-
+background-color=#FFFFFE
 
 html,body{
     margin: 0;
@@ -111,12 +127,17 @@ a:hover{
         line-height: 1.5em;
     }
 }
+
 /* 
 ---
 index style
 --- 
 */
-
+#index-banner .typed-cursor{
+    font-size: 2rem;
+    line-height: 1.5em;
+    color: first-text-color;
+}
 #index-banner h1{
     font-size: 4rem;
     line-height: 1.85em;
@@ -170,4 +191,100 @@ footer{
     padding: 0;
     color: second-text-color;
     padding: 5px;
+}
+/* 
+---
+post style
+--- 
+*/
+#page-banner{
+    word-break:break-all;
+    // filter: brightness(.8);
+}
+
+#page-banner h3{
+    font-size: 2rem;
+    line-height: 1.5em;
+    color: first-text-color;
+}
+.slogan-white{
+    color: #fff!important;
+}
+@media (min-width: 576px){
+    #article,#post-meta{
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    #article,#post-meta{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    #article,#post-meta{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    #article,#post-meta{
+        max-width: 1140px;
+    }
+}
+
+#article{
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 6px shadow-color;
+    padding: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    border-radius: 0.5rem;
+    // margin-top: -4rem;
+    background-color: background-color;
+}
+#post-meta-m{
+    z-index: 3;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+#post-meta{
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 6px shadow-color;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: background-color;
+}
+#post-meta{
+    color: first-text-color;
+    margin-top: 1rem!important;
+}
+.article-m{
+    z-index: 3;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.meta-icon{
+    font-size: 0.9rem!important;
 }

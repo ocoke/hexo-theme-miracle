@@ -1,3 +1,21 @@
-<div id="article">
-    <%- page.content %>
+<%
+var banner_img = page.banner_img
+%>
+
+<div id="post-meta-m">
+    <%- partial('_partial/plugins/post-meta.ejs') %>
 </div>
+<div class="article-m">
+    <div id="article">
+        <!-- <%- partial('_partial/plugins/post-meta.ejs') %> -->
+        <%- page.content %>
+    </div>
+</div>
+<% if(page.comment || theme.post.comment) { %>
+    <!-- Comments -->
+    <div id="miracle-comments">
+        <% var type = '_partial/comments/' + theme.comment.type %>
+        <%- partial('_partial/comments/gitalk.ejs') %>
+    </div>
+<% } %>
+

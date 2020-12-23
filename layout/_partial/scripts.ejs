@@ -1,8 +1,8 @@
-
 <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
+<script src="<%- theme.static_prefix.md5 %>md5.min.js"></script>
 <!-- 引入 JS 文件 -->
 <%- js('/js/main.js') %>
 
-<% if(theme.index.slogan_typing.enable){ %>
-    <%- partial('_partial/plugins/index-type.ejs') %>
+<% if (theme.global.typing.enable && is_home()){ %>
+    <%- partial('_partial/plugins/type.ejs') %>
 <% } %>

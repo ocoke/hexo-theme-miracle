@@ -30,19 +30,10 @@ global:
     # Every time the page is generated, detect whether the theme is the latest version
     version_check: true # 主题版本相关
 
-#---------------------------
-# 主页
-# Homepage
-#---------------------------
-index:
-    # Banner Slogan
-    # 输出在 Banner 标题下方的文字
-    # The text below banner title
-    banner_slogan: Write the miracle in your heart.
+    # 为 Banner 标题 添加打字机效果
+    # Typing animation for banner header
+    typing:
 
-    # 为 Slogan 添加打字机效果
-    # Typing animation for slogan
-    slogan_typing:
         enable: true
 
         # 打印速度，数字越大越慢
@@ -52,6 +43,21 @@ index:
         # 游标字符
         # Cursor character
         cursorChar: "|"
+
+    web_analytics:
+
+        
+
+
+#---------------------------
+# 主页
+# Homepage
+#---------------------------
+index:
+    # Banner Slogan
+    # 输出在 Banner 标题下方的文字
+    # The text below banner title
+    banner_slogan: Write the miracle in your heart.
 
     # 文章通过 sticky 排序后，在首页文章标题前显示图标
     # If the posts are sorted by `sticky`, an icon is displayed in front of the post title
@@ -86,6 +92,87 @@ navbar:
         # - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
         - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
 
+#---------------------------
+# 文章页
+# Post Page
+#---------------------------
+post:
+    meta:
+        # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
+        # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
+        author: true
+
+        # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
+        # Post date, based on `date` field in front-matter, if not set, based on create date of .md file
+        date: true
+
+        # 格式参照 ISO-8601 日期格式化
+        # ISO-8601 date format
+        # See: http://momentjs.cn/docs/#/parsing/string-format/
+        date_format: "LL"
+    
+    # 字数统计
+    # Word count
+    # 需要先安装 `hexo-wordcount` 插件
+    # You need to install the `hexo wordcount` plugin first
+    wordcount:
+        enable: true
+
+        # 所显示的文本，{} 是数字的占位符（必须包含）
+        # Displayed text, {} is a placeholder for numbers (must be included)
+        format: "共 {} 字"
+
+    # 估计阅读全文需要的时长
+    # Estimate the time required to read the full text
+    # 需要先安装 `hexo-wordcount` 插件
+    # You need to install the `hexo wordcount` plugin first
+    min2read:
+        enable: true
+        format: "预计 {} 分钟"
+        # 每分钟阅读多少字，如果是技术文章，建议降低
+        # Words read per minute
+        words: 120
+
+    # 评论插件
+    # Comment plugin
+    comment: true
+    
+#---------------------------
+# 评论插件
+# Comment plugins
+#
+# 开启评论需要先设置上方 `post: comments: enable: true`，然后根据 `type` 设置下方对应的评论插件参数
+# Enable comments need to be set `post: comments: enable: true`, then set the corresponding comment plugin parameters below according to `type`
+#---------------------------
+comment:
+
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo
+    type: gitalk
+
+    # Gitalk
+    # 基于 GitHub Issues
+    # Based on GitHub Issues
+    # See: https://github.com/gitalk/gitalk#options
+
+    gitalk:
+        clientID: 
+        clientSecret: 
+        repo: 
+        owner: 
+        admin: ['name']
+        language: zh-CN
+        labels: ['Gitalk']
+        perPage: 10
+        pagerDirection: last
+        distractionFreeMode: false
+        createIssueManually: true
+
+
+
+        
+
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
@@ -104,3 +191,5 @@ static_prefix:
     font: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
+    gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
+    md5: https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/
