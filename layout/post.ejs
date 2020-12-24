@@ -11,11 +11,15 @@ var banner_img = page.banner_img
         <%- page.content %>
     </div>
 </div>
-<% if(page.comment || theme.post.comment) { %>
+<% if((page.comment || theme.post.comment) && (theme.comment.valine.appid || theme.comment.gitalk.clientID)) { %>
     <!-- Comments -->
-    <div id="miracle-comments">
+    <div class="comments">
+        <div id="miracle-comments">
         <% var type = '_partial/comments/' + theme.comment.type %>
-        <%- partial('_partial/comments/gitalk.ejs') %>
+        <%- partial(type) %>
+        </div>
     </div>
 <% } %>
+
+
 

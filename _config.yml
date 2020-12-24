@@ -148,8 +148,8 @@ comment:
 
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
-    # Options: disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo
-    type: gitalk
+    # Options: gitalk | valine
+    type: valine
 
     # Gitalk
     # 基于 GitHub Issues
@@ -169,9 +169,25 @@ comment:
         distractionFreeMode: false
         createIssueManually: true
 
+    valine:
+        appid: 
+        appkey: 
+        placeholder:
+        path: window.location.pathname
+        avatar: mp
+        meta: ['nick','mail','link']
+        pageSize: 10
+        lang: zh-CN
+        highlight: true
+        avatarForce: false
+        recordIP: true
+        serverURLs: 
+        enableQQ: false
+        requiredFields: ['nick','mail']
 
 
-        
+
+
 
 
 #---------------------------
@@ -193,3 +209,4 @@ static_prefix:
     typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     md5: https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/
+    valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
