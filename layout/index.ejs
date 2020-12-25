@@ -1,4 +1,5 @@
-<div id="index-banner" class="text-center middle-center">
+<% if(!page.prev){ %>
+  <div id="index-banner" class="text-center middle-center">
     <div class="banner-text" id="typed-strings">
         <h3 id="index-slogan">
             <%- theme.index.banner_slogan %>
@@ -7,6 +8,8 @@
     </div>
     <h3 id="typed"></h3>
 </div>
+<% } %>
+
 <div class="post-card-center">
 <div class="post-card-main">
 <!-- 循环输出文章列表 -->
@@ -62,3 +65,4 @@
   <% }) %>
 </div>
 </div>
+<%- partial('_partial/paginator') %>

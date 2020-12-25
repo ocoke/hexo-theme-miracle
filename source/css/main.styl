@@ -178,7 +178,7 @@ index style
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    padding-top: 30px;
 }
 .index-pin{
     position: absolute;
@@ -369,4 +369,39 @@ NavBar
 @import "_include/nav"
 .mg-top{
     margin-top: 80.72px
+}
+
+/* 
+---
+Footer
+--- 
+*/
+footer p{
+    font-size: 1rem;
+}
+.pagination .page-number,.next,.prev{
+
+}
+.pagination .current:hover, .pagination a:hover {
+    background-color: #f8f9fa;
+}
+.pagination .current, .pagination a {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: .9rem;
+    padding: .5rem .75rem;
+    line-height: 1.25;
+    border-radius: .125rem;
+    transition: background-color .2s ease-in-out;
+}
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

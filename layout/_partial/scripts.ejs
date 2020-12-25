@@ -3,6 +3,6 @@
 <!-- 引入 JS 文件 -->
 <%- js('/js/main.js') %>
 
-<% if (theme.global.typing.enable && is_home()){ %>
+<% if (theme.global.typing.enable && is_home() && !page.prev){ %>
     <%- partial('_partial/plugins/type.ejs') %>
 <% } %>
