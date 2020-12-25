@@ -24,7 +24,8 @@ third-text-color = #858585;
 default-text-color = #505050;
 link-color = #000000;
 second-link-color = #4F9BFA;
-background-color=#FFFFFE
+background-color = #FFFFFE
+
 
 html,body{
     margin: 0;
@@ -33,7 +34,7 @@ html,body{
     height: 100%;
 }
 nav{
-    display: none; // This is just for test
+    // display: none; // This is just for test
 }
 .text-center{
     text-align: center!important;
@@ -57,6 +58,7 @@ nav{
     padding: 0;
 }
 #index-banner{
+    top: -80.72px!important;
     z-index: 0;
     top: 0px;
     width: 100%;
@@ -357,4 +359,14 @@ p{
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+/* 
+---
+NavBar
+--- 
+*/
+@import "_include/nav"
+.mg-top{
+    margin-top: 80.72px
 }
