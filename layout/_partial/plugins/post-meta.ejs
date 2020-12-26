@@ -17,14 +17,14 @@
     <% if (theme.post.wordcount.enable) { %>
       <% var wordcount_texts = theme.post.wordcount.format.split('{}') %>
       <span class="post-meta ml-10">
-        <i class="fa fa-file-word-o meta-icon"></i>
+        <i class="fa fa-file-word meta-icon"></i>
         <%- wordcount_texts[0] %><%- wordcount(page.content) %><%- wordcount_texts[1] %>
       </span>
     <% } %>
     <% if (theme.post.min2read.enable) { %>
       <% var min2read_texts = theme.post.min2read.format.split('{}') %>
       <span class="post-meta ml-10">
-        <i class="fa fa-clock-o meta-icon"></i>
+        <i class="fa fa-clock meta-icon"></i>
         <% var words = parseInt(theme.post.min2read.words) %>
         <%- min2read_texts[0] %>
         <%- min2read(page.content, {cn: words, en: words / 2}) %>
