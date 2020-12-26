@@ -1,8 +1,9 @@
 <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
 <script src="<%- theme.static_prefix.md5 %>md5.min.js"></script>
 <!-- 引入 JS 文件 -->
+<%- js('/js/cookie.js') %>
 <%- js('/js/main.js') %>
-
+<%- js('/js/darkmode.js') %>
 <% if (theme.global.typing.enable && is_home() && !page.prev){ %>
     <%- partial('_partial/plugins/type.ejs') %>
 <% } %>

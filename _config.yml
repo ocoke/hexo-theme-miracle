@@ -10,6 +10,10 @@
 #---------------------------
 
 global:
+    # 深色模式
+    # Dark mode
+    darkmode: true
+
     # 导航栏左侧的标题，为空则按 hexo config 中 `title` 显示
     # The title on the left side of the navigation bar. If empty, it is based on `title` in hexo config
     nav_title: Miracle
@@ -27,7 +31,7 @@ global:
     # Theme font settings
     font:
         family: "'Noto Sans SC', sans-serif"
-        css: 
+        css: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
 
     # 每次生成页面后，检测主题是否为最新版本
     # Every time the page is generated, detect whether the theme is the latest version
@@ -53,7 +57,7 @@ global:
 
 menu:
     Home: /
-    Archives: /archives
+    # Archives: /archives
     # Categories: /categories
     # Tags: /tags
     # Links: /links
@@ -73,7 +77,7 @@ index:
     # If the posts are sorted by `sticky`, an icon is displayed in front of the post title
     post_sticky:
         enable: true
-        icon: "fa fa-thumb-tack"
+        icon: "fas fa-thumbtack"
 
     # 文章卡片是否显示相关信息（时间、分类、标签）
     # Whether the article card displays relevant information (time, category, label)
@@ -214,7 +218,6 @@ comment:
 
 static_prefix:
 
-    font: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/

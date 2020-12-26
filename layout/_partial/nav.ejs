@@ -1,9 +1,9 @@
 <div class="c-nav">
 	<div class="container navFlex">
 		<div class="flexItem">
-      <a href="<%- url_for() %>">
-        <h1 class="logo"><%= theme.global.nav_title || config.title %></h1>
-      </a>
+      		<a href="<%- url_for() %>">
+        		<h1 class="logo"><%= theme.global.nav_title || config.title %></h1>
+      		</a>
 		</div>
 		
 		<div class="flexItem hiden logo">
@@ -12,9 +12,16 @@
 		<div class="flexItem show">
 			<ul>
 				<% for (var i in theme.menu){ %>
-          <li><a href="<%- url_for(theme.menu[i]) %>"><%-  __(i) %></a></li>
-    <% } %>
-    
+          			<li><a href="<%- url_for(theme.menu[i]) %>"><%-  __(i) %></a></li>
+				<% } %>
+				<% if(theme.global.darkmode){ %>
+
+					<li><a href="javascript:;" id="toggle-theme"><i id="theme-icon" class="fas fa-sun"></i></a></li>
+				
+				
+				<% } %>
+	
+			
 			</ul>
 		</div>
 	</div>

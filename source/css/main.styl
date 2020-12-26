@@ -16,6 +16,19 @@ _________________________________________________
 
 // 设置相关变量
 
+:root{
+    --shadow-color: rgba(0,0,0,0.2);
+    --shadow-hover-color: rgba(0,0,0,0.28);
+    --first-text-color: #484848;
+    --second-text-color: #4c4c4c;
+    --third-text-color: #858585;
+    --default-text-color: #505050;
+    --link-color: #000000;
+    --second-link-color: #4F9BFA;
+    --background-color: #FFFFFE
+    --color-mode: 'light';
+}
+
 shadow-color = rgba(0,0,0,0.2);
 shadow-hover-color = rgba(0,0,0,0.28);
 first-text-color = #484848;
@@ -370,6 +383,23 @@ NavBar
 .mg-top{
     margin-top: 80.72px
 }
+
+/* 
+---
+DarkMode
+--- 
+*/
+@media (prefers-color-scheme: dark) {
+    @import "_include/darkmode"
+}
+.dark{
+    @import "_include/darkmode"
+}
+#toggle-theme,#theme-icon{
+    display: none!important;
+}
+
+
 
 /* 
 ---

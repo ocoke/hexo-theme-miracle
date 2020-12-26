@@ -13,9 +13,8 @@ if (page.title) {
     <title><%= title %></title>
     <!-- 引入 CSS 样式文件 -->
     <%- css('/css/dist/main.css') %>
-    <%- css('/icon/css/icon.css') %>
+    <%- css('/icon/css/all.min.css') %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="<%- theme.static_prefix.font %>" rel="stylesheet">
     <% if(theme.global.font.css){ %>
     <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>

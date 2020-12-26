@@ -12,7 +12,7 @@ module.exports = (hexo) => {
 
   const errorLog = (_) => {
     if (isZh) {
-      hexo.log.warn('[Miracle] 获取主题版本信息失败，这不影响正常使用。');
+      hexo.log.warn('[Miracle] 获取主题版本信息失败，可能无法连接至 GitHub 服务器，这不会影响正常使用。');
     } else {
       hexo.log.warn('[Miracle] Failed to detect version info. It won\'t hinder the use.');
     }
