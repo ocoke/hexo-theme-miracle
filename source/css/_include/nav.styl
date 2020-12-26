@@ -21,6 +21,7 @@
 	-webkit-backdrop-filter: blur(10px);
 	box-shadow: 0 0 8px rgba(0,0,0,0.25);
     z-index 9999
+	// height 80px
 }
 .container{
     max-width 885px
@@ -43,10 +44,13 @@
     // background-color:#34495e;
 	width: 100%;
 }
+.c-nav h1{
+	font-size 1.7rem
+}
 .c-nav .logo{
     color:#4c4c4c
     padding-left: 20px!important;
-    line-height 50px
+    line-height 85%
     float left
     // text-transform uppercase
 }
@@ -77,13 +81,17 @@
 	border-bottom: 3px solid transparent;
 }
 .c-nav .logo{
-	height: 40px;
+	// height: 30px;
+}
+.c-nav .navFlex ul{
+	// backdrop-filter: blur(10px);
+    // -webkit-backdrop-filter: blur(10px);
 }
 .c-nav .btnImg{
     color: #4c4c4c;
 	height: 20px;
 	width: 25px;
-	padding: 3px 8px 3px 8px;
+	padding: 0px 8px 0px 8px;
 	box-sizing: content-box;
 	border: 1px solid transparent;
 }
@@ -91,10 +99,11 @@
 @media screen and (max-width: 885px){
 	.c-nav{
 		padding: 10px 0px 10px 0px;
+		// height 60px
 	}
 	.c-nav .navFlex{
 		flex-wrap: wrap;
-		font-size: 30px;
+		font-size: 1.7rem;
 		justify-content: space-between;
 	}
 	.c-nav ul li{
@@ -104,9 +113,6 @@
 	}
 	.c-nav ul li a{
 		border-bottom: 3px solid transparent;
-	}
-	.c-nav ul a:hover{
-		border-bottom: 3px solid #e4c17e;
 	}
 	.c-nav ul li:nth-child(4),.c-nav ul li:nth-child(5){
 		display: block;
