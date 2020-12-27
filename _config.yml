@@ -10,9 +10,18 @@
 #---------------------------
 
 global:
-    # 深色模式
-    # Dark mode
-    darkmode: true
+
+    # 用于浏览器标签的图标
+    # Icon for browser tab
+    favicon: /img/favicon.png
+
+    # 用于苹果设备的图标
+    # Icon for Apple touch
+    apple_touch_icon: /img/favicon.png
+
+    # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
+    # Force all links to be HTTPS (applicable to HTTP mixed error)
+    force_https: false
 
     # 导航栏左侧的标题，为空则按 hexo config 中 `title` 显示
     # The title on the left side of the navigation bar. If empty, it is based on `title` in hexo config
@@ -199,8 +208,17 @@ comment:
         enableQQ: false
         requiredFields: ['nick','mail']
 
-
-
+    waline:
+        serverURL: 
+        placeholder:
+        path:
+        avatar:
+        meta: ['nick','mail','link']
+        pageSize: 10
+        lang: zh-CN
+        highlight: true
+        avatarForce: false
+        requiredFields: ['nick','mail']
 
 
 
@@ -220,6 +238,7 @@ static_prefix:
 
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
-    gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     md5: https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/
+    gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
+    waline: https://cdn.jsdelivr.net/npm/@waline/client@0.9.0/dist/

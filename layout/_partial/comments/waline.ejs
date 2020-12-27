@@ -1,0 +1,18 @@
+<% if(theme.comment.waline.serverURL){ %>
+    <script src="<%- theme.static_prefix.waline %>Waline.min.js"></script>
+    <div id="waline"></div>
+    <script>
+        new Waline({
+            el: '#waline',
+            serverURL: '<%= theme.comment.waline.serverURL %>',
+            path: <%= theme.comment.waline.path %>,
+            placeholder: '<%= theme.comment.waline.placeholder %>',
+            avatar: '<%= theme.comment.waline.avatar %>',
+            meta: <%- JSON.stringify(theme.comment.waline.meta || []) %>,
+            pageSize: <%= theme.comment.waline.pageSize %>,
+            lang: '<%= theme.comment.waline.lang %>',
+            highlight: <%= theme.comment.waline.highlight %>,
+            avatarForce: <%= theme.comment.waline.avatarForce %>,
+            requiredFields: <%- JSON.stringify(theme.comment.waline.requiredFields || []) %>
+        });
+    </script>

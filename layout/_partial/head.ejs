@@ -9,15 +9,23 @@ if (page.title) {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%- url_for(theme.global.apple_touch_icon) %>">
+    <link rel="icon" type="image/png" href="<%- url_for(theme.global.favicon) %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title><%= title %></title>
-    <!-- 引入 CSS 样式文件 -->
+    <% if (theme.global.force_https) { %>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <% } %>
     <%- css('/css/dist/main.css') %>
     <%- css('/icon/css/all.min.css') %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <% if(theme.global.font.css){ %>
     <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>
+    <meta name="description" content="<%= config.description %>">
+    <meta name="author" content="<%= page.author || config.author %>">
+    <meta name="keywords" content="<%= config.keywords %>">
+
     <style>
         body{
             font-family: <%- theme.global.font.family %>;
