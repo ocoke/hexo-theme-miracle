@@ -231,7 +231,7 @@ h6{
     font-size: 1.25rem;
 }
 p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 @media (max-width: 500px){
     h1{
@@ -250,10 +250,10 @@ p{
         font-size: 1.3rem;
     }
     h6{
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
     p{
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 }
 #page-banner{
@@ -434,4 +434,37 @@ footer p{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+@media print {
+    /*隐藏不必要的元素*/
+    header, .post-meta-label,footer{
+        display: none!important;
+    }
+    /*使用下划线标记链接*/
+    article a {
+        text-decoration: underline!important;
+    }
+    /*由于纸张不可交互，在链接后显示链接到的 URL*/
+    article a::after {
+        content: "(" attr(href) ")";
+    }
+    /*强制白底黑字*/
+    html > body {
+        background-color: white!important;
+    }
+    article p {
+        color: rgba(0,0,0,.8)!important;
+    }
+    /*对于纸张上的长文章，衬线字体拥有更好的可读性。以下字体列表来自 fonts.css*/
+    article {
+        font: 13pt Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif!important;
+    }
+    
+    #article p {
+        page-break-inside: auto;
+    }
+    #article,#post-meta{
+        box-shadow: none;
+    }
+
 }
