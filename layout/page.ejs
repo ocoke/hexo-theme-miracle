@@ -3,14 +3,16 @@ var banner_img = page.banner_img
 %>
 
 <div id="post-meta-m">
-    <%- partial('_partial/plugins/post-meta.ejs') %>
+    <div class="post-meta" id="post-meta">
+        <h3><%= page.title %></h3>
+    </div>
 </div>
 <div class="article-m">
     <div id="article">
         <%- page.content %>
     </div>
 </div>
-<% if(page.comment || theme.post.comment) { %>
+<% if(page.comment) { %>
     <!-- Comments -->
     <div class="comments">
         <div id="miracle-comments">

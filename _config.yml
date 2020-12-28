@@ -64,14 +64,7 @@ global:
 
         
 
-menu:
-    Home: /
-    # Archives: /archives
-    # Categories: /categories
-    # Tags: /tags
-    # Links: /links
-    # About: /about
-    # ...
+
 
 
 #---------------------------
@@ -101,19 +94,16 @@ index:
         enable: true
 
 navbar:
-    # 模糊像素，只能为数字，数字越大模糊度越高
-    # Number of blurred pixel. the larger the number, the higher the blur
-    blur: 3
-
-    # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
-    # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
+    # 导航栏菜单，可自行增减.
+    # Navigation bar menu.
     menu:
-        - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-        - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-        - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
-        - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-        # - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
-        - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+        Home: /
+        # Archives: /archives
+        Categories: /categories
+        Tags: /tags
+        Links: /links
+        # About: /about
+        # ...
 
 #---------------------------
 # 文章页
@@ -220,6 +210,55 @@ comment:
         avatarForce: false
         requiredFields: ['nick','mail']
 
+
+#---------------------------
+# 分类页
+# Category Page
+#---------------------------
+category:
+    enable: true
+
+
+#---------------------------
+# 归档页
+# Archive Page
+#---------------------------
+archive:
+    banner_img: /img/default.png
+    banner_img_height: 60
+    banner_mask_alpha: 0.3
+    subtitle:
+
+
+#---------------------------
+# 标签页
+# Tag Page
+#---------------------------
+tag:
+    enable: true
+    subtitle:
+    tagcloud:
+        min_font: 15
+        max_font: 30
+        unit: px
+        start_color: "#BBBBEE"
+        end_color: "#337ab7"
+
+#---------------------------
+# 友链页
+# Links Page
+#---------------------------
+links:
+    enable: true
+
+
+#---------------------------
+# 404页
+# 404 Page
+#---------------------------
+page404:
+    enable: true
+    text: 啊哦，页面走丢了~
 
 
 #---------------------------

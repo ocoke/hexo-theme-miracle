@@ -1,0 +1,17 @@
+<%
+page.layout = "404"
+page.title = theme.page404.title || __('page404.title')
+page.subtitle = theme.page404.subtitle || __('page404.subtitle')
+%>
+<div id="post-meta-m">
+    <div class="post-meta" id="post-meta">
+      <h3><%= page.title %></h3>
+      <p class="404-text"><%= theme.page404.text %></p>
+    </div>
+  </div>
+<script>
+    function redirect() {
+        location.href = "/";
+    }
+  // setTimeout(redirect, 3000)
+</script>

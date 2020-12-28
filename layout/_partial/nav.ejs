@@ -11,8 +11,8 @@
 		</div>
 		<div class="flexItem show">
 			<ul>
-				<% for (var i in theme.menu){ %>
-          			<li><a href="<%- url_for(theme.menu[i]) %>"><%-  __(i) %></a></li>
+				<% for (var i in theme.navbar.menu){ %>
+          			<li><a href="<%- url_for(theme.navbar.menu[i]) %>"><%-  __(i) %></a></li>
 				<% } %>
 				<% if(theme.global.darkmode){ %>
 

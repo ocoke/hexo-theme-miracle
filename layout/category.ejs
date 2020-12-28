@@ -1,0 +1,9 @@
+
+<%
+page.layout = "category"
+page.title = [__('category.title'), page.category].join(" - ")
+page.subtitle = [__('category.subtitle'), page.category].join(" - ")
+var cat = site.categories.find({name: page.category}).filter(cat => cat.length).data[0]
+%>
+
+<%- partial('_partial/archive-list.ejs', { params: { postTotal: cat ? cat.posts.length : 0 } }) %>

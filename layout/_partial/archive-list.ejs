@@ -1,3 +1,4 @@
+<div class="tag-page-main">
 <div class="list-group">
     <p class="h4"><%= __('postTotal', params.postTotal) %></p>
     <hr>
@@ -12,6 +13,6 @@
         <time style="float: right;"><%- date(post.date, "MM-DD") %></time>
       </a>
     <% }) %>
-  </div>
-  
-  <%- partial('_partial/paginator') %>
+</div>
+</div>
+<%- partial('_partial/paginator') %>

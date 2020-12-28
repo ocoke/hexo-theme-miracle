@@ -1,0 +1,7 @@
+<%
+page.layout = "archive"
+page.title = theme.archive.title || __('archive.title')
+page.subtitle = theme.archive.subtitle || __('archive.subtitle')
+%>
+
+<%- partial('_partial/archive-list.ejs', { params: { postTotal: site.posts.length } }) %>
