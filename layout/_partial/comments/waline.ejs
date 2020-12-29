@@ -1,6 +1,8 @@
 <% if(theme.comment.waline.serverURL){ %>
     <script src="<%- theme.static_prefix.waline %>Waline.min.js"></script>
-    <div id="waline"></div>
+    <div id="miracle-comments">
+        <div id="waline"></div>
+    </div>
     <script>
         new Waline({
             el: '#waline',

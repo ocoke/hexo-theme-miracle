@@ -1,6 +1,8 @@
 <% if(theme.comment.valine.appid && theme.comment.valine.appkey){ %>
     <script src="<%- theme.static_prefix.valine %>Valine.min.js"></script>
-    <div id="miracle-vcomments"></div>
+    <div id="miracle-comments">
+        <div id="miracle-vcomments"></div>
+    </div>
     <script>
         new Valine({
             el: '#miracle-vcomments',

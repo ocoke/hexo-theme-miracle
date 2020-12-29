@@ -13,12 +13,9 @@ var banner_img = page.banner_img
 <% if(page.comment || theme.post.comment) { %>
     <!-- Comments -->
     <div class="comments">
-        <div id="miracle-comments">
         <% var type = '_partial/comments/' + theme.comment.type %>
         <%- partial(type) %>
-        </div>
     </div>
 <% } %>
-
 
 
