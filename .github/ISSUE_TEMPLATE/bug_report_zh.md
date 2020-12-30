@@ -13,7 +13,7 @@ assignees: ''
 <!-- 4. 不确定是不是 BUG 的，请后退使用问题求助 -->
 
 #### 请确认
-- [ ] 是当前最新的 [Release 版本](https://github.com/fluid-dev/hexo-theme-fluid/releases)
+- [ ] 是当前最新的 [Release 版本](https://github.com/hifun-team/hexo-theme-miracle/releases)
 - [ ] 浏览器不属于 IE 等非主流浏览器 
 - [ ] 本地 `hexo clean && hexo s`，并且清除浏览器缓存，仍可复现
 - [ ] 已经排除是其他 Hexo 插件影响
