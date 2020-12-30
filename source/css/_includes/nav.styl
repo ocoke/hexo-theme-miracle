@@ -16,12 +16,11 @@
 .c-nav{
     position fixed
     top 0
-    background: rgba(253,253,253,0.5);
+    background-color: var(--nav-bkg-color);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	box-shadow: 0 0 8px rgba(0,0,0,0.25);
-    z-index 9999
-	// height 80px
+    z-index: 9999;
 }
 .container{
     max-width 885px
@@ -31,7 +30,7 @@
     line-height 30px
 }
 .c-nav li a:hover{
-    color #3498db
+    color var(--nav-a-hover-color)
 }
 .c-nav .show{
 	display: inline-block;
@@ -48,7 +47,7 @@
 	font-size 1.7rem
 }
 .c-nav .logo{
-    color:#4c4c4c
+    color:var(--second-text-color)
     padding-left: 20px!important;
     line-height 85%
     float left
@@ -61,7 +60,7 @@
 	-webkit-justify-content: space-between;
 	align-items: center;
 	-webkit-align-content: center;
-	color:#4c4c4c;
+	color:var(--second-text-color);
     width: 100%;
 }
 .c-nav ul{
@@ -75,7 +74,7 @@
 	display: inline-block;
 }
 .c-nav ul li a{
-	color: #4c4c4c;
+	color: var(--second-text-color);
 	padding-bottom: 2px;
 	text-decoration: none;
 	border-bottom: 3px solid transparent;
@@ -88,7 +87,7 @@
     // -webkit-backdrop-filter: blur(10px);
 }
 .c-nav .btnImg{
-    color: #4c4c4c;
+    color: var(--second-text-color);
 	height: 20px;
 	width: 25px;
 	padding: 0px 8px 0px 8px;
@@ -137,4 +136,7 @@
         padding 0 10px
         transition 0.4s
     }
+}
+.mg-top{
+    margin-top: 80.72px
 }
