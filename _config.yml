@@ -65,8 +65,14 @@ global:
             enable: true
             key: 
 
-
-
+#---------------------------
+# 主题
+# Theme
+#---------------------------
+theme:
+    # 深色模式
+    # Dark mode
+    darkmode: true
 
 #---------------------------
 # 主页
@@ -162,8 +168,8 @@ comment:
 
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
-    # Options: gitalk | valine
-    type: valine
+    # Options: gitalk | valine | waline
+    type: gitalk
 
     # Gitalk
     # 基于 GitHub Issues
