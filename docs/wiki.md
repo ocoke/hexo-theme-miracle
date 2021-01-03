@@ -1,6 +1,6 @@
 # Wiki (简体中文)
 
-<p align="center">简体中文｜<a href="docs/wiki-en.md">English</a></p>
+<p align="center">简体中文｜<a href="wiki-en.md">English</a></p>
 
 `Hexo Theme Miracle` 是一款简洁的单栏 [Hexo](https://hexo.io) 主题。
 
