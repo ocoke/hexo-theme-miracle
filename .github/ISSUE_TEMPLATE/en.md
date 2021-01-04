@@ -8,7 +8,8 @@ assignees: ''
 #### Issue type
 
 - [ ] Bug
-- [ ] Future
+- [ ] Feature
+- [ ] Enhancement
 - [ ] Other help
 
 #### Describe
