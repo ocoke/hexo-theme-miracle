@@ -1,5 +1,6 @@
 ---
 name: 简体中文
+about: Chinese
 title: ''
 assignees: ''
 ---
