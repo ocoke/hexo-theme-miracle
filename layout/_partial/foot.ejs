@@ -1,6 +1,26 @@
 <footer class="text-center">
     
     <p><%- theme.global.footer.content %></p>
+    <% if(theme.global.web_analytics.busuanzi.enable){ %>
+        <% var pv_texts = theme.global.web_analytics.busuanzi.pv_format.split('{}') %>
+        <% var uv_texts = theme.global.web_analytics.busuanzi.uv_format.split('{}') %>
+        <% if (theme.global.web_analytics.busuanzi.pv_format) { %>
+            <!-- 不蒜子统计PV -->
+            <span id="busuanzi_container_site_pv" style="display: none">
+                <%- pv_texts[0] %>
+                <span id="busuanzi_value_site_pv"></span>
+                <%- pv_texts[1] %>
+              </span>
+          <% } %>
+          <% if (theme.global.web_analytics.busuanzi.uv_format) { %>
+            <!-- 不蒜子统计UV -->
+            <span id="busuanzi_container_site_uv" style="display: none">
+                <%- uv_texts[0] %>
+                <span id="busuanzi_value_site_uv"></span>
+                <%- uv_texts[1] %>
+              </span>
+          <% } %>
+    <% } %>
     <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/hifun-team/hexo-theme-miracle" target="_blank">Miracle</a></p>
 </footer>
 <!-- SCRIPTS -->

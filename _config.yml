@@ -60,10 +60,35 @@ global:
         # Cursor character
         cursorChar: "|"
 
+    # 网页访问统计
+    # Analysis of website visitors
     web_analytics:
+        # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
+        # Baidu analytics, get the string behind `hm.js?`
+        # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
         baidu:
+        
+        # Google 统计的 Tracking ID
+        # Google analytics, set Tracking ID
+        # See: https://developers.google.com/analytics/devguides/collection/analyticsjs
+        google:
+        
+        # 51.la 站点统计 ID
+        # 51.la analytics
+        # See: https://www.51.la/user/site/index
+        woyaola: 
+
+        # 友盟/cnzz 站点统计 web_id
+        # cnzz analytics
+        # See: https://web.umeng.com/main.php?c=site&a=show
+        cnzz:
+
+        busuanzi:
             enable: true
-            key: 
+            # 页面显示的文本，{} 是数字的占位符（必须包含)，下同
+            # Displayed text, {} is a placeholder for numbers (must be included), the same below
+            pv_format: "总访问量 {} 次"
+            uv_format: "总访客数 {} 人"
 
 #---------------------------
 # 主题
@@ -153,6 +178,14 @@ post:
         # Words read per minute
         words: 120
 
+    # 文章阅读量统计
+    # Article reading statistics
+    # 由 不蒜子 提供支持
+    # Supported by busuanzi
+    views:
+        enable: true
+        format: "共 {} 次阅读"
+
     # 评论插件
     # Comment plugin
     comment: true
@@ -231,10 +264,6 @@ category:
 # Archive Page
 #---------------------------
 archive:
-    banner_img: /img/default.png
-    banner_img_height: 60
-    banner_mask_alpha: 0.3
-    subtitle:
 
 
 #---------------------------
@@ -284,6 +313,7 @@ static_prefix:
 
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
+    busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/
     md5: https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
