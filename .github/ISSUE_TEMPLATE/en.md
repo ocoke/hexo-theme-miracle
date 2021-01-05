@@ -1,5 +1,6 @@
 ---
 name: English
+about: English
 title: ''
 assignees: ''
 ---
@@ -7,7 +8,8 @@ assignees: ''
 #### Issue type
 
 - [ ] Bug
-- [ ] Future
+- [ ] Feature
+- [ ] Enhancement
 - [ ] Other help
 
 #### Describe
