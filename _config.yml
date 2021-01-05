@@ -158,8 +158,6 @@ post:
     
     # 字数统计
     # Word count
-    # 需要先安装 `hexo-wordcount` 插件
-    # You need to install the `hexo wordcount` plugin first
     wordcount:
         enable: true
 
@@ -169,8 +167,6 @@ post:
 
     # 估计阅读全文需要的时长
     # Estimate the time required to read the full text
-    # 需要先安装 `hexo-wordcount` 插件
-    # You need to install the `hexo wordcount` plugin first
     min2read:
         enable: true
         format: "预计 {} 分钟"

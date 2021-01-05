@@ -120,15 +120,7 @@ navbar:
 
 ### 文章字数统计&时长预计
 
-> 需要先安装 `hexo-wordcount` 插件。
-
-在博客目录执行命令安装：
-
-```bash
-npm install hexo-wordcount --save
-```
-
-随后，在配置文件中启用文章字数统计与时长预计。
+首先，在配置文件中启用文章字数统计与时长预计。
 
 ```yaml
 post:
@@ -138,6 +130,16 @@ post:
     min2read:
         enable: true # 设为 True。
         
+```
+
+随后，可根据自己的需要修改文章的阅读速度：
+
+```yaml
+post:
+    min2read:
+        # 每分钟阅读多少字，如果是技术文章，建议降低
+        # Words read per minute
+        words: 120
 ```
 
 ### 评论插件
@@ -161,3 +163,7 @@ comment:
 最后，根据选择的评论系统与官方文档在下方逐一配置。
 
 > Tips: 仅需要配置您选择的评论系统即可。
+
+<div class="create-pr">
+<p style="float: left;"><a href="https://github.com/hifun-team/hexo-theme-miracle/edit/master/docs/zh-cn.md">📝 帮助我们完善文档</a>
+</div>
