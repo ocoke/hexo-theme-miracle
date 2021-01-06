@@ -14,10 +14,15 @@
     - [Git](#git)
 - [基础配置](#基础配置)
     - [Banner Slogan](#banner-slogan)
+    - [自定义字体](#自定义字体)
     - [导航栏菜单](#导航栏菜单)
     - [文章字数统计&时长预计](#文章字数统计时长预计)
     - [评论插件](#评论插件)
-
+    - [站内搜索](#站内搜索)
+    - [网页统计](#网页统计)
+    - [文章排序 (置顶)](#文章排序-(置顶))
+- [进阶玩法](#进阶玩法)
+    - [图标](#图标)
 ## 下载与安装
 
 在开始前，你需要先安装 Hexo 并初始化你的博客。
@@ -106,6 +111,20 @@ index:
     banner_slogan: Write the miracle in your heart.
 ```
 
+### 自定义字体
+
+所有页面的字体可以通过主题配置中的配置项设置：
+
+```yaml
+global:
+    font:
+        # 页面字体
+        family: "'Noto Sans SC', sans-serif"
+        # 字体 CSS 文件，选填，默认使用 Google Fonts
+        css: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
+```
+
+
 ### 导航栏菜单
 
 导航栏菜单可以自行增减。
@@ -163,6 +182,82 @@ comment:
 最后，根据选择的评论系统与官方文档在下方逐一配置。
 
 > Tips: 仅需要配置您选择的评论系统即可。
+
+### 站内搜索
+
+主题已集成 `hexo-generator-search` 插件，仅需启用即可。
+
+```yaml
+search:
+    enable: true
+```
+
+> 如已安装其他搜索插件请关闭，避免生成多余的索引文件。
+
+### 网页统计
+
+目前统计平台支持 百度统计、谷歌统计、51.la、友盟（CNZZ）与 不蒜子。
+
+请参考配置文件中的注释完成配置。
+
+> 需要注意！如果在使用 不蒜子统计 时不想在页面的底部显示 PV 和 UV，请将 `pv_format` 和 `uv_format` 留空。
+
+```yaml
+global:
+    # 网页访问统计
+    # Analysis of website visitors
+    web_analytics:
+        # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
+        # Baidu analytics, get the string behind `hm.js?`
+        # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
+        baidu:
+        
+        # Google 统计的 Tracking ID
+        # Google analytics, set Tracking ID
+        # See: https://developers.google.com/analytics/devguides/collection/analyticsjs
+        google:
+        
+        # 51.la 站点统计 ID
+        # 51.la analytics
+        # See: https://www.51.la/user/site/index
+        woyaola: 
+
+        # 友盟/cnzz 站点统计 web_id
+        # cnzz analytics
+        # See: https://web.umeng.com/main.php?c=site&a=show
+        cnzz:
+
+        busuanzi:
+            enable: true
+            # 页面显示的文本，{} 是数字的占位符（必须包含），下同
+            # Displayed text, {} is a placeholder for numbers (must be included), the same below.
+            pv_format: "总访问量 {} 次"
+            uv_format: "总访客数 {} 人"
+```
+
+### 文章排序 (置顶)
+
+如果想将改变文章在首页的顺序，可以在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 中配置 `sticky` 的值。
+
+`sticky` 的值越大，则文章在首页的排序越靠前。
+
+```markdown
+---
+title: Title
+sticky: 100
+---
+Content
+```
+
+## 进阶玩法
+
+### 图标
+
+主题内置 FontAwesome 图标，你可以直接使用 HTML 引入。
+
+所有的图标列表请参考 [FontAwesome 官网](https://fontawesome.com)。
+
+
 
 <div class="create-pr">
 <p style="float: left;"><a href="https://github.com/hifun-team/hexo-theme-miracle/edit/master/docs/zh-cn.md">📝 帮助我们完善文档</a>
