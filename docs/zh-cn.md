@@ -257,7 +257,7 @@ Content
 
 所有的图标列表请参考 [FontAwesome 官网](https://fontawesome.com)。
 
-
+---
 
 <div class="create-pr">
 <p style="float: left;"><a href="https://github.com/hifun-team/hexo-theme-miracle/edit/master/docs/zh-cn.md">📝 帮助我们完善文档</a>
