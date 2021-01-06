@@ -255,7 +255,7 @@ Content
 
 主题内置 FontAwesome 图标，你可以直接使用 HTML 引入。
 
-所有的图标列表请参考 [FontAwesome 官网](https://fontawesome.com)。
+所有的图标列表请参考 [FontAwesome 官网](https://fontawesome.com/icons?d=gallery)。
 
 ---
 
