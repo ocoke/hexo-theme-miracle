@@ -49,7 +49,6 @@ global:
     # 为 Banner 标题 添加打字机效果
     # Typing animation for banner header
     typing:
-
         enable: true
 
         # 打印速度，数字越大越慢
@@ -86,9 +85,32 @@ global:
         busuanzi:
             enable: true
             # 页面显示的文本，{} 是数字的占位符（必须包含)，下同
-            # Displayed text, {} is a placeholder for numbers (must be included), the same below
+            # Displayed text, {} is a placeholder for numbers (must be included), the same below.
             pv_format: "总访问量 {} 次"
             uv_format: "总访客数 {} 人"
+
+# 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
+# Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files.
+
+search:
+    enable: true
+    # 搜索索引文件的路径，可以是相对路径或外站的绝对路径
+    # Path for search index file, it can be a relative path or an absolute path.
+    path: /search.xml
+
+    # 文件生成在本地的位置，必须是相对路径
+    # The location where the index file is generated locally, it must be a relative location.
+    generate_path: /search.xml
+
+    # 搜索的范围
+    # Search field
+    # Options: post | page | all
+    field: post
+
+    # 搜索是否扫描正文
+    # If true, search will scan the post content.
+    content: true
+
 
 #---------------------------
 # 主题

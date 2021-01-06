@@ -5,6 +5,10 @@
 <%- js('/js/cookie.js') %>
 <%- js('/js/main.js') %>
 <%- js('/js/darkmode.js') %>
+<% if (theme.search.enable){ %>
+    <%- js('/js/search.js') %>
+    <%- partial('_partial/plugins/search.ejs') %>
+<% } %>
 <% if (theme.global.typing.enable && is_home() && !page.prev){ %>
     <%- partial('_partial/plugins/type.ejs') %>
 <% } %>

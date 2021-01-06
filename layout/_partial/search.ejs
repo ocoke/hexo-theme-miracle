@@ -1,0 +1,23 @@
+<div class="modal fade display-none" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" id="searchDocument">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold"><%= __('search.title') %></h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="fas fa-times meta-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate" placeholder="<%= __('search.keyword') %>">
+        </div>
+        <div class="list-group-m">
+          <div class="list-group" id="local-search-result">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
