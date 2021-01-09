@@ -1,12 +1,25 @@
 <% if(!page.prev){ %>
   <div id="index-banner" class="text-center middle-center">
-    <div class="banner-text" id="typed-strings">
-        <h3 id="index-slogan">
-            <%- theme.index.banner_slogan %>
+    <div class="banner-text">
+        <h3 id="banner-name">
+            <%- theme.index.name %>
         </h3>
-    </h3>
+        <p class="slogan">
+          <%- theme.index.slogan %>
+        </p>
+        <div class="profile-social">
+          <% for(const each of theme.index.social || []) { %>
+            <% if (!each.name || !each.link) continue %>
+              <a href="<%= url_for(each.link) %>" target="_blank" rel="noopener">
+                <% if (each.icon){ %>
+                  <span class="<%= each.icon %>"></span>
+                <% } else { %>
+                  <span><%- each.name %></span>
+                <% } %>
+              </a>
+          <% } %>
+        </div>
     </div>
-    <h3 id="typed"></h3>
 </div>
 <% } %>
 

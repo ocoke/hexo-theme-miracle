@@ -36,7 +36,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px
 }
 .index-pin{
     position: absolute;
@@ -48,4 +48,40 @@
 }
 .post-metas{
     color: var(--third-text-color);
+}
+#index-banner{
+    top: 30px;
+    text-align: center;
+}
+@media (max-width 576px){
+    #index-banner{
+        padding-bottom: 30px;
+    }
+}
+#banner-name{
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    margin: .5em 0;
+}
+#banner-name:before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    bottom: 2px;
+    left: -2px;
+    width: 100%;
+    z-index: -1;
+    background-color: #4169E1;
+    opacity: .3;
+    transition: 0.1s ease background-color;
+}
+.slogan{
+    color: var(--first-text-color);
+    margin: .3em 0;
+}
+.profile-social a{
+    margin-right: .6em;
+    text-decoration: none;
+    color: var(--first-text-color);
 }

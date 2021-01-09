@@ -12,8 +12,13 @@
     <%- js('/js/search.js') %>
     <%- partial('_partial/plugins/search.ejs') %>
 <% } %>
-<% if (theme.global.typing.enable && is_home() && !page.prev){ %>
-    <%- partial('_partial/plugins/type.ejs') %>
+<% if (theme.lazyload.enable){ %>
+    <%- js('/js/lazyload.js') %>
+<% } %>
+<% if (theme.post.code.highlight){ %>
+<link href="/css/themes/code.css" rel="stylesheet">  
+<script src="/js/hljs.js"></script>  
+<script >hljs.initHighlightingOnLoad();</script>
 <% } %>
 <% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>
     <script src="<%- theme.static_prefix.busuanzi %>busuanzi.pure.mini.js"></script>
