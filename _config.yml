@@ -83,7 +83,6 @@ global:
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files.
-
 search:
     enable: true
     # 搜索索引文件的路径，可以是相对路径或外站的绝对路径
@@ -103,6 +102,8 @@ search:
     # If true, search will scan the post content.
     content: true
 
+# 图片懒加载
+# Image lazyload
 lazyload:
     enable: true
 
@@ -122,15 +123,16 @@ theme:
 # Homepage
 #---------------------------
 index:
+    # 名称
     # Name
     name: YFun's Blog
     # Slogan
     slogan: Write the miracle in your heart.
+    # 社交
     # Social
     social:
-        - { name: "f", icon: "fas fa-thumbtack" , link: "https://hexo.fluid-dev.com/" }
-        - { name: "f" , icon: "fas fa-clock",link: "https://hexo.fluid-dev.x" }
-        - { name: "f" ,link: "https://hexo.fluid-dev.x" }
+        - { name: "GitHub", icon: "fab fa-github" , link: "https://github.com/hifun-team" }
+        - { name: "Gitee"  , link: "https://gitee.com/hifun-team" }
 
     # 文章通过 `sticky` 排序后，在首页文章标题前显示图标
     # If the posts are sorted by `sticky`, an icon is displayed in front of the post title
@@ -155,7 +157,7 @@ navbar:
     # Navigation bar menu.
     menu:
         Home: /
-        # Archives: /archives
+        Archives: /archives
         Categories: /categories
         Tags: /tags
         Links: /links
@@ -211,7 +213,11 @@ post:
     # Comment plugin
     comment: true
 
+    # 代码显示设置
+    # Code display setting
     code:
+        # 代码高亮
+        # Code highlight
         highlight: true
     
 #---------------------------
@@ -288,7 +294,7 @@ category:
 # Archive Page
 #---------------------------
 archive:
-
+    title: 归档
 
 #---------------------------
 # 标签页
