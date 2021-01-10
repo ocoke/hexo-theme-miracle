@@ -16,9 +16,34 @@
     <%- js('/js/lazyload.js') %>
 <% } %>
 <% if (theme.post.code.highlight){ %>
-<link href="/css/themes/code.css" rel="stylesheet">  
-<script src="/js/hljs.js"></script>  
-<script >hljs.initHighlightingOnLoad();</script>
+    <link href="/css/themes/code.css" rel="stylesheet">  
+    <script src="/js/hljs.js"></script>  
+    <script >hljs.initHighlightingOnLoad();</script>
+<% } %>
+<% if(is_post() && theme.post.toc.enable && page.toc !== false) { %>
+    <script src="<%- theme.static_prefix.tocbot %>tocbot.min.js"></script>
+    <script>
+        window.tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.post-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '#post-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: '<%- theme.post.toc.headingSelector %>' || 'h1, h2, h3, h4, h5, h6',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+            linkClass: 'tocbot-link',
+            activeLinkClass: 'tocbot-active-link',
+            listClass: 'tocbot-list',
+            isCollapsedClass: 'tocbot-is-collapsed',
+            collapsibleClass: 'tocbot-is-collapsible',
+            collapseDepth: <%- theme.post.toc.collapseDepth %> || 0,
+            scrollSmooth    : true
+        });
+        $(".toc-btn").click(function(){
+            $(".post-toc").toggleClass("display-inline")
+        });
+    </script>
 <% } %>
 <% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>
     <script src="<%- theme.static_prefix.busuanzi %>busuanzi.pure.mini.js"></script>

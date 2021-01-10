@@ -13,7 +13,7 @@
     - [发行版](#发行版-1)
     - [Git](#git)
 - [基础配置](#基础配置)
-    - [Banner Slogan](#banner-slogan)
+    - [博主信息](#博主信息)
     - [自定义字体](#自定义字体)
     - [导航栏菜单](#导航栏菜单)
     - [文章字数统计&时长预计](#文章字数统计时长预计)
@@ -21,8 +21,10 @@
     - [站内搜索](#站内搜索)
     - [网页统计](#网页统计)
     - [文章排序 (置顶)](#文章排序-置顶)
+    - [代码高亮](#代码高亮)
 - [进阶玩法](#进阶玩法)
     - [图标](#图标)
+
 ## 下载与安装
 
 在开始前，你需要先安装 Hexo 并初始化你的博客。
@@ -102,13 +104,30 @@ git pull https://github.com/hifun-team/hexo-theme-miracle.git master
 
 ## 基础配置
 
-### Banner Slogan
+### 博主信息
 
-主题会在首页展示一句 Slogan，您可以通过修改主题配置文件来修改这句话。
+主题会在首页展示博主的名称与 Slogan 。
+
 
 ```yaml
 index:
-    banner_slogan: Write the miracle in your heart.
+    name: YFun's Blog # 博主 / 站点的名称
+    slogan: Write the miracle in your heart. # Slogan
+```
+
+### 社交媒体
+
+主题可在博主的名称与 Slogan 下方展示 社交媒体。
+
+其中，每个社交媒体的 `link` 与 `name` 是必须的，如果没有这两个值，将不会展示。
+
+您还可以配置 `icon` 的值，可参考 [FontAwesome 官网](https://fontawesome.com/icons?d=gallery)。
+
+```yaml
+index:
+    social:
+        - { name: "GitHub", icon: "fab fa-github" , link: "https://github.com/hifun-team" }
+        - { name: "Gitee"  , link: "https://gitee.com/hifun-team" }
 ```
 
 ### 自定义字体
@@ -248,6 +267,33 @@ sticky: 100
 ---
 Content
 ```
+
+### 代码高亮
+
+修改**博客配置**（博客目录下的 `_config.yml` 文件）：
+
+```yaml
+highlight:
+    enable: true # 启用高亮
+    line_number: false
+    auto_detect: false
+    tab_replace: ''
+    wrap: false # 推荐 False
+    hljs: true # 必须为 True
+```
+
+随后修改主题配置：
+
+```yaml
+post:
+    # 代码显示设置
+    # Code display setting
+    code:
+        # 代码高亮
+        # Code highlight
+        highlight: true # 设为 True
+```
+
 
 ## 进阶玩法
 

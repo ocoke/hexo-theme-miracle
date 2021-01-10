@@ -92,6 +92,52 @@ p{
     background-color: var(--post-bkg-color);
     color: var(--second-text-color);
 }
+.post-toc{
+    width 15vh
+    position fixed
+    right 10px
+    z-index 9999
+    background-color: var(--page-bkg-color)
+    ol {
+        list-style: none;
+        padding-inline-start: 1rem;
+    }
+    .toc-list-item a{
+        color: var(--second-text-color)
+    }
+    .is-active-li a{
+        color: var(--default-link-color)
+    }
+    .tocbot-is-collapsed li{
+        display none
+    }
+}
+.toc-btn{
+    display: none
+}
+.display-inline{
+    display inline!important
+}
+@media (max-width: 1395px){
+    .post-toc{
+        display: none
+    }
+}
+@media (max-width: 1395px){
+    .toc-btn{
+        height: 3vh
+        width: 3vh
+        font-size: 1.6vh;
+        display: flex;
+        justify-content: center;
+        position: fixed
+        right 10px
+        z-index 9999
+        border-radius: 100%;
+        color: var(--first-text-color)
+        background-color: var(--post-bkg-color)
+    }
+}
 #post-meta-m{
     z-index: 3;
     box-sizing: border-box;

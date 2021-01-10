@@ -220,6 +220,10 @@ post:
         # Code highlight
         highlight: true
     
+    toc:
+        enable: true
+        headingSelector: 'h1, h2, h3, h4, h5, h6'
+        collapseDepth: 0
 #---------------------------
 # 评论插件
 # Comment plugins
@@ -341,7 +345,7 @@ page404:
 static_prefix:
 
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
-    typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
+    tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
     busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/
     md5: https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
