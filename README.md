@@ -1,3 +1,3 @@
 # Hexo Theme Miracle
 
-> Hexo Theme Miracle is still under development.
+> Hexo Theme Miracle 是一款简洁的单栏 Hexo 主题。
