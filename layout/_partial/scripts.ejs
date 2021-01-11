@@ -41,10 +41,10 @@
             scrollSmooth    : true
         });
         $(".toc-btn").click(function(){
-            $(".post-toc").toggleClass("display-inline")
+            $(".post-toc").toggleClass("display-inline");
         });
     </script>
 <% } %>
 <% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>
-    <script src="<%- theme.static_prefix.busuanzi %>busuanzi.pure.mini.js"></script>
+    <script src="<%- theme.static_prefix.busuanzi %>busuanzi.pure.mini.js" async></script>
 <% } %>

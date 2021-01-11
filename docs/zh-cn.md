@@ -24,6 +24,8 @@
     - [代码高亮](#代码高亮)
 - [进阶玩法](#进阶玩法)
     - [图标](#图标)
+    - [Tag 插件](#tag-插件)
+        - [a](a)
 
 ## 下载与安装
 
@@ -302,6 +304,37 @@ post:
 主题内置 FontAwesome 图标，你可以直接使用 HTML 引入。
 
 所有的图标列表请参考 [FontAwesome 官网](https://fontawesome.com/icons?d=gallery)。
+
+### Tag 插件
+
+在文章的 Markdown 中加入以下的代码来使用便签：
+
+```markdown
+{% note success %}
+<div class="title">标题（可选）</div>
+此处可以使用文字或者 **Markdown**
+{% endnote %}
+```
+
+也可以使用 HTML：
+
+```html
+<div class="note note-success">
+Hello!
+</div>
+```
+
+注：示例中的 `success` 是可以被替换为其他便签，以下是所有便签：
+
+- [default](https://miracle-demo.now.sh/2021/01/11/note/#default) - 默认的样式。
+- [success](https://miracle-demo.now.sh/2021/01/11/note/#success) - 一般展示成功信息等。
+- [danger](https://miracle-demo.now.sh/2021/01/11/note/#danger) - 一般展示错误或危险警告等。
+- [warning](https://miracle-demo.now.sh/2021/01/11/note/#warning) - 一般展示警告等。
+- [info](https://miracle-demo.now.sh/2021/01/11/note/#info) - 一般展示信息等。
+
+> 使用时 `{% note %}` 和 `{% endnote %}` 需单独一行，否则会出现问题。
+
+
 
 ---
 

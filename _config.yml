@@ -39,8 +39,8 @@ global:
     # 主题字体设置
     # Theme font settings
     font:
-        family: "'Noto Sans SC', sans-serif"
-        css: https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
+        family: # "'Noto Sans SC', sans-serif"
+        css: # https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
 
     # 每次生成页面后，检测主题是否为最新版本
     # Every time the page is generated, detect whether the theme is the latest version
@@ -72,7 +72,7 @@ global:
         cnzz:
 
         busuanzi:
-            enable: true
+            enable: false
             # 页面显示的文本，{} 是数字的占位符（必须包含)，下同
             # Displayed text, {} is a placeholder for numbers (must be included), the same below.
             pv_format: "总访问量 {} 次"
@@ -206,7 +206,7 @@ post:
     # 由 不蒜子 提供支持
     # Supported by busuanzi
     views:
-        enable: true
+        enable: false
         format: "共 {} 次阅读"
 
     # 评论插件
@@ -343,7 +343,6 @@ page404:
 #---------------------------
 
 static_prefix:
-
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
     busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/
