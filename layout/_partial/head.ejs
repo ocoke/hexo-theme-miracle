@@ -21,17 +21,17 @@ if (page.title) {
     <% if (theme.theme.darkmode){ %>
         <link rel="stylesheet" href="/css/themes/dark.css" media="(prefers-color-scheme: dark)">
     <% } %>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <% if(theme.global.font.css){ %>
         <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>
     <meta name="description" content="<%= config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
-
+    <% if (theme.global.font.family){ %>
     <style>
         body{
             font-family: <%- theme.global.font.family %>;
         }
     </style>
+    <% } %>
 </head>

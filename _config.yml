@@ -346,7 +346,6 @@ static_prefix:
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
     busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/
-    md5: https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
     waline: https://cdn.jsdelivr.net/npm/@waline/client@0.9.0/dist/
