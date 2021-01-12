@@ -119,29 +119,6 @@ p{
 .display-inline{
     display inline!important
 }
-    .toc-btn{
-        border-radius: 50px;
-        padding: 3px;
-        position: fixed;
-        opacity: 1;
-        height: 30px
-        padding: 3px;
-        display: flex;
-        right 10px
-        text-align: center;
-        width: 30px
-        overflow: hidden;
-        z-index: 9999;
-        line-height: 2.5;
-        background-color: var(--post-bkg-color)
-        color: var(--second-text-color)
-        justify-content: center;
-    }
-    .toc-btn i{
-        position: relative;
-        top: 50%;
-        transform: translateY(-20%);
-    }
     .post-toc{
         width: 40vw;
     }
@@ -346,3 +323,50 @@ p{
     font-size: 1rem
 }
 
+
+// .toc-btn{
+//         border-radius: 50px;
+//         padding: 3px;
+//         position: fixed;
+//         opacity: 1;
+//         height: 30px
+//         padding: 3px;
+//         display: flex;
+//         right 10px
+//         text-align: center;
+//         width: 30px
+//         overflow: hidden;
+//         z-index: 9999;
+//         line-height: 2.5;
+//         background-color: var(--post-bkg-color)
+//         color: var(--second-text-color)
+//         justify-content: center;
+// }
+// .toc-btn i{
+//         position: relative;
+//         top: 50%;
+//         transform: translateY(-20%);
+// }
+.p-btn{
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    contain: layout;
+}
+.toc-btn,.click-btn{
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    align-items: center;
+    margin-top: .5rem;
+    font-size: .75rem;
+    background-color: var(--sec-bkg);
+    display: block;
+    padding: 0.9rem;
+    box-shadow: 0 0.3rem 0.6rem rgba(48,55,66,.15);
+    border: none;
+    border-radius: 0.5rem;
+    line-height: 1;
+    color: var(--first-text-color)
+}

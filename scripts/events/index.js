@@ -4,6 +4,7 @@
 
 hexo.on('generateBefore', () => {
     require('./lib/hello')(hexo);
+    require('./lib/footnote')(hexo);
 });
 
 hexo.on('generateAfter', () => {

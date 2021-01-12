@@ -23,6 +23,13 @@
     <% } %>
     <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/hifun-team/hexo-theme-miracle" target="_blank">Miracle</a></p>
 </footer>
+<div class="p-btn">
+    <% if(is_post()){ %>
+        <a class="toc-btn" id="toc-btn"><i class="fas fa-indent"></i></a>
+    <% } %>
+    <a href="#" class="click-btn"><i class="fas fa-chevron-up"></i></a>
+</div>
+
 <!-- SCRIPTS -->
 <%- partial('_partial/scripts.ejs') %>
 
