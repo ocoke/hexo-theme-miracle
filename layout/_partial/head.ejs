@@ -27,11 +27,5 @@ if (page.title) {
     <meta name="description" content="<%= config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
-    <% if (theme.global.font.family){ %>
-    <style>
-        body{
-            font-family: <%- theme.global.font.family %>;
-        }
-    </style>
-    <% } %>
+    <%- partial('_partial/style.ejs') %>
 </head>

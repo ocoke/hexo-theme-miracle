@@ -3,7 +3,7 @@ hexo.extend.filter.register(
     'after_post_render',
     function (data) {
         const theme = hexo.theme.config;
-        if (theme.lazyload.enable && theme.post.fancybox.enable){
+        if (theme.post.lazyload.enable && theme.post.fancybox.enable){
             // 如果 FancyBox 与 Lazyload 同时开启
             
             data.content = data.content.replace(
@@ -20,7 +20,7 @@ hexo.extend.filter.register(
                     `
                 }
             )
-        }else if (theme.lazyload.enable){
+        }else if (theme.post.lazyload.enable){
             // 仅开启 Lazyload
             data.content = data.content.replace(
                 // Match 'img' tags width the src attribute.
