@@ -1,7 +1,10 @@
 <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
-<!-- 引入 JS 文件 -->
 <%- partial('_partial/plugins/analytics.ejs') %>
 <%- partial('_partial/page-scripts.ejs') %>
+<% if (theme.post.fancybox.enable){ %>
+    <link href="<%- theme.static_prefix.fancybox %>jquery.fancybox.min.css" rel="stylesheet">
+    <script src="<%- theme.static_prefix.fancybox %>jquery.fancybox.min.js"></script>
+<% } %>
 <% if (theme.search.enable){ %>
     <%- js('/js/search.js') %>
     <%- partial('_partial/plugins/search.ejs') %>

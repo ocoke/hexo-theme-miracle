@@ -228,6 +228,10 @@ post:
     footnote:
         enable: true
         header: ''
+    
+    fancybox:
+        enable: true
+
 #---------------------------
 # 评论插件
 # Comment plugins
@@ -353,3 +357,4 @@ static_prefix:
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
     waline: https://cdn.jsdelivr.net/npm/@waline/client@0.9.0/dist/
+    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
