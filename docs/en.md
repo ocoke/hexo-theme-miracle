@@ -15,7 +15,7 @@
     - [Release](#release-1)
     - [Git](#git)
 - [Basic configuration](#basic-configuration)
-    - [Blogger Information](#blogger-Information)
+    - [Blogger Information](#blogger-information)
     - [Custom font](#custom-font)
     - [Navigation bar menu](#navigation-bar-menu)
     - [Article word count & duration estimation](#article-word-count--duration-estimation)
