@@ -31,11 +31,6 @@ global:
     # Title separator in browser tab, eg: article - site
     title_join_string: " - "
 
-    # 页脚文字（支持 HTML 格式）
-    # Footer text (supports HTML)
-    footer:
-        cotent: ''
-    
     # 主题字体设置
     # Theme font settings
     font:
@@ -100,8 +95,34 @@ search:
     # If true, search will scan the post content.
     content: true
 
+# 中国大陆服务器的备案信息
+# For Chinese mainland website policy, other areas keep disable.
+beian:
+    enable: false
+    # ICP 证号
+    icp_text: 京ICP证 123456 号
+    # 公安备案号，不填则只显示 ICP
+    police_text: 京公网安备 12345678 号
+    # 公安备案的编号，用于链接跳转查询
+    police_code: 12345678
+    # 公安备案的图片. 为空时不显示备案图片
+    police_icon: /img/police_beian.png
 
-
+# 自定义
+# Custom
+custom:
+    # 页面头部 HTML
+    # Page header HTML
+    header_html: ''
+    # 页面底部 HTML
+    # Page footer HTML
+    footer_html: ''
+    # 页面自定义 JS（底部引入）
+    # Page custom JS (introduced at the bottom)
+    js: 
+    # 页面自定义 CSS
+    # Page custom CSS
+    css: 
 
 #---------------------------
 # 主题
@@ -259,8 +280,6 @@ comment:
     type: gitalk
 
     # Gitalk
-    # 基于 GitHub Issues
-    # Based on GitHub Issues
     # See: https://github.com/gitalk/gitalk#options
 
     gitalk:
@@ -276,6 +295,8 @@ comment:
         distractionFreeMode: false
         createIssueManually: true
 
+    # Valine
+    # See: https://valine.js.org/configuration.html
     valine:
         appid: 
         appkey: 
@@ -292,6 +313,8 @@ comment:
         enableQQ: false
         requiredFields: ['nick','mail']
 
+    # Waline
+    # See: https://waline.js.org/client/basic.html
     waline:
         serverURL: 
         placeholder:

@@ -1,6 +1,5 @@
 <footer class="text-center">
-    
-    <p><%- theme.global.footer.content %></p>
+    <%- theme.custom.footer_html %>
     <% if(theme.global.web_analytics.busuanzi.enable){ %>
         <% var pv_texts = theme.global.web_analytics.busuanzi.pv_format.split('{}') %>
         <% var uv_texts = theme.global.web_analytics.busuanzi.uv_format.split('{}') %>
@@ -21,7 +20,40 @@
               </span>
           <% } %>
     <% } %>
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/hifun-team/hexo-theme-miracle" target="_blank">Miracle</a></p>
+    <% if (theme.beian.enable){ %>
+        <span>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+                <%- theme.beian.icp_text %>
+            </a>
+        </span>
+        <% if(theme.beian.police_text) { %>
+            <% if(theme.beian.police_code) { %>
+              <span>
+                <a
+                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%- theme.beian.police_code %>"
+                  rel="nofollow noopener"
+                  class="beian-police"
+                  target="_blank"
+                >
+                  <% if(theme.beian.police_icon) { %>
+                    <span style="visibility: hidden; width: 0">|</span>
+                    <img class="police-icon" src="<%- url_for(theme.beian.police_icon) %>" alt="police-icon"/>
+                  <% } %>
+                  <span><%- theme.beian.police_text %></span>
+                </a>
+              </span>
+            <% } else { %>
+              <span class="beian-police">
+                <% if(theme.beian.police_icon) { %>
+                  <span style="visibility: hidden; width: 0">|</span>
+                  <img class="police-icon" src="<%- url_for(theme.beian.police_icon) %>" alt="police-icon"/>
+                <% } %>
+                <span class="beian-police"><%- theme.beian.police_text %></span>
+              </span>
+            <% } %>
+          <% } %>
+    <% } %>
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme is <a href="https://github.com/hifun-team/hexo-theme-miracle" target="_blank">Miracle</a></p>
 </footer>
 <div class="p-btn">
     <% if(is_post()){ %>
@@ -31,5 +63,8 @@
 </div>
 
 <!-- SCRIPTS -->
-<%- partial('_partial/scripts.ejs') %>
 
+<%- partial('_partial/scripts.ejs') %>
+<% if (theme.custom.js){ %>
+  <%- js(theme.custom.js) %>
+<% } %>

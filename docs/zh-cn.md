@@ -25,6 +25,7 @@
 - [进阶玩法](#进阶玩法)
     - [图标](#图标)
     - [Tag 插件](#tag-插件)
+    - [自定义](#自定义)
 
 ## 下载与安装
 
@@ -199,7 +200,7 @@ comment:
     type: gitalk # valine / waline
 ```
 
-最后，根据选择的评论系统与官方文档在下方逐一配置。
+最后，根据选择的评论系统与评论的官方文档在下方逐一配置。
 
 > Tips: 仅需要配置您选择的评论系统即可。
 
@@ -334,6 +335,66 @@ Hello!
 > 使用时 `{% note %}` 和 `{% endnote %}` 需单独一行，否则会出现问题。
 
 
+### 自定义
+
+#### HTML
+
+您可以自定义页面头部和底部的 HTML 代码。
+
+```yaml
+custom:
+    # 页面头部 HTML
+    # Page header HTML
+    header_html: ''
+    # 页面底部 HTML
+    # Page footer HTML
+    footer_html: ''
+```
+
+> 页面底部 HTML 可以使用 `p` 或 `span` 在页面底部输出文字。
+
+#### JavaScript
+
+您可以自定义引入的 JavaScript 文件。
+
+单文件引入：
+
+```yaml
+custom:
+    js: '/path/to/your/file.js'
+```
+
+多文件引入：
+
+```yaml
+custom:
+    js: 
+        - '/path/to/your/file/1.js'
+        - '/path/to/your/file/2.js'
+```
+
+> 请注意！此处引入的 JavaScript 文件只会在页面的底部引入（ `</body>` 前）。<br/>
+> 如您需要在页面的头部引入，请自定义 HTML。
+
+#### CSS
+
+您可以自定义引入的样式表文件。
+
+单文件引入：
+
+```yaml
+custom:
+    css: '/path/to/your/file.css'
+```
+
+多文件引入：
+
+```yaml
+custom:
+    css: 
+        - '/path/to/your/file/1.css'
+        - '/path/to/your/file/2.css'
+```
 
 ---
 
