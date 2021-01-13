@@ -340,6 +340,13 @@ tag:
 #---------------------------
 links:
     enable: true
+    items:
+        - {
+            title: "Miracle Docs",
+            intro: "主题文档",
+            link: "https://miracle-docs.now.sh/",
+            # image: "/img/favicon.png"
+        }
 
 #---------------------------
 # 404页

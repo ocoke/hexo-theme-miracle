@@ -3,14 +3,19 @@ page.layout = "links"
 page.title = theme.links.title || __('links.title')
 page.subtitle = theme.links.subtitle || __('links.subtitle')
 %>
+<div id="post-meta-m">
+  <div class="post-meta" id="post-meta">
+    <h3><%= page.title %></h3>
+  </div>
+</div>
 <div class="links-page-m">
     <div class="links-page">
     <% for(const each of theme.links.items || []) { %>
       <% if (!each.title || !each.link) continue %>
-      <div class="card col-lg-4 col-md-6 col-sm-12">
-        <a href="<%= url_for(each.link) %>" class="card-body hover-with-bg" target="_blank" rel="noopener">
-          <div class="card-content">
-            <% if (each.image) { %>
+      <div class="links-card">
+        <a href="<%= url_for(each.link) %>" class="links-card-body" target="_blank" rel="noopener">
+          <div class="links-card-content">
+            <% if (each.image){ %>
               <div class="link-avatar my-auto">
                 <img src="<%= each.image %>" alt="<%= each.title %>" />
               </div>
