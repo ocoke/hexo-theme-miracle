@@ -17,6 +17,9 @@
 				<% if (theme.search.enable){ %>
 				<li><a href="javascript:;" id="search-btn"><i class="fas fa-search meta-icon"></i></a></li>
 				<% } %>
+				<% if (theme.theme.darkmode){ %>
+				<li><a href="javascript:;" onclick="toggleDark()"><i class="fas fa-sun meta-icon" id="toggle-dark-icon"></i></a></li>
+				<% } %>
 			</ul>
 		</div>
 	</div>

@@ -16,17 +16,23 @@ if (page.title) {
     <% if (theme.global.force_https) { %>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <% } %>
-    <%- css('/css/main.css') %>
+    
     <link rel="stylesheet" href="<%- theme.static_prefix.fontawesome %>css/all.min.css">
-    <% if (theme.theme.darkmode){ %>
-        <link rel="stylesheet" href="/css/themes/dark.css" media="(prefers-color-scheme: dark)">
-    <% } %>
+    
     <% if(theme.global.font.css){ %>
         <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>
     <meta name="description" content="<%= config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
+    <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
+    
+    <script src="/js/darkmode.js"></script>
+    
+    <%- css('/css/main.css') %>
+    <% if (theme.theme.darkmode){ %>
+    <link rel="stylesheet" href="/css/themes/dark.css">
+    <% } %>
     <%- partial('_partial/style.ejs') %>
     <%- theme.custom.header_html %>
 </head>
