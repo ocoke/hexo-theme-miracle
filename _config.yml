@@ -393,6 +393,7 @@ page404:
 #---------------------------
 
 static_prefix:
+    fontawesome: https://cdn.jsdelivr.net/gh/hifun-team/hexo-theme-miracle@latest/source/icon/
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
     tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
     busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/

@@ -17,7 +17,7 @@ if (page.title) {
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <% } %>
     <%- css('/css/main.css') %>
-    <%- css('/icon/css/all.min.css') %>
+    <link rel="stylesheet" href="<%- theme.static_prefix.fontawesome %>css/all.min.css">
     <% if (theme.theme.darkmode){ %>
         <link rel="stylesheet" href="/css/themes/dark.css" media="(prefers-color-scheme: dark)">
     <% } %>
