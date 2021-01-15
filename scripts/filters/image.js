@@ -12,10 +12,9 @@ hexo.extend.filter.register(
                 function (match, attrBegin, src, attrEnd) {
                     // Exit if the src doesn't exists.
                     if (!src) return match;
-
                     return `
                     <a data-fancybox="gallery" href="${src}">
-                        <img ${attrBegin} class="lazyload" src="/img/loading.svg" data-src="${src}" ${attrEnd} >
+                        <img ${attrBegin} class="lazyload-img" src="${src}" srcset="/img/loading.svg" data-srcset="${src}" ${attrEnd} >
                     </a>
                     `
                 }
@@ -29,12 +28,7 @@ hexo.extend.filter.register(
                     // Exit if the src doesn't exists.
                     if (!src) return match;
 
-                    return `<img ${attrBegin}
-                        class="lazyload"
-                        src="/img/loading.svg"
-                        data-src="${src}"
-                        ${attrEnd}
-                    >`
+                    return `<img ${attrBegin} class="lazyload-img" src="${src}" srcset="/img/loading.svg" data-srcset="${src}" ${attrEnd} >`
                 }
             )
         }else if (theme.post.fancybox.enable){
