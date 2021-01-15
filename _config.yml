@@ -239,12 +239,30 @@ post:
     # Article Directory
     toc:
         enable: true
-        # 目录会选择这些节点作为标题
-        # TOC will select these nodes as headings
-        headingSelector: 'h1, h2, h3, h4, h5, h6'
-        # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
-        # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
-        collapseDepth: 0
+
+        # 指定的插件，需要同时设置对应插件的必要参数
+        # The specified plugin needs to set the necessary parameters at the same time
+        # Options: tocbot | hexo
+        type: hexo
+
+        tocbot:
+            # 目录会选择这些节点作为标题
+            # TOC will select these nodes as headings
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
+            # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
+            # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
+            collapseDepth: 0
+        
+        hexo:
+            # 显示编号
+            # Displays list number
+            list_number: true
+            # 生成 TOC 的最大深度
+            # Maximum heading depth of generated toc
+            max_depth: 
+            # 生成 TOC 的最小深度
+            # Minimum heading depth of generated toc
+            min_depth: 
 
     # 脚注
     # Footnote

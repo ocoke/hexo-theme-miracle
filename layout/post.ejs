@@ -6,7 +6,11 @@ var banner_img = page.banner_img
     <%- partial('_partial/plugins/post-meta.ejs') %>
 </div>
 <div class="article-m">
-  <div class="post-toc"></div>
+  <div class="post-toc">
+    <% if (theme.post.toc.enable && theme.post.toc.type == "hexo" && page.toc !== false){ %>
+      <%- toc(page.content) %>
+    <% } %>
+  </div>
     <div id="article">
       <div id="post-content">
         <%- page.content %>

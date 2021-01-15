@@ -17,7 +17,14 @@
     <script src="/js/hljs.js"></script>  
     <script >hljs.initHighlightingOnLoad();</script>
 <% } %>
-<% if(is_post() && theme.post.toc.enable && page.toc !== false) { %>
+<% if (is_post() && theme.post.toc.enable && page.toc !== false){ %>
+    <script>
+        $(".toc-btn").click(function(){
+            $(".post-toc").toggleClass("display-inline");
+        });
+    </script>
+<% } %>
+<% if (is_post() && theme.post.toc.enable && theme.post.toc.type == "tocbot" && page.toc !== false) { %>
     <script src="<%- theme.static_prefix.tocbot %>tocbot.min.js"></script>
     <script>
         window.tocbot.init({
@@ -36,9 +43,6 @@
             collapsibleClass: 'tocbot-is-collapsible',
             collapseDepth: <%- theme.post.toc.collapseDepth %> || 0,
             scrollSmooth    : true
-        });
-        $(".toc-btn").click(function(){
-            $(".post-toc").toggleClass("display-inline");
         });
     </script>
 <% } %>
