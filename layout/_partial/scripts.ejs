@@ -47,6 +47,8 @@
         });
     </script>
 <% } %>
+
+<%- partial('_partial/plugins/mermaid.ejs') %>
 <% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>
     <script src="<%- theme.static_prefix.busuanzi %>busuanzi.pure.mini.js" async></script>
 <% } %>

@@ -25,6 +25,7 @@
 - [进阶玩法](#进阶玩法)
     - [图标](#图标)
     - [Tag 插件](#tag-插件)
+    - [Mermaid 流程图](#mermaid-流程图)
     - [自定义](#自定义)
 
 ## 下载与安装
@@ -334,6 +335,31 @@ Hello!
 
 > 使用时 `{% note %}` 和 `{% endnote %}` 需单独一行，否则会出现问题。
 
+### Mermaid 流程图
+
+首先，在配置文件中启用 Mermaid 流程图。
+
+```yaml
+post:
+    mermaid:
+        enable: true # 设为 True。
+```
+
+在文章的 Markdown 中加入以下的代码来使用 Mermaid 流程图：
+
+```markdown
+{% mermaid %}
+    text
+{% endmermaid %}
+```
+
+也可以使用 HTML：
+
+```html
+<div class="mermaid">
+    text
+</div>
+```
 
 ### 自定义
 

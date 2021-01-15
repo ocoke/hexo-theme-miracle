@@ -27,6 +27,7 @@
 - [Advanced](#advanced)
     - [icon](#icon)
     - [Tag plugin](#tag-plugin)
+    - [Mermaid flow chart](#mermaid-flow-chart)
     - [Custom](#custom)
 
 ## Download and install
@@ -332,6 +333,31 @@ Note: The `success` in the example can be replaced with other notes, the followi
 
 > When using, `{% note %}` and `{% endnote %}` must be on a separate line, otherwise problems will occur.
 
+### Mermaid flow chart
+
+First, enable Mermaid flowcharts in the configuration file.
+
+```yaml
+post:
+     mermaid:
+         enable: true # Set to True.
+```
+
+Add the following code to the Markdown of the article to use the Mermaid flow chart:
+
+```markdown
+{% mermaid %}
+    text
+{% endmermaid %}
+```
+
+You can also use HTML:
+
+```html
+<div class="mermaid">
+    text
+</div>
+```
 
 ### Custom
 
