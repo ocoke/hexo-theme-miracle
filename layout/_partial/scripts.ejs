@@ -33,7 +33,7 @@
             // Where to grab the headings to build the table of contents.
             contentSelector: '#post-content',
             // Which headings to grab inside of the contentSelector element.
-            headingSelector: '<%- theme.post.toc.headingSelector %>' || 'h1, h2, h3, h4, h5, h6',
+            headingSelector: '<%- theme.post.toc.tocbot.headingSelector %>' || 'h1, h2, h3, h4, h5, h6',
             // For headings inside relative or absolute positioned containers within content.
             hasInnerContainers: true,
             linkClass: 'tocbot-link',
@@ -41,7 +41,7 @@
             listClass: 'tocbot-list',
             isCollapsedClass: 'tocbot-is-collapsed',
             collapsibleClass: 'tocbot-is-collapsible',
-            collapseDepth: <%- theme.post.toc.collapseDepth %> || 0,
+            collapseDepth: <%- theme.post.toc.tocbot.collapseDepth %> || 0,
             scrollSmooth    : true
         });
     </script>
