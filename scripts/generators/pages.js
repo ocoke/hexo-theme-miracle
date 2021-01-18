@@ -50,3 +50,14 @@ hexo.extend.generator.register('_links', function(locals) {
     };
   }
 });
+
+// generate search page
+hexo.extend.generator.register('_search', function(locals) {
+  if (this.theme.config.search.enable !== false) {
+    return {
+      path  : 'search/index.html',
+      data  : locals.theme,
+      layout: 'search'
+    };
+  }
+});

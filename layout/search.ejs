@@ -1,12 +1,9 @@
-<div class="modal fade display-none" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
+<div class="modal fade" id="modalSearch">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" id="searchDocument">
     <div class="modal-content">
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold"><%= __('search.title') %></h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="fas fa-times meta-icon" aria-hidden="true"></span>
-        </button>
+        
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
@@ -21,3 +18,11 @@
     </div>
   </div>
 </div>
+<script src="/js/search.min.js"></script>
+<script>
+  (function () {
+      var path = "<%- url_for(theme.search.path) || '/search.xml' %>";
+      var inputArea = $("#local-search-input");
+      searchFunc(path, 'local-search-input', 'local-search-result');
+  })();
+</script>
