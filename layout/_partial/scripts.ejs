@@ -6,7 +6,7 @@
     <script src="<%- theme.static_prefix.fancybox %>jquery.fancybox.min.js"></script>
 <% } %>
 <% if (theme.search.enable){ %>
-    <%- js('/js/search.js') %>
+    <script src="/js/search.min.js"></script>
     <%- partial('_partial/plugins/search.ejs') %>
 <% } %>
 <% if (theme.post.lazyload.enable && (is_page() || is_post())){ %>
