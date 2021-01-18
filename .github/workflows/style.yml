@@ -29,7 +29,7 @@ jobs:
 
       - name: Compress CSS
         run: |
-          stylus -w source/css/main.styl -o source/css/main.min.css --compress
+          stylus -w source/css/main.styl -o source/css/main.min.css
       
       - name: Push to repository
         run: |
@@ -40,4 +40,3 @@ jobs:
           git commit -m ":art: 压缩 CSS 代码"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push origin master
-          
