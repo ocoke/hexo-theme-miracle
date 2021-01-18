@@ -37,6 +37,12 @@ var banner_img = page.banner_img
                   <% } %>
             </div>
           <% } %>
+          <% if (theme.post.copyright.enable){ %>
+          <br/>
+          <div class="note note-warning">
+            <%- theme.post.copyright.content %>
+          </div>
+          <% } %>
     </div>
 </div>
 <% if(page.comment || theme.post.comment) { %>
