@@ -22,6 +22,7 @@
 - [x] Responsive / adaptive design
 - [x] Article TOC
 - [x] Optimized reading experience
+- [x] Mermaid
 
 ## Links
 
