@@ -42,3 +42,7 @@ page404:
 links:
   title: 友链
   subtitle: 友情链接
+
+nojs:
+  title: 无法使用 JavaScript
+  text: 此网站依赖 JavaScript 的使用，如不使用 JavaScript，您将无法正常访问该网站。

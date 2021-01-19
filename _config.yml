@@ -133,6 +133,10 @@ theme:
     # Dark mode
     darkmode: true
 
+    # 加载动画
+    # Loading
+    loading: true
+
 #---------------------------
 # 主页
 # Homepage

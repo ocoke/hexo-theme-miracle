@@ -23,3 +23,12 @@
     });
     console.log('\n' + ' %c Powered by Hexo Theme Miracle ' + ' %c https://github.com/hifun-team/hexo-theme-miracle ' + '\n' + '\n', 'color: #fff; background: #4F9BFA; padding:5px 0;', 'background: #FFF; padding:5px 0;');
 </script>
+<% if (theme.theme.loading){ %>
+<script>
+        document.onreadystatechange = function(){
+            if(document.readyState == "complete"){
+                setTimeout('$(".cloading").addClass("display-none")',1)
+            }
+        }
+</script>
+<% } %>

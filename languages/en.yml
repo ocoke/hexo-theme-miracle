@@ -42,3 +42,7 @@ page404:
 links:
   title: Links
   subtitle: Links
+
+nojs:
+  title: JavaScript cannot be used
+  text: This website relies on the use of JavaScript. If you do not use JavaScript, you will not be able to access the website normally.
