@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
-<!-- 引入页面头部文件 -->
 <%- partial('_partial/head') %>
-
     <body>
         <% if (theme.theme.loading){ %>
             <div class="cloading">
@@ -20,7 +18,7 @@
                 <div class="loading">
                     <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                         <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-                     </svg>
+                    </svg>
                 </div>
             </div>
         <% } %>
@@ -32,8 +30,6 @@
             <%- body %>
         </div>
         </div>
-        <!-- 引入页脚文件 -->
         <%- partial('_partial/foot') %>
     </body>
-
 </html>
