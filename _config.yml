@@ -315,8 +315,8 @@ comment:
 
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
-    # Options: gitalk | valine | waline
-    type: gitalk
+    # Options: gitalk | valine | waline | twikoo
+    type: twikoo
 
     # Gitalk
     # See: https://github.com/gitalk/gitalk#options
@@ -357,7 +357,7 @@ comment:
     waline:
         serverURL: 
         placeholder:
-        path:
+        path: window.location.pathname
         avatar:
         meta: ['nick','mail','link']
         pageSize: 10
@@ -366,6 +366,12 @@ comment:
         avatarForce: false
         requiredFields: ['nick','mail']
 
+    # Twikoo
+    # See: https://twikoo.js.org/quick-start.html#%E5%89%8D%E7%AB%AF%E9%83%A8%E7%BD%B2
+    twikoo:
+        envid: 
+        region: 
+        path: window.location.pathname
 
 #---------------------------
 # 分类页
@@ -442,3 +448,4 @@ static_prefix:
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
     hljs: https://cdn.jsdelivr.net/gh/hifun-team/hexo-theme-miracle@latest/source/js/
     mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/
+    twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.0.0/dist/
