@@ -197,11 +197,11 @@ post:
 
 And select the corresponding comment program below.
 
-> Currently supports `Gitalk` / `Valine` / `Waline` as a comment system.
+> Currently supports `Gitalk` / `Valine` / `Waline` / `Twikoo` as a comment system.
 
 ```yaml
 comment:
-    type: gitalk # valine / waline
+    type: gitalk # valine / waline / twikoo
 ```
 
 Finally, configure one by one below according to the selected comment system and official documentation of comments.

@@ -194,11 +194,11 @@ post:
 
 并在下方选择对应的评论程序。
 
-> 目前支持 `Gitalk` / `Valine` / `Waline` 作为评论系统。
+> 目前支持 `Gitalk` / `Valine` / `Waline` / `Twikoo` 作为评论系统。
 
 ```yaml
 comment:
-    type: gitalk # valine / waline
+    type: gitalk # valine / waline / twikoo
 ```
 
 最后，根据选择的评论系统与评论的官方文档在下方逐一配置。
