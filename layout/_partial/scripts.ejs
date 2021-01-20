@@ -19,7 +19,11 @@
 <% if (is_post() && theme.post.toc.enable && page.toc !== false){ %>
     <script>
         $(".toc-btn").click(function(){
-            $(".post-toc").toggleClass("display-inline");
+            if ($('.post-toc').html()){
+                $(".post-toc").toggleClass("display-inline");
+            }else{
+                alert("<%- theme.post.toc.nothing %>");
+            }
         });
     </script>
 <% } %>

@@ -244,6 +244,9 @@ post:
     toc:
         enable: true
 
+        # 在没有目录时提示的文本
+        # Text to prompt when there is no TOC
+        nothing: 本文没有目录哦~
         # 指定的插件，需要同时设置对应插件的必要参数
         # The specified plugin needs to set the necessary parameters at the same time
         # Options: tocbot | hexo
