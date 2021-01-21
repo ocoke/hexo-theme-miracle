@@ -4,7 +4,7 @@
 
 const note = (args, content) => {
   if (!args || !args[0]) {
-    args = ['default'];
+    args = ['No Title'];
   }
   return `<div class="collapse">
             <div class="header">
