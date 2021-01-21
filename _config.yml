@@ -135,7 +135,7 @@ theme:
 
     # 加载动画
     # Loading
-    loading: false
+    loading: true
 
 #---------------------------
 # 主页

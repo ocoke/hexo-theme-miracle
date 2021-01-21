@@ -306,6 +306,8 @@ Please refer to [FontAwesome official website](https://fontawesome.com/icons?d=g
 
 ### Tag plugin
 
+#### Note
+
 Add the following code in the Markdown of the article to use the sticky notes:
 
 ```markdown
@@ -332,6 +334,36 @@ Note: The `success` in the example can be replaced with other notes, the followi
 - [info](https://miracle-demo.now.sh/2021/01/11/note/#info) - General display information, etc.
 
 > When using, `{% note %}` and `{% endnote %}` must be on a separate line, otherwise problems will occur.
+
+#### Card
+
+Add the following code in the Markdown of the article to use the card:
+
+```markdown
+{% card Title %}
+
+You can use text or **Markdown** here
+
+{% endcard %}
+```
+
+You can also use HTML:
+
+```html
+<div class="collapse">
+<div class="header">
+<span class="title">Title</span>
+<span class="icon fas fa-chevron-down"></span>
+</div>
+<div class="content">
+content...
+</div>
+</div>
+```
+
+> When using, `{% note %}` and `{% endnote %}` must be on a separate line, otherwise problems will occur.
+
+> When you click any card, all cards will be expanded.
 
 ### Mermaid flow chart
 

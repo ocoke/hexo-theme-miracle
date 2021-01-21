@@ -254,6 +254,7 @@ a:hover{
     text-overflow: ellipsis;
     overflow: hidden;
 }
+/*
 .cloading{
     height 100%
     width: 100%
@@ -322,4 +323,41 @@ a:hover{
   }
 }
 }
+*/
+.c-loading{
+    // height 100%
+    // width: 100%
+    z-index: 9999
+    // background-color:  #424952;
+    position fixed
+    top 90px
+    right 15px
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #miracle-comments { text-align: left; } #miracle-comments p{ font-size: 1rem; } #article ul li{ font-size: 1.1rem; }
+
+.collapse{
+    background-color: var(--page-bkg-color)
+    padding: 15px
+        box-shadow: 2px 2px 6px var(--shadow-color);
+}
+.collapse .content{
+    display: none;
+    margin-top: 20px;
+}
+.collapse .header{
+    cursor pointer
+}
+.collapse .header .icon{
+    font-size: 0.9rem
+    float right
+    margin-top: 3px;
+}
+.collapse .header .up {
+    transform:rotate(180deg);
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+}

@@ -4,22 +4,29 @@
     $('.btnImg').click(function() {
         if (toggle) {
             toggle = false
+            $(".btnImg").removeClass("fa-bars");
+            $(".btnImg").addClass("fa-times");
         } else {
             toggle = true;
+            $(".btnImg").removeClass("fa-times");
+            $(".btnImg").addClass("fa-bars");
         }
         $(".show").slideToggle(300);
-    })
-     
-    // 窗口大小发生改变
-    $(window).resize(function() {
-        // 获取窗口宽度
-        var windSize = $(window).width();
-     
-        if (windSize > 885) {
-            $(".show").slideDown(0);
+    });
+    var cToggle = true;
+    // 导航栏按钮
+    $('.collapse .header').click(function() {
+        if (cToggle) {
+            cToggle = false
+            $(".collapse .header .icon").removeClass("fas fa-chevron-down");
+            $(".collapse .header .icon").addClass("fas fa-chevron-up");
+            // $(".collapse .header .icon").addClass("up");
         } else {
-            $(".show").slideUp(0);
+          cToggle = true;
+          $(".collapse .header .icon").removeClass("fas fa-chevron-up");
+          $(".collapse .header .icon").addClass("fas fa-chevron-down");
         }
+        $(".collapse .content").slideToggle(250);
     });
     console.log('\n' + ' %c Powered by Hexo Theme Miracle ' + ' %c https://github.com/hifun-team/hexo-theme-miracle ' + '\n' + '\n', 'color: #fff; background: #4F9BFA; padding:5px 0;', 'background: #FFF; padding:5px 0;');
 </script>
@@ -27,7 +34,7 @@
 <script>
         document.onreadystatechange = function(){
             if(document.readyState == "complete"){
-                setTimeout('$(".cloading").addClass("display-none")',1)
+              $(".c-loading").addClass("display-none")
             }
         }
 </script>

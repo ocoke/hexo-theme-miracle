@@ -308,6 +308,8 @@ post:
 
 ### Tag 插件
 
+#### 便签
+
 在文章的 Markdown 中加入以下的代码来使用便签：
 
 ```markdown
@@ -334,6 +336,37 @@ Hello!
 - [info](https://miracle-demo.now.sh/2021/01/11/note/#info) - 一般展示信息等。
 
 > 使用时 `{% note %}` 和 `{% endnote %}` 需单独一行，否则会出现问题。
+
+
+#### 卡片
+
+在文章的 Markdown 中加入以下的代码来使用折叠卡片：
+
+```markdown
+{% card 折叠标题 %}
+
+此处可以使用文字或者 **Markdown**
+
+{% endcard %}
+```
+
+也可以使用 HTML：
+
+```html
+<div class="collapse">
+<div class="header">
+<span class="title">Title</span>
+<span class="icon fas fa-chevron-down"></span>
+</div>
+<div class="content">
+content...
+</div>
+</div>
+```
+
+> 使用时 `{% card %}` 和 `{% endcard %}` 需单独一行，否则会出现问题。
+
+> 当您点击任意一个卡片时，所有的卡片都会被展开。
 
 ### Mermaid 流程图
 
