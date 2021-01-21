@@ -135,7 +135,7 @@ theme:
 
     # 加载动画
     # Loading
-    loading: true
+    loading: false
 
 #---------------------------
 # 主页
@@ -150,8 +150,8 @@ index:
     # 社交
     # Social
     social:
-        - { name: "GitHub", icon: "fab fa-github" , link: "https://github.com/hifun-team/hexo-theme-miracle" }
-        - { name: "Gitee"  , link: "https://gitee.com/hifun-team/hexo-theme-miracle" }
+        #- { name: "GitHub", icon: "fab fa-github" , link: "https://github.com/hifun-team/hexo-theme-miracle" }
+        #- { name: "Gitee"  , link: "https://gitee.com/hifun-team/hexo-theme-miracle" }
 
     # 文章通过 `sticky` 排序后，在首页文章标题前显示图标
     # If the posts are sorted by `sticky`, an icon is displayed in front of the post title
