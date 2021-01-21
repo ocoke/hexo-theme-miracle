@@ -13,14 +13,22 @@
         }
         $(".show").slideToggle(300);
     });
+    // 窗口大小发生改变
+    $(window).resize(function() {
+        // 获取窗口宽度
+        var windSize = $(window).width();
+
+        if (windSize > 885) {
+            $(".show").slideDown(0);
+        }
+    });
+    
     var cToggle = true;
-    // 导航栏按钮
     $('.collapse .header').click(function() {
         if (cToggle) {
             cToggle = false
             $(".collapse .header .icon").removeClass("fas fa-chevron-down");
             $(".collapse .header .icon").addClass("fas fa-chevron-up");
-            // $(".collapse .header .icon").addClass("up");
         } else {
           cToggle = true;
           $(".collapse .header .icon").removeClass("fas fa-chevron-up");
