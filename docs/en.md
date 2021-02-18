@@ -1,6 +1,4 @@
----
-title: English
----
+# Wiki (English)
 
 `Hexo Theme Miracle` is a simple single-column [Hexo](https://hexo.io) theme.
 
