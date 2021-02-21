@@ -111,5 +111,9 @@ darkModeTogglebuttonElement.addEventListener('click', () => {
   // 当用户点击「开关」时，获得新的显示模式、写入 localStorage、并在页面上生效
   applyCustomDarkModeSettings(toggleCustomDarkMode());
 });
+
+document.getElementById("btn-dropdown").addEventListener('click', () => {
+  $("#dropdown-menus").toggleClass("display-inline");
+});
 </script>
 <% } %>
