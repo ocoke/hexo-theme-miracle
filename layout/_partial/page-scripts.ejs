@@ -1,28 +1,4 @@
 <script>
-    var toggle = true;
-    // 导航栏按钮
-    $('.btnImg').click(function() {
-        if (toggle) {
-            toggle = false
-            $(".btnImg").removeClass("fa-bars");
-            $(".btnImg").addClass("fa-times");
-        } else {
-            toggle = true;
-            $(".btnImg").removeClass("fa-times");
-            $(".btnImg").addClass("fa-bars");
-        }
-        $(".show").slideToggle(300);
-    });
-    // 窗口大小发生改变
-    $(window).resize(function() {
-        // 获取窗口宽度
-        var windSize = $(window).width();
-
-        if (windSize > 885) {
-            $(".show").slideDown(0);
-        }
-    });
-    
     var cToggle = true;
     $('.collapse .header').click(function() {
         if (cToggle) {
@@ -53,7 +29,7 @@ const rootElement = document.documentElement; // <html>
 const darkModeStorageKey = 'user-color-scheme'; // 作为 localStorage 的 key
 const darkModeMediaQueryKey = '--color-mode';
 const rootElementDarkModeAttributeName = 'data-user-color-scheme';
-const darkModeTogglebuttonElement = document.getElementById("toggle-dark-icon");
+const darkModeTogglebuttonElement = document.getElementById("btn-toggle-dark");
 const setLS = (k, v) => {
   try {
     localStorage.setItem(k, v);
