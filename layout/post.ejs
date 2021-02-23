@@ -8,7 +8,7 @@ var banner_img = page.banner_img
 <div class="article-m">
   <div class="post-toc"><% if (theme.post.toc.enable && theme.post.toc.type == "hexo" && page.toc !== false){ %><%- toc(page.content) %><% } %></div>
     <div id="article">
-      <div id="post-content">
+      <div id="post-content" class="markdown-body">
         <%- page.content %>
       </div>
           <% if((page.categories && page.categories.length > 0) || (page.tags && page.tags.length > 0)){ %>
