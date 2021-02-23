@@ -10,29 +10,35 @@
 }
 
 .index-card{
+    border-radius:  0.5rem;
     margin: auto
     max-width 700px;
-    box-shadow: 2px 2px 6px var(--shadow-color);
+    box-shadow: var(--shadow)
     padding: 28px;
     margin-bottom: 38px;
     padding-top: 5px; 
+    background-color: var(--post-bkg-color)
 }
 
 .index-card{
     a{
-        color: var(--second-text-color);
-    }
-    a:hover{
-        color: var(--second-link-color);
+        color: var(--first-text-color);
     }
 }
+/*
 .index-card:hover{
     box-shadow: 2px 2px 6px var(--shadow-hover-color);
 }
+*/
 .post-card-main{
-    max-width: 920px;
+    max-width: 720px;
     position: relative;
     width: 100%;
+}
+@media (max-width 1120px){
+    .post-card-main{
+        max-width: 600px;
+    }
 }
 .post-card-center{
     width: 100%;

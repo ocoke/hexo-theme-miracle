@@ -36,7 +36,6 @@
           <a href="<%- post_url %>"><%= post.title %></a>
         </h3>
         <p class="index-excerpt">
-          <a href="<%- post_url %>">
             <% var excerpt = '' %>
             <% if(post.excerpt) { %>
               <% excerpt = strip_html(post.excerpt).substr(0, 200) %>
@@ -44,30 +43,19 @@
               <% excerpt = strip_html(post.content).substr(0, 200) %>
             <% } %>
             <%- excerpt %>
-          </a>
         </p>
         <div class="index-btm post-metas">
           <% if(theme.index.post_meta.date ) { %>
             
-              <i class="fa fa-calendar meta-icon"></i>
               <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
                 <%- date(post.date, config.date_format) %>
               </time>
             
           <% } %>
           <% if(theme.index.post_meta.category && post.categories.length > 0) { %>
-            &nbsp;|&nbsp;
-              <i class="fa fa-folder meta-icon"></i>
-              <% post.categories.each(function(cate){ %>
-                <a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
-              <% }) %>
             
-          <% } %>
-          <% if(theme.index.post_meta.tag && post.tags.length > 0) { %>
-            &nbsp;|&nbsp;
-              <i class="fa fa-tags meta-icon"></i>
-              <% post.tags.each(function(tag){ %>
-                <a href="<%= url_for(tag.path) %>"><%- tag.name %></a>
+              <% post.categories.each(function(cate){ %>
+                <span class="p-dot"></span><a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
               <% }) %>
             
           <% } %>

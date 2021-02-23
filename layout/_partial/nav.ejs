@@ -1,31 +1,3 @@
-<!--
-<div class="c-nav">
-	<div class="container navFlex">
-		<div class="flexItem">
-      		<a href="<%- url_for() %>">
-        		<h1 class="logo"><%= theme.global.nav_title || config.title %></h1>
-      		</a>
-		</div>
-		
-		<div class="flexItem hiden logo">
-			<i class="fa fa-bars btnImg"></i>
-		</div>
-		<div class="flexItem show">
-			<ul>
-				<% for (var i in theme.navbar.menu){ %>
-          			<li><a href="<%- url_for(theme.navbar.menu[i]) %>"><%-  __(i) %></a></li>
-				<% } %>
-				<% if (theme.search.enable){ %>
-				<li><a href="/search/" id="search-btn"><i class="fas fa-search meta-icon"></i></a></li>
-				<% } %>
-				<% if (theme.theme.darkmode){ %>
-				<li><a href="javascript:;"><i class="fas fa-moon meta-icon" id="toggle-dark-icon"></i></a></li>
-				<% } %>
-			</ul>
-		</div>
-	</div>
-</div>
--->
 
 <div class="header__left">
 	<a href="<%- url_for() %>" class="button"><span class="logo__text"><%= theme.global.nav_title || config.title %></span></a>
