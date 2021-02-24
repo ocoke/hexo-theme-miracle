@@ -1,5 +1,4 @@
 <%
-<!-- 组合页面标题 -->
 var joinStr = theme.global.title_join_string
 var title = config.title
 if (page.title) {
@@ -22,14 +21,25 @@ if (page.title) {
     <% if(theme.global.font.css){ %>
         <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>
-    <meta name="description" content="<%= config.description %>">
+    <meta name="description" content="<%= page.excerpt ||config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
-    <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
 
+    <link rel="preload" href="<%- theme.static_prefix.jquery %>jquery.min.js" as="script">
+    <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
 
     <link rel="stylesheet" href="/css/main.min.css" media="print" onload="this.media='all';this.onload=null">
     <noscript><link rel="stylesheet" href="/css/main.min.css"></noscript>
     <%- partial('_partial/style.ejs') %>
     <%- theme.custom.header_html %>
+    <script>
+        function loadScript(url, cb, isMoudule) {
+            var script = document.createElement('script');
+            script.src = url;
+            if (cb) script.onload = cb;
+            if (isMoudule) script.type = 'module';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+    </script>
 </head>

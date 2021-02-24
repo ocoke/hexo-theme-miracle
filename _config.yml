@@ -284,6 +284,7 @@ post:
     # Image lazyload
     lazyload:
         enable: true
+        loadImg: /img/loading.svg
 
     mermaid:
         enable: true
