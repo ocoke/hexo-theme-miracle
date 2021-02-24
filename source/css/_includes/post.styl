@@ -26,6 +26,7 @@ p{
     // filter: brightness(.8);
 }
 
+
 #page-banner h3{
     font-size: 2rem;
     line-height: 1.5em;
@@ -34,42 +35,25 @@ p{
 .slogan-white{
     color: #fff!important;
 }
-@media (max-width: 425px){
-    #article,#post-meta,#miracle-comments,.tagcloud,.list-group,.category-list-content,.links-page{
+@media (max-width: 520px){
+    article[class="page"]{
         width: 100%!important;
-        margin-left: 10px!important;
-        margin-right: 10px!important;
-
     }
     
 }
 @media (min-width: 768px){
-    #article,#post-meta,#miracle-comments,.tagcloud,.list-group,.category-list-content,.links-page{
-        max-width: 720px;
+    article[class="page"]{
+        max-width: 650px;
     }
 }
-@media (min-width: 992px){
-    #article,#post-meta,#miracle-comments,.tagcloud,.list-group,.category-list-content,.links-page{
-        max-width: 920px;
+
+@media (max-width 1120px){
+    .post-card-main{
+        max-width: 820px;
     }
 }
 
 
-#article{
-    position: relative;
-    box-sizing: border-box;
-    width: 80%;
-    height: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 2px 2px 6px var(--shadow-color);
-    padding: 30px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-    border-radius: 0.5rem;
-    background-color: var(--post-bkg-color);
-    color: var(--second-text-color);
-}
 .post-toc{
     border-radius: 5px;
     width 15vh
@@ -107,44 +91,37 @@ p{
         width: 90vw;
     }
 }
-#post-meta-m{
-    z-index: 3;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-}
-#post-meta{
-    text-align: center;
-    position: relative;
-    box-sizing: border-box;
-    width: 80%;
-    height: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 2px 2px 6px var(--shadow-color);
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-    background-color: var(--post-bkg-color);
-}
+
 #post-meta{
     color: var(--third-text-color)
-    margin-top: 1rem!important;
 }
 #post-meta h3{
   color: var(--first-text-color);
 }
-.article-m{
-    z-index: 3;
+article[class="page"]{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    box-shadow: 2px 2px 6px var(--shadow-color);
+    padding: 15px 30px;
     box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
+    border-radius: 0.5rem;
+    background-color: var(--post-bkg-color);
+    color: var(--second-text-color);
+    display: block
+    margin: 84px auto 30px auto;
+}
+.post-meta{
+  padding-bottom: 10px;
+  border-bottom: 0.1rem solid var(--hr-color); 
+}
+#article{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 0.1rem solid var(--hr-color); 
+}
+.post-meta span {
+  margin-bottom: 10px;
 }
 .ml-10{
     margin-left: 10px;
@@ -153,31 +130,10 @@ p{
     font-size: 0.9rem!important;
 }
 #miracle-comments{
-    position: relative;
-    box-sizing: border-box;
-    width: 80%;
-    height: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 2px 2px 6px var(--shadow-color);
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-    background-color: var(--post-bkg-color);
-    color: var(--second-text-color)
+
 }
 .comments{
-    background-color: var(--page-bkg-color);
-    z-index: 3;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  padding-top: 10px;
 }
 /*
 #article{
