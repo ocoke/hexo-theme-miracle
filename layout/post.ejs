@@ -14,37 +14,32 @@ var banner_img = page.banner_img
       <div id="post-content" class="markdown-body">
         <%- page.content %>
       </div>
-          <% if((page.categories && page.categories.length > 0) || (page.tags && page.tags.length > 0)){ %>
-            <br/>
-            <hr/>
-            <div id="p-meta-i">
-                <% if (page.categories && page.categories.length > 0) { %>
-                    <div class="post-meta mr-3">
-                      <i class="fa fa-folder meta-icon"></i>
-                      <% page.categories.each(function(cate) { %>
-                        &nbsp;&nbsp;&nbsp;<a class="hover-with-bg" href="<%= url_for(cate.path) %>"><%- cate.name %></a>
-                      <% }) %>
-                    </div>
-                  <% } %>
-                  <% if (page.tags && page.tags.length > 0 ) { %>
-                    <div class="post-meta">
-                      <i class="fa fa-tags meta-icon"></i>
-                      <% page.tags.each(function(tag) { %>
-                        &nbsp;&nbsp;<a class="hover-with-bg" href="<%= url_for(tag.path) %>"><%- tag.name %></a>
-                      <% }) %>
-                    </div>
-                  <% } %>
-            </div>
+          
+          
+    </div>
+</div>
+<% if((page.categories && page.categories.length > 0) || (page.tags && page.tags.length > 0)){ %>
+<div class="post-category">
+
+    <div id="p-meta-i">
+        <% if (page.categories && page.categories.length > 0) { %>
+              <% page.categories.each(function(cate) { %>
+                <a class="hover-with-bg" href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+              <% }) %>
           <% } %>
-          <% if (theme.post.copyright.enable){ %>
-          <br/>
-          <div class="note note-warning">
-            <%- theme.post.copyright.content %>
-          </div>
+          <% if (page.tags && page.tags.length > 0 ) { %>
+              <% page.tags.each(function(tag) { %>
+                <a class="hover-with-bg" href="<%= url_for(tag.path) %>"># <%- tag.name %></a>
+              <% }) %>
           <% } %>
     </div>
 </div>
-
+<% } %>
+<% if (theme.post.copyright.enable){ %>
+  <div class="note note-warning">
+    <%- theme.post.copyright.content %>
+  </div>
+  <% } %>
 <% if(page.comment || theme.post.comment) { %>
     <!-- Comments -->
     <div class="comments">

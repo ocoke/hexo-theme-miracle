@@ -9,16 +9,16 @@ h3{
     font-size: 1.55rem;
 }
 h4{
-    font-size: 1.45rem;
+    font-size: 1.4rem;
 }
 h5{
-    font-size: 1.35rem;
-}
-h6{
     font-size: 1.25rem;
 }
+h6{
+    font-size: 1.15rem;
+}
 p{
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 
 #page-banner{
@@ -102,7 +102,7 @@ article[class="page"]{
     position: relative;
     width: 80%;
     height: 100%;
-    box-shadow: 2px 2px 6px var(--shadow-color);
+    box-shadow: var(--shadow)
     padding: 15px 30px;
     box-sizing: border-box;
     border-radius: 0.5rem;
@@ -111,14 +111,18 @@ article[class="page"]{
     display: block
     margin: 84px auto 30px auto;
 }
-.post-meta{
-  padding-bottom: 10px;
+#post-meta-m{
+  padding-bottom: 15px;
   border-bottom: 0.1rem solid var(--hr-color); 
 }
 #article{
   padding-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   border-bottom: 0.1rem solid var(--hr-color); 
+}
+.post-category{
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 .post-meta span {
   margin-bottom: 10px;
@@ -129,11 +133,19 @@ article[class="page"]{
 .meta-icon{
     font-size: 0.9rem!important;
 }
-#miracle-comments{
-
-}
 .comments{
-  padding-top: 10px;
+  border-top: 0.1rem solid var(--hr-color); 
+  padding-top: 15px;
+}
+#p-meta-i .hover-with-bg {
+    background-color: var(--bg-t);
+    display: inline-block;
+    margin: .35em;
+    font-size: .75em;
+    text-decoration: none;
+    color: currentColor!important;
+    padding: .25rem .6rem .25rem .6rem;
+    border-radius: 5px
 }
 /*
 #article{
