@@ -9,7 +9,7 @@ page.subtitle = theme.links.subtitle || __('links.subtitle')
     <h3><%= page.title %></h3>
   </div>
 </div>
-<div class="links-page" style="padding-top:10px;">
+<div class="links-page" style="padding-top:10px;" id="links-page">
     <% for(const each of theme.links.items || []) { %>
       <% if (!each.title || !each.link) continue %>
       <div class="links-card">
@@ -27,6 +27,35 @@ page.subtitle = theme.links.subtitle || __('links.subtitle')
           </div>
         </a>
       </div>
+    <% } %>
+    <% if (theme.links.json_links.enable) { %>
+      <script>
+        (async () => {
+          var res = await fetch('<%= theme.links.json_links.item_links %>');
+          var json = await res.json();
+          console.log(json);
+          const Linkscontainer = document.getElementById('links-page');
+          json.forEach(item => {
+            const element = document.createElement('div');
+            element.className = "links-card";
+
+            element.innerHTML = `
+        <a href="${item.link}" class="links-card-body" target="_blank" rel="noopener">
+          <div class="links-card-content">
+              <div class="link-avatar my-auto">
+                <img src="${item.image}" alt="${item.title}" />
+              </div>
+            <div class="link-text">
+              <div class="link-title">${item.title}</div>
+              <div class="link-intro">${item.intro}</div>
+            </div>
+          </div>
+        </a>
+            `;
+            Linkscontainer.appendChild(element);
+          });
+        })();
+      </script>
     <% } %>
 </div>
   </div>

@@ -413,17 +413,24 @@ links:
             image: "/img/favicon.png"
         }
         - {
-            title: "Miracle Docs",
-            intro: "主题文档",
-            link: "https://miracle-docs.now.sh/",
+            title: "Miracle Demo",
+            intro: "主题演示",
+            link: "https://miracle-demo.now.sh/",
             image: "/img/favicon.png"
         }
-        - {
-            title: "Miracle Docs",
-            intro: "主题文档",
-            link: "https://miracle-docs.now.sh/",
-            image: "/img/favicon.png"
-        }
+
+    # JSON 友链
+    # JSON Links
+    json_links:
+        enable: false
+
+        # JSON 文件链接
+        # Link to JSON file
+        item_links: 
+
+
+
+
 #---------------------------
 # 404页
 # 404 Page
