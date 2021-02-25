@@ -27,15 +27,15 @@
 ## 链接
 
 - [主题演示](https://miracle-demo.now.sh)
-- [主题文档](https://miracle-docs.now.sh)
+- [主题文档](https://github.com/hifun-team/hexo-theme-miracle/wiki)
 
 ## 安装主题
 
-请参见文档：[下载与安装](https://miracle-docs.now.sh/?p=zh-cn#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85)
+请参见文档：[下载与安装](https://github.com/hifun-team/hexo-theme-miracle/wiki/Wiki-(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85)
 
 ## 更新主题
 
-请参见文档：[更新主题](https://miracle-docs.now.sh/?p=zh-cn#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98)
+请参见文档：[更新主题](https://github.com/hifun-team/hexo-theme-miracle/wiki/Wiki-(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98)
 
 ## 参与贡献
 
@@ -59,5 +59,5 @@
 
 - [fluid-dev/hexo-theme-fluid](https://github.com/fluid-dev/hexo-theme-fluid)
 - [XPoet/hexo-theme-keep](https://github.com/XPoet/hexo-theme-keep)
-
+- [ChrAlpha/hexo-theme-cards](https://github.com/ChrAlpha/hexo-theme-cards)
 

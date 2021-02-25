@@ -31,11 +31,11 @@
 
 ## Install themes
 
-Please check the document: [Download and Install](https://miracle-docs.now.sh/?p=en#download-and-install)
+Please check the document: [Download and Install](https://github.com/hifun-team/hexo-theme-miracle/wiki/Wiki-(English)#download-and-install)
 
 ## Update theme
 
-Please check the document: [Update Theme](https://miracle-docs.now.sh/?p=en#update-theme)
+Please check the document: [Update Theme](https://github.com/hifun-team/hexo-theme-miracle/wiki/Wiki-(English)#update-theme)
 
 ## Participate in contribution
 
@@ -59,3 +59,4 @@ This project reference some open source theme projects, thanks very much!
 
 - [fluid-dev/hexo-theme-fluid](https://github.com/fluid-dev/hexo-theme-fluid)
 - [XPoet/hexo-theme-keep](https://github.com/XPoet/hexo-theme-keep)
+- [ChrAlpha/hexo-theme-cards](https://github.com/ChrAlpha/hexo-theme-cards)
