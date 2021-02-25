@@ -1,60 +1,58 @@
-#modalSearch{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    // background-color:rgb(192,192,192,0.3);
-    transition: opacity .15s linear;
-}
-#local-search-result{
-    width: 75%;
-    .search-list-content {
-        padding: 0 1.25rem;
-    }
-    .search-list-title {
-        border-left: 3px solid #0d47a1;
-    }
-    margin-left: 0!important;
-    margin-right: 0!important;
-}
-#local-search-result{
-    word-break: break-all;
-}
-#searchDocument{
+.search-result__title{
+    border-left: 3px solid #0d47a1;
+    color: var(--first-text-color)
+    background-color: transparent;
+    font-weight: bolder!important;
     position: relative;
-    box-sizing: border-box;
-    width: 80%;
-    height: 100%;
-    transition: all 0.3s ease;
-    padding: 30px;
-    border-radius: 0.5rem;
-    color: var(--second-text-color);
+    display: block;
+    padding: .75rem 1.25rem;
+    width: 100%;
+    text-align: inherit;
 }
-.md-form,.list-group-m{
+.search-result__content{
+    color: var(--third-text-color)
+    padding: .3rem 1.25rem;
+}
+.search-result__item{
+    padding-top: 20px;
+}
+.search-form #search-input {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+.search-form .search-input {
+    flex: 1 1 auto;
+    padding: .15rem .35rem .15rem .35rem;
+    border: 1px solid #dbdbdb;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    background-color: transparent;
+}
+.search-form {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
 }
-.md-form{
-    height: 40px;
+.search-form .search-button {
+    border: 1px solid #dbdbdb;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
 }
-.md-form input{
+.search-form #search-button {
+    padding: 5px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
     color: var(--second-text-color);
-    border-radius: 3px;
-    border: 1px solid rgb(230,230,230);
-    padding: .4em .6em;
-    background-color: var(--post-bkg-color);
 }
-#local-search-close{
-    position: fixed;
-    top: 1px;
-    right: 1px;
-    float right;
-    border-radius: 3px;
-    padding: .4em .6em;
-    border: none;
-    width: 35px;
-    height 35px;
-    background-color: var(--page-bkg-color);
-}
-#local-search-close .meta-icon{
-    color: var(--second-text-color);
+#search-input{
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: var(--second-text-color)
 }
