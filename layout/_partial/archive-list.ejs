@@ -1,5 +1,5 @@
-<div class="tag-page-main">
-<div class="list-group">
+<article class="page">
+  <div class="archive-list">
     <p class="h4"><%= __('postTotal', params.postTotal) %></p>
     <hr>
     <% var dateCursor %>
@@ -13,6 +13,6 @@
         <time style="float: right;"><%- date(post.date, "MM-DD") %></time>
       </a>
     <% }) %>
-</div>
-</div>
 <%- partial('_partial/paginator') %>
+</div>
+</article>

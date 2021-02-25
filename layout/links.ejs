@@ -3,13 +3,13 @@ page.layout = "links"
 page.title = theme.links.title || __('links.title')
 page.subtitle = theme.links.subtitle || __('links.subtitle')
 %>
-<div id="post-meta-m">
+<article class="page">
+<div id="post-meta-m" style="padding-bottom:0;">
   <div class="post-meta" id="post-meta">
     <h3><%= page.title %></h3>
   </div>
 </div>
-<div class="links-page-m">
-    <div class="links-page">
+<div class="links-page" style="padding-top:10px;">
     <% for(const each of theme.links.items || []) { %>
       <% if (!each.title || !each.link) continue %>
       <div class="links-card">
@@ -30,3 +30,4 @@ page.subtitle = theme.links.subtitle || __('links.subtitle')
     <% } %>
 </div>
   </div>
+</article>

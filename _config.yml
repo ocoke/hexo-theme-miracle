@@ -396,8 +396,8 @@ tag:
         min_font: 15
         max_font: 30
         unit: px
-        start_color: "#BBBBEE"
-        end_color: "#337ab7"
+        start_color: "#acb3c2"
+        end_color: "#454d5d"
 
 #---------------------------
 # 友链页
@@ -410,9 +410,20 @@ links:
             title: "Miracle Docs",
             intro: "主题文档",
             link: "https://miracle-docs.now.sh/",
-            # image: "/img/favicon.png"
+            image: "/img/favicon.png"
         }
-
+        - {
+            title: "Miracle Docs",
+            intro: "主题文档",
+            link: "https://miracle-docs.now.sh/",
+            image: "/img/favicon.png"
+        }
+        - {
+            title: "Miracle Docs",
+            intro: "主题文档",
+            link: "https://miracle-docs.now.sh/",
+            image: "/img/favicon.png"
+        }
 #---------------------------
 # 404页
 # 404 Page

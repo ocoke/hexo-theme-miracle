@@ -5,15 +5,16 @@ page.subtitle = theme.tag.subtitle || __('tag.subtitle')
 var min_font = theme.tag.tagcloud.min_font || 15
 var max_font = theme.tag.tagcloud.max_font || 30
 var unit = theme.tag.tagcloud.unit || 'px'
-var start_color = theme.tag.tagcloud.start_color || '#BBBBEE'
-var end_color = theme.tag.tagcloud.end_color || '#337ab7'
+var start_color = theme.tag.tagcloud.start_color || '#acb3c2'
+var end_color = theme.tag.tagcloud.end_color || '#454d5d'
 %>
-<div id="post-meta-m">
+<article class="page">
+<div id="post-meta-m" style="padding-bottom:0;">
   <div class="post-meta" id="post-meta">
     <h3><%= page.title %></h3>
   </div>
 </div>
-<div class="tag-page-main">
+<div class="tag-page-main" style="padding-top:10px;">
 <div class="text-center tagcloud">
   <%- tagcloud({
     min_font: min_font,
@@ -26,3 +27,4 @@ var end_color = theme.tag.tagcloud.end_color || '#337ab7'
   }) %>
 </div>
 </div>
+</article>

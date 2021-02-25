@@ -3,7 +3,7 @@
 <style>
     :root{
         --shadow-color: rgba(0,0,0,0.2);
-        --sec-shadow: rgba(0,0,0,0.1);
+        --sec-shadow: rgba(0,0,0,0.03);
         --shadow-hover-color: rgba(0,0,0,0.28);
         --first-text-color: #475b6d;
         --second-text-color: #37475b;
@@ -227,6 +227,7 @@ header .header__right .dropdown-icon {
     background-color: transparent;
 }
 header .header__right .dropdown-menus {
+    line-height: 2rem;
     animation: slide-in .15s ease 1;
     display: none;
     position: absolute;
@@ -235,7 +236,6 @@ header .header__right .dropdown-menus {
     top: calc(54px + 10px);
     border-radius: 6px;
     padding: 24px;
-    line-height: 1.8rem;
     background-color: var(--page-bkg-color);
     border: 1px solid var(--bkg-m);
     z-index: 9999;
