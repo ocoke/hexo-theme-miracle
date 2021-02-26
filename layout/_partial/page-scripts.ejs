@@ -6,25 +6,7 @@
 
     var cToggle = true;
     $('.collapse .header').click(function() {
-        if (cToggle) {
-            cToggle = false
-            $(".collapse .header .icon").removeClass("fas fa-chevron-down");
-            $(".collapse .header .icon").addClass("fas fa-chevron-up");
-        } else {
-          cToggle = true;
-          $(".collapse .header .icon").removeClass("fas fa-chevron-up");
-          $(".collapse .header .icon").addClass("fas fa-chevron-down");
-        }
         $(".collapse .content").slideToggle(250);
     });
     console.log('\n' + ' %c Powered by Hexo Theme Miracle ' + ' %c https://github.com/hifun-team/hexo-theme-miracle ' + '\n' + '\n', 'color: #fff; background: #4F9BFA; padding:5px 0;', 'background: #FFF; padding:5px 0;');
 </script>
-<% if (theme.theme.loading){ %>
-<script>
-        document.onreadystatechange = function(){
-            if(document.readyState == "complete"){
-              $(".c-loading").addClass("display-none")
-            }
-        }
-</script>
-<% } %>
