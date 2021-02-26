@@ -7,18 +7,6 @@
         <p class="slogan">
           <%- theme.index.slogan %>
         </p>
-        <div class="profile-social">
-          <% for(const each of theme.index.social || []) { %>
-            <% if (!each.name || !each.link) continue %>
-              <a href="<%= url_for(each.link) %>" target="_blank" rel="noopener">
-                <% if (each.icon){ %>
-                  <span class="<%= each.icon %>"></span>
-                <% } else { %>
-                  <span><%- each.name %></span>
-                <% } %>
-              </a>
-          <% } %>
-        </div>
     </div>
 </div>
 <% } %>
