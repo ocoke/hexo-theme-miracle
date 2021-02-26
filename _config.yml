@@ -107,12 +107,15 @@ custom:
     # 页面头部 HTML
     # Page header HTML
     header_html: ''
+
     # 页面底部 HTML
     # Page footer HTML
     footer_html: ''
+
     # 页面自定义 JS（底部引入）
     # Page custom JS (introduced at the bottom)
     js: 
+    
     # 页面自定义 CSS
     # Page custom CSS
     css: 
@@ -300,7 +303,7 @@ comment:
 
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
-    # Options: gitalk | valine | waline | twikoo
+    # Options: gitalk | valine | waline | twikoo | twikooPlus
     type: twikoo
 
     # Gitalk
@@ -357,6 +360,22 @@ comment:
         envid: 
         region: 
         path: window.location.pathname
+
+    # TwikooPlus
+    # See: https://hexoplusplus.js.org/use/hexoinit.html
+    twikooPlus:
+        envid:
+        region:
+        ver: "1.2.0"
+        domain:
+        path: window.location.pathname
+        cdn: "https://dn-qiniu-avatar.qbox.me/avatar/"
+        adminmail: ''
+        friendmail: ['']
+        timelimit: 200
+        mode: 1
+
+
 
 #---------------------------
 # 分类页
@@ -416,8 +435,41 @@ links:
         # Link to JSON file
         item_links: 
 
+#---------------------------
+# 说说页
+# Talk Page
+#---------------------------
+talk:
+    enable: false
 
+    # Page Title
+    title: 说说
 
+    # Options: HPP | Artitalk
+    type: HPP
+
+    # HexoPlusPlus, See: https://hexoplusplus.js.org/use/hexoinit.html
+    HPP:
+        domain: 
+        limit: 10
+        start: 0
+    
+    # Artitalk, See: https://artitalk.js.org/settings.html
+    Artitalk:
+        appId: 
+        appKey: 
+        serverURL: 
+        lang: zh
+        pageSize: 5
+        shuoPla: 
+        avatarPla: 
+        motion: 1
+        bgImg:
+
+# HexoPlusPlus 签到
+hpp_time:
+    enable: false
+    domain: 
 
 
 #---------------------------
@@ -452,3 +504,6 @@ static_prefix:
     hljs: https://cdn.jsdelivr.net/gh/hifun-team/hexo-theme-miracle@master/source/js/
     mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/
     twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.0.0/dist/
+    artitalk: https://cdn.jsdelivr.net/npm/artitalk
+    hpp: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/
+    hppComment: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoComment_TwikooPlus@main/dist/

@@ -1,0 +1,24 @@
+<% if (theme.comment.twikooPlus.envid && theme.comment.twikooPlus.domain){ %>
+    <style>
+        @-webkit-keyframes AnimationName{0%,100%{background-position:0 31%}50%{background-position:100% 70%}}@-moz-keyframes AnimationName{0%,100%{background-position:0 31%}50%{background-position:100% 70%}}@keyframes AnimationName{0%,100%{background-position:0 31%}50%{background-position:100% 70%}}.hpp_twikooplus_comment_load{position:absolute;left:50%;top:150px;width:8em;height:8em;margin:-4em 0 0 -4em;overflow:hidden;background:rgba(0,0,0,0)}.hpp_twikooplus_comment_load>div{position:absolute;width:8em;height:8em;animation:alpha 2.25s linear infinite forwards;background:rgba(231,76,60,.75)}.hpp_twikooplus_comment_load>div:nth-child(1){top:-50%;left:-50%}.hpp_twikooplus_comment_load>div:nth-child(2){top:-50%;right:-50%}.hpp_twikooplus_comment_load>div:nth-child(3){bottom:-50%;right:-50%}.hpp_twikooplus_comment_load>div:nth-child(4){bottom:-50%;left:-50%}@keyframes alpha{0%{transform:rotate(0);background:rgba(231,76,60,.75)}25%{background:rgba(230,126,34,.75)}50%{border-radius:50%;background:rgba(142,68,173,.75)}75%{background:rgba(41,128,185,.75)}100%{transform:rotate(360deg);background:rgba(231,76,60,.75)}}.hpp_twikooplus_avatar{float:left;display:block;margin:1.4rem 1rem 0 0;width:40px;height:40px;border-radius:50%;border:0}.hpp_twikooplus_comment-main{overflow:hidden;padding:1rem 0;border-bottom:1px dotted #e0e0e0}.hpp_twikooplus_comment-main p{margin:0}.hpp_twikooplus_comment-at{padding:0 0 10px}.comment-meta,.hpp_twikooplus_cancel-comment-reply{margin-top:1rem;color:#aaa;font-size:.8rem}.hpp_twikooplus_comment-author{padding:.1rem .25rem;border-radius:.25rem;background:#eee;font-size:.7rem}.hpp_twikooplus_comment_a_href{text-decoration:none;color:#aaa}.hpp_twikooplus_comment-meta .hpp_twikooplus_comment-reply,.hpp_twikooplus_comment-reply{float:right}.hpp_comment_loadmore{width:270px;height:40px;border-width:0;border-radius:3px;background:0 0;cursor:pointer;outline:0;font-family:Microsoft YaHei;font-size:17px;margin:.2rem auto 0;display:block}.hpp_twikooplus-footer{width:100%;text-align:end;font-size:.75em;color:#999;margin-top:1em}
+    </style>
+    <script src="<%- theme.static_prefix.hppComment %>comment.js"></script>
+    <div id="miracle-comments">
+        <div id="hpp_comment"></div>
+    </div>
+    <script>
+        new hpp_comment({
+            id:"hpp_comment",
+            envId:"<%= theme.comment.twikooPlus.envid %>",
+            region:"<%= theme.comment.twikooPlus.region %>",
+            ver:"<%= theme.comment.twikooPlus.ver %>",
+            domain: "<%= theme.comment.twikooPlus.domain %>",
+            path: '<%= theme.comment.twikooPlus.path %>',
+            cdn:"<%= theme.comment.twikooPlus.cdn %>",
+            adminmail: '<%= theme.comment.twikooPlus.adminmail %>',
+            friendmail: <%- JSON.stringify(theme.comment.twikooPlus.friendmail || []) %>,
+            timelimit: <%= theme.comment.twikooPlus.timelimit %>,//单位毫秒，超时设置，默认访问/cdn-cgi/trace拉取用户侧信息，若超过timelimit/位置是CN【中国大陆】/位置是HK【中国香港】则使用Twikoo原生，否则使用TwikooPlus中继
+            mode: <%= theme.comment.twikooPlus.mode %>//1为检测模式，0为强制使用TwikooPlus，但依旧允许手动强制原版
+        })
+    </script>
+<% } %>

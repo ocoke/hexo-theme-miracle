@@ -61,3 +61,14 @@ hexo.extend.generator.register('_search', function(locals) {
     };
   }
 });
+
+// generate talk page
+hexo.extend.generator.register('_talk', function(locals) {
+  if (this.theme.config.talk.enable !== false) {
+    return {
+      path  : 'talk/index.html',
+      data  : locals.theme,
+      layout: 'talk'
+    };
+  }
+});
