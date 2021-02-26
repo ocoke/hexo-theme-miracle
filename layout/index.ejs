@@ -19,7 +19,7 @@
       <article class="index-card-info">
         <h3 class="index-header">
           <% if (theme.index.post_sticky && theme.index.post_sticky.enable && post.sticky > 0) { %>
-            <i class="index-pin <%= theme.index.post_sticky && theme.index.post_sticky.icon %>" title="Pin on top"></i>
+            <span class="index-pin"><%= theme.index.post_sticky.text %></span>
           <% } %>
           <a href="<%- post_url %>"><%= post.title %></a>
         </h3>

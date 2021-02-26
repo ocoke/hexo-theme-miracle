@@ -41,3 +41,33 @@
 .display-inline{
     display inline
 }
+#i-up, #i-menu{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: 15px;
+    position: relative;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-indent: -9999px;
+}
+#i-up:before {
+    height: .65em;
+    width: .65em;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    transform: translate(-50%,-25%) rotate(45deg);
+}
+#i-menu:before {
+    box-shadow: 0 -0.35em, 0 0.35em;
+    border-top: 2px solid;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+#i-menu:after, #i-menu:before,#i-up:after, #i-up:before{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}

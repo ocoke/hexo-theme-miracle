@@ -57,9 +57,11 @@
 </footer>
 <div class="p-btn">
     <% if(is_post() && theme.post.toc.enable){ %>
-        <a class="toc-btn" id="toc-btn"><i class="fas fa-indent"></i></a>
+        <a class="toc-btn" id="toc-btn"><i id="i-menu"></i></a>
     <% } %>
-    <a href="#" class="click-btn"><i class="fas fa-chevron-up"></i></a>
+    <a href="#" class="click-btn">
+      <i id="i-up"></i>
+    </a>
 </div>
 
 <!-- SCRIPTS -->
