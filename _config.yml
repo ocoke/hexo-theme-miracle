@@ -164,11 +164,11 @@ navbar:
     # 导航栏菜单，可自行增减.
     # Navigation bar menu.
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        Links: /links
+        # Home: /
+        # Archives: /archives
+        # Categories: /categories
+        # Tags: /tags
+        # Links: /links
         # About: /about
         # ...
 
@@ -415,11 +415,12 @@ links:
     # JSON 友链
     # JSON Links
     json_links:
-        enable: false
+        enable: true
 
         # JSON 文件链接
         # Link to JSON file
         item_links: 
+
 
 
 
