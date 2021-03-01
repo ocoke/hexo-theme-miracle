@@ -5,8 +5,8 @@
 <% if (theme.post.fancybox.enable && (is_page() || is_post())){ %>
     <script>
     setTimeout(() => {
-        loadScript("<%- theme.static_prefix.fancybox %>jquery.fancybox.min.js")
-        let fancyTimer=setInterval((function(){window.$&&$(document).ready((function(){$(".markdown-body img").each((function(){if("a"!==$(this).parent().get(0).tagName.toLowerCase()){var t=document.createElement("a");$(t).attr("data-fancybox","gallery"),$(t).attr("style","text-decoration: none; outline: none; border: 0px none transparent;"),$(this).attr("data-original")?$(t).attr("href",$(this).attr("data-original")):$(t).attr("href",$(this).attr("src")),$(this).wrap(t)}})),clearInterval(fancyTimer)}))}),10);
+        $(".markdown-body img").addClass("ImageBox");
+        $(function(){$(".ImageBox").click(function(){$("body").append('<div class="image-box-plugin"><img src="'+$(this).attr("src")+'"></div>');var imgW=$(this).width(),imgH=$(this).height(),scrW=document.body.clientWidth,scrH=window.screen.availHeight;var newW=$(this).width(),newH=$(this).height(),scale=imgW/imgH;if(imgW>scrW){newW=scrW;newH=newW/scale;console.log(newH);console.log(scrH);$(".image-box-plugin img").css({"height":""});$(".image-box-plugin img").css({"width":newW});if(newH>scrH){newH=scrH;newW=newH*scale;$(".image-box-plugin img").css({"width":""});$(".image-box-plugin img").css({"height":newH})}}else{if(imgH>scrH){newH=scrH;newW=newH*scale;$(".image-box-plugin img").css({"width":""});$(".image-box-plugin img").css({"height":newH});if(newW>scrW){newW=scrW;newH=newW/scale;$(".image-box-plugin img").css({"height":""});$(".image-box-plugin img").css({"width":newW})}}}$(".image-box-plugin").fadeIn(500,function(){$(".image-box-plugin").css({"display":"table"})});$(".image-box-plugin").bind("click",function(){$(this).fadeOut(500,function(){$(this).remove()})})})});
     },0);
     </script>
 <% } %>
@@ -20,7 +20,7 @@ function query(selector) {
     
 var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) { 
             var img = entry.target;
             img.srcset = img.getAttribute('data-srcset');
             img.className += ' loaded'
