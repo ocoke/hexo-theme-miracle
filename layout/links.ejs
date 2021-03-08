@@ -43,7 +43,7 @@ page.subtitle = theme.links.subtitle || __('links.subtitle')
         <a href="${item.link}" class="links-card-body" target="_blank" rel="noopener">
           <div class="links-card-content">
               <div class="link-avatar my-auto">
-                <img src="${item.image}" alt="${item.title}" />
+                <img class="lazyload-img" data-srcset="${item.image}" srcset="<%= theme.post.lazyload.loadImg || "/img/loading.svg" %>" src="${item.image}" alt="${item.title}" />
               </div>
             <div class="link-text">
               <div class="link-title">${item.title}</div>
@@ -54,7 +54,29 @@ page.subtitle = theme.links.subtitle || __('links.subtitle')
             `;
             Linkscontainer.appendChild(element);
           });
+          setTimeout(function () {
+  function query(selector) {
+    return Array.from(document.querySelectorAll(selector));
+}
+    
+var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) { 
+            var img = entry.target;
+            img.srcset = img.getAttribute('data-srcset');
+            img.className += ' loaded'
+            io.unobserve(img);
+        }
+    });
+});
+    
+query('.lazyload-img').forEach(function (item) {
+    io.observe(item);
+});
+},0)
         })();
+
+
       </script>
     <% } %>
 </div>

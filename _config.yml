@@ -429,7 +429,7 @@ links:
     # JSON 友链
     # JSON Links
     json_links:
-        enable: true
+        enable: false
 
         # JSON 文件链接
         # Link to JSON file

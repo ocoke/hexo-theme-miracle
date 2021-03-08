@@ -7,11 +7,9 @@
 
     <% if (theme.hpp_time.enable) { %>
       setTimeout(function(){
-        window.onload = function () {
           var ele = document.createElement("script");
           ele.src = "https://<%= theme.hpp_time.domain %>/hpp/api/getblogeractive";
           document.body.appendChild(ele);
-        };
       },0) 
         
     <% } %>
