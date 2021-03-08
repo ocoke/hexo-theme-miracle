@@ -1,3 +1,4 @@
+<% if (page.layout !== "404"){ %>
 <footer class="text-center">
     <%- theme.custom.footer_html %>
     <% if(theme.global.web_analytics.busuanzi.enable){ %>
@@ -60,7 +61,7 @@
     
     
 </footer>
-
+<% } %>
 <div class="p-btn">
     <% if(is_post() && theme.post.toc.enable){ %>
         <a class="toc-btn" id="toc-btn"><i id="i-menu"></i></a>
