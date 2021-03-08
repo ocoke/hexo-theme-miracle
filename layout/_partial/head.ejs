@@ -8,29 +8,28 @@ if (page.title) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preload" href="/css/main.css" as="style">
+    <% if (theme.global.dns_prefetch){ %>
+    <link rel="dns-prefetch" href="<%= theme.global.dns_prefetch %>">
+    <% } %>
     <link rel="apple-touch-icon" sizes="76x76" href="<%- url_for(theme.global.apple_touch_icon) %>">
     <link rel="icon" type="image/png" href="<%- url_for(theme.global.favicon) %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title><%= title %></title>
     <% if (theme.global.force_https) { %>
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <% } %>
-    
-    
-    
     <% if(theme.global.font.css){ %>
-        <link href="<%- theme.global.font.css %>" rel="stylesheet">
+    <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>
     <meta name="description" content="<%= page.excerpt ||config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
-
-    <link rel="preload" href="<%- theme.static_prefix.jquery %>jquery.min.js" as="script">
-    <script src="<%- theme.static_prefix.jquery %>jquery.min.js"></script>
-
+    <%- partial('_partial/style.ejs') %>
+    <link rel="preload" href="<%- theme.static_prefix.jquery %>jquery.slim.min.js" as="script">
+    <script src="<%- theme.static_prefix.jquery %>jquery.slim.min.js"></script>
     <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all';this.onload=null">
     <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
-    <%- partial('_partial/style.ejs') %>
     <%- theme.custom.header_html %>
     <script>
         function loadScript(url, cb, isMoudule) {
@@ -149,8 +148,6 @@ if (page.title) {
               });
           };
       })();
-      
-      
         </script>
         <% } %>
         

@@ -6,15 +6,11 @@ const note = (args, content) => {
   if (!args || !args[0]) {
     args = ['No Title'];
   }
-  return `<div class="collapse">
-            <div class="header">
-            <span class="title">${args.join(' ')}</span>
-            <span class="icon fas fa-chevron-down"></span>
-            </div>
-            <div class="content">
-            ${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
-            </div>
-            </div>`;
+  return `
+  <details>
+  <summary>${args.join(' ')}</summary>
+  ${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
+  </details>`;
 };
 
 /*

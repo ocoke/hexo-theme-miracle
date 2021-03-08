@@ -12,7 +12,7 @@ hexo.extend.filter.register(
                     // Exit if the src doesn't exists.
                     if (!src) return match;
 
-                    return `<img ${attrBegin} class="lazyload-img" src="${src}" srcset="${theme.post.lazyload.loadImg}" data-srcset="${src}" ${attrEnd} >`
+                    return `<img ${attrBegin} class="lazyload-img" src="${src}" srcset="${theme.post.lazyload.loadImg || "/img/loading.svg"}" data-srcset="${src}" ${attrEnd} >`
                 }
             )
         }else{

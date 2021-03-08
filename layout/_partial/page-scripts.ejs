@@ -3,19 +3,16 @@
     document.getElementById("btn-dropdown").addEventListener('click', () => {
     $("#dropdown-menus").toggleClass("display-inline");
   });
-
-    var cToggle = true;
-    $('.collapse .header').click(function() {
-        $(".collapse .content").slideToggle(250);
-    });
     console.log('\n' + ' %c Powered by Hexo Theme Miracle ' + ' %c https://github.com/hifun-team/hexo-theme-miracle ' + '\n' + '\n', 'color: #fff; background: #4F9BFA; padding:5px 0;', 'background: #FFF; padding:5px 0;');
 
     <% if (theme.hpp_time.enable) { %>
-      $(document).ready(function (){
-        var ele = document.createElement("script");
-        ele.src = "https://<%= theme.hpp_time.domain %>/hpp/api/getblogeractive";
-        document.body.appendChild(ele);
-      })
+      setTimeout(function(){
+        window.onload = function () {
+          var ele = document.createElement("script");
+          ele.src = "https://<%= theme.hpp_time.domain %>/hpp/api/getblogeractive";
+          document.body.appendChild(ele);
+        };
+      },0) 
         
     <% } %>
 </script>
