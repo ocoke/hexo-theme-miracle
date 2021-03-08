@@ -32,12 +32,13 @@ if (page.title) {
     <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
     <%- theme.custom.header_html %>
     <script>
-        function loadScript(url, cb, isMoudule) {
+        function loadScript(isAsync, url, cb, isMoudule) {
             var script = document.createElement('script');
             script.src = url;
             if (cb) script.onload = cb;
             if (isMoudule) script.type = 'module';
-            script.async = true;
+            if (!isAsync){isAsync = true};
+            script.async = isAsync;
             document.body.appendChild(script);
         }
     </script>

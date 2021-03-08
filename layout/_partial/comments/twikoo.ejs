@@ -1,14 +1,37 @@
 <% if (theme.comment.twikoo.envid){ %>
-    <script src="<%- theme.static_prefix.twikoo %>twikoo.all.min.js"></script>
+    <script src="<%- theme.static_prefix.twikoo %>twikoo.all.min.js" async></script>
     <div id="miracle-comments">
         <div id="tcomment"></div>
     </div>
     <script>
-        twikoo.init({
-            envId: '<%- theme.comment.twikoo.envid %>',
-            el: '#tcomment',
-            region: '<%- theme.comment.twikoo.region %>',
-            path: '<%- theme.comment.twikoo.path %>'
-        })
+function loadComment() {
+    twikoo.init({
+        envId: '<%- theme.comment.twikoo.envid %>',
+        el: '#tcomment',
+        region: '<%- theme.comment.twikoo.region %>',
+        path: '<%- theme.comment.twikoo.path %>'
+    })
+}
+
+var runningOnBrowser = typeof window !== "undefined";
+
+var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+
+var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+setTimeout(function () {
+  if (!isBot && supportsIntersectionObserver) {
+    var observer = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        loadComment();
+        observer.disconnect();
+      }
+    }, { threshold: [0] });
+    observer.observe(document.getElementById('miracle-comments'));
+  } else {
+    loadComment();
+  }
+}, 1);
+
     </script>
 <% } %>

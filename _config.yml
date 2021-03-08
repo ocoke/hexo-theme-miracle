@@ -502,7 +502,7 @@ static_prefix:
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
     hljs: https://cdn.jsdelivr.net/gh/hifun-team/hexo-theme-miracle@master/source/js/
     mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/
-    twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.0.0/dist/
+    twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.2.0/dist/
     artitalk: https://cdn.jsdelivr.net/npm/artitalk
     hpp: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/
     hppComment: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoComment_TwikooPlus@main/dist/
