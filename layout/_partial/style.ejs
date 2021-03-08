@@ -110,38 +110,24 @@ a {
 a:hover{
     color: var(--second-link-color);
 }
-/* 响应式判断页面尺寸 */
 .main-content,.post-card-main{
     margin: 30px;
 }
 
-@media (min-width: 576px){
-    .main-content,.post-card-main{
-        margin: 45px;
-    }
-}
-@media (min-width: 768px){
-    .main-content,.post-card-main{
-        margin: 55px;
-    }
-}
-@media (min-width: 992px){
-    .main-content,.post-card-main{
-        margin: 4%;
-    }
-}
-@media (min-width: 1300px){
-    .main-content,.post-card-main{
-        margin: 4% 6%;
+
+
+@media (max-width: 410px){
+    .post-card-main{
+        max-width: 350px!important;
     }
 }
 
-@media (max-width: 780px){ 
-    h3{
-        font-size: 1.4rem;
-        line-height: 1.5em;
+@media (max-width: 980px){
+    .post-card-main{
+        max-width: 520px!important;
     }
 }
+
 
 @media (min-width: 780px){ 
     h3{
