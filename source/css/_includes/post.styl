@@ -1278,3 +1278,105 @@ h1, h2, h3, th {
     font-weight: 700;
     color: var(--first-text-color);
 }
+.highlight {
+  margin: 10px 0;
+  display: block
+  width: 100%;
+  background-color: #181c27;
+  border-radius: 5px;
+  table {
+    width: 100%
+    display: block
+    overflow: auto;
+  }
+  tr {
+    border: none  !important;
+    background: #181c27;
+  }
+  td {
+    padding: 0;
+    border: none  !important;
+  }
+  pre {
+    border-radius: 0;
+    width: 100%;
+    background-color: #181c27;
+  }
+  .code {
+    background: #181c27;
+  }
+  .code pre {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #181c27 !important;
+    padding: 10px;
+    overflow: auto;
+    font-size: 90%;
+    line-height: 1.8;
+    color: #ccc!important;
+  }
+  .gutter, .gutter pre {
+    color: #999;
+    background: #1b1b1b;
+    border-radius: 0;
+    padding: 10px;
+    overflow: auto;
+    font-size: 90%;
+    line-height: 1.8;
+  }
+  
+}
+
+hljs {
+	display: block;
+	overflow-x: auto;
+	padding: .5em;
+	color: #abb2bf;
+	background: #282c34
+}
+
+.highlight .code pre .comment,.highlight .code pre .quote {
+	color: #5c6370;
+	font-style: italic
+}
+
+.highlight .code pre .doctag,.highlight .code pre .formula,.highlight .code pre .keyword {
+	color: #c678dd
+}
+
+.highlight .code pre .deletion,.highlight .code pre .name,.highlight .code pre .section,.highlight .code pre .selector-tag,.highlight .code pre .subst {
+	color: #e06c75
+}
+
+.highlight .code pre .literal {
+	color: #56b6c2
+}
+
+.highlight .code pre .addition,.highlight .code pre .attribute,.highlight .code pre .meta-string,.highlight .code pre .regexp,.highlight .code pre .string {
+	color: #98c379
+}
+
+.highlight .code pre .built_in,.highlight .code pre .class .highlight .code pre .title {
+	color: #e6c07b
+}
+
+.highlight .code pre .attr,.highlight .code pre .number,.highlight .code pre .selector-attr,.highlight .code pre .selector-class,.highlight .code pre .selector-pseudo,.highlight .code pre .template-variable,.highlight .code pre .type,.highlight .code pre .variable {
+	color: #d19a66
+}
+
+.highlight .code pre .bullet,.highlight .code pre .link,.highlight .code pre .meta,.highlight .code pre .selector-id,.highlight .code pre .symbol,.highlight .code pre .title {
+	color: #61aeee
+}
+
+.highlight .code pre .emphasis {
+	font-style: italic
+}
+
+.highlight .code pre .strong {
+	font-weight: 700
+}
+
+.highlight .code pre .link {
+	text-decoration: underline
+}

@@ -34,11 +34,6 @@ query('.lazyload-img').forEach(function (item) {
 });
     </script>
 <% } %>
-<% if (theme.post.code.highlight && (is_page() || is_post())){ %>
-    <script>
-        loadScript(true,"<%- theme.static_prefix.hljs %>hljs.js")
-    </script>
-<% } %>
 <% if (is_post() && theme.post.toc.enable && page.toc !== false){ %>
     <script>
         $(".toc-btn").click(function(){
