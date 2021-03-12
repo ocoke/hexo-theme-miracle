@@ -74,6 +74,15 @@ global:
             uv_format: "总访客数 {} 人"
 
 
+    # 在页面底部加入 Copyright
+    copyright:
+        enable: true
+        # 开始年份，不填不显示
+        from_year: 2020
+        to_year: 2021
+        name: "Hexo Theme Miracle"
+
+
 # 搜索功能
 # Search feature
 search:

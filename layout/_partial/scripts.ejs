@@ -39,10 +39,11 @@ query('.lazyload-img').forEach(function (item) {
         $(".toc-btn").click(function(){
             if ($('.post-toc').html()){
                 $(".post-toc").toggleClass("display-inline");
-            }else{
-                alert("<%- theme.post.toc.nothing %>");
             }
         });
+        if (!$('.post-toc').html()){
+            $('#toc-btn').css("display","none")
+        }
     </script>
 <% } %>
 <% if (is_post() && theme.post.toc.enable && theme.post.toc.type == "tocbot" && page.toc !== false) { %>
