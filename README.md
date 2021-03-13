@@ -8,6 +8,9 @@
     <a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
 </p>
 
+> 我们决定于近期重写部分代码，对样式进行调整，还请期待。
+
+
 ## 功能特性
 
 - [x] 代码高亮
