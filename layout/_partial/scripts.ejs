@@ -46,28 +46,6 @@ query('.lazyload-img').forEach(function (item) {
         }
     </script>
 <% } %>
-<% if (is_post() && theme.post.toc.enable && theme.post.toc.type == "tocbot" && page.toc !== false) { %>
-    <script src="<%- theme.static_prefix.tocbot %>tocbot.min.js"></script>
-    <script>
-        window.tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.post-toc',
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '#post-content',
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: '<%- theme.post.toc.tocbot.headingSelector %>' || 'h1, h2, h3, h4, h5, h6',
-            // For headings inside relative or absolute positioned containers within content.
-            hasInnerContainers: true,
-            linkClass: 'tocbot-link',
-            activeLinkClass: 'tocbot-active-link',
-            listClass: 'tocbot-list',
-            isCollapsedClass: 'tocbot-is-collapsed',
-            collapsibleClass: 'tocbot-is-collapsible',
-            collapseDepth: <%- theme.post.toc.tocbot.collapseDepth %> || 0,
-            scrollSmooth    : true
-        });
-    </script>
-<% } %>
 
 <%- partial('_partial/plugins/mermaid.ejs') %>
 <% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>

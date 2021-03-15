@@ -240,21 +240,7 @@ post:
     toc:
         enable: true
 
-        # 在没有目录时提示的文本
-        # Text to prompt when there is no TOC
-        nothing: 本文没有目录哦~
-        # 指定的插件，需要同时设置对应插件的必要参数
-        # The specified plugin needs to set the necessary parameters at the same time
-        # Options: tocbot | hexo
         type: hexo
-
-        tocbot:
-            # 目录会选择这些节点作为标题
-            # TOC will select these nodes as headings
-            headingSelector: 'h1, h2, h3, h4, h5, h6'
-            # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
-            # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
-            collapseDepth: 0
         
         hexo:
             # 显示编号
@@ -503,7 +489,6 @@ page404:
 
 static_prefix:
     jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
-    tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
     busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/
     gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
     valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
