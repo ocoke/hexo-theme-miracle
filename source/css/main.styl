@@ -19,6 +19,25 @@ _________________________________________________
 #css-loading{
     display: none !important
 }
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(120,120,120);
+    border-radius: 2px;
+    transition: .2s;
+}
+::selection {
+    background: rgb(230,230,230);
+    color: black;
+}
+
 /* Page */
 @import '_includes/page'
 

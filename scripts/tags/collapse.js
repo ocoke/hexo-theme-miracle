@@ -7,10 +7,12 @@ const note = (args, content) => {
     args = ['No Title'];
   }
   return `
-  <details>
+  <details class="post-details">
   <summary>${args.join(' ')}</summary>
+<div class="details-content">
   ${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
-  </details>`;
+  
+  </div></details>`;
 };
 
 /*

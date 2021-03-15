@@ -80,12 +80,12 @@ p{
     display inline!important
 }
     .post-toc{
-        width: 45vw;
+        width: 250px;
     }
 
-@media (max-width 635px){
+@media (max-width 300px){
     .post-toc{
-        width: 80vw;
+        max-width: 95vw;
     }
 }
 
@@ -1379,4 +1379,33 @@ hljs {
 
 .highlight .code pre .link {
 	text-decoration: underline
+}
+details.post-details {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    padding: 0;
+}
+details.post-details summary {
+    outline: 0;
+}
+details.post-details summary {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 300;
+    list-style: none;
+    background: rgba(0,0,0,.05);
+    padding: .5em 1.1em!important;
+    margin: 0;
+    overflow: hidden;
+}
+
+details.post-details[open] .details-content {
+    opacity: 1;
+    height: auto;
+}
+details.post-details .details-content {
+    transition: all .3s;
+    margin: 1.5ch;
+    //overflow: hidden;
 }

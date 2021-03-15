@@ -18,10 +18,11 @@
       <% var post_url = url_for(post.path)%>
       <article class="index-card-info">
         <h3 class="index-header">
+          <a href="<%- post_url %>">
           <% if (theme.index.post_sticky && theme.index.post_sticky.enable && post.sticky > 0) { %>
             <span class="index-pin"><%= theme.index.post_sticky.text %></span>
           <% } %>
-          <a href="<%- post_url %>"><%= post.title %></a>
+          <%= post.title %></a>
         </h3>
         <p class="index-excerpt">
             <% var excerpt = '' %>
