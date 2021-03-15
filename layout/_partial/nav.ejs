@@ -6,10 +6,11 @@
 	<div class="navbar__menus">
 		<% for (var i in theme.navbar.menu){ %>
 		<a href="<%- url_for(theme.navbar.menu[i]) %>" class="button">
-			<div class="navbar-menu"><%-  __(i) %></div>
+			<div class="donate-btn"><%-  __(i) %></div>
 		</a>
 		<% } %>
 	</div>
+	<% if (theme.search.enable) { %>
 	<a href="/search/" class="button">
 		<div id="btn-search">
 			<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1024 1024" width="24" height="24" fill="currentColor"
@@ -20,6 +21,7 @@
 			</svg>
 		</div>
 	</a>
+	<% } %>
 	<a href="javaScript:void(0);" rel="external nofollow noreferrer" class="button">
 		<div id="btn-toggle-dark">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"

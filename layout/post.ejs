@@ -29,11 +29,26 @@
     </div>
 </div>
 <% } %>
+
+<div class="post-footer">
+  <% if (theme.post.donate.enable){ %>
+  <div class="donate text-center">
+    <span><%- theme.post.donate.text %></span>
+    <div class="donate-way">
+      <% for (var i in theme.post.donate.way){ %>
+        <a href="<%- url_for(theme.post.donate.way[i]) %>" class="donate-btn button">
+          <%-  __(i) %>
+        </a>
+      <% } %>
+    </div>
+  </div>
+  <% } %>
 <% if (theme.post.copyright.enable){ %>
   <div class="note note-warning">
     <%- theme.post.copyright.content %>
   </div>
   <% } %>
+</div>
 <% if(page.comment || theme.post.comment) { %>
     <!-- Comments -->
     <div class="comments">
