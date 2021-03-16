@@ -1,3 +1,4 @@
+
 'use strict'
 hexo.extend.filter.register(
     'after_post_render',
@@ -11,7 +12,6 @@ hexo.extend.filter.register(
                 function (match, attrBegin, src, attrEnd) {
                     // Exit if the src doesn't exists.
                     if (!src) return match;
-
                     return `<img ${attrBegin} class="lazyload-img" src="${src}" srcset="${theme.post.lazyload.loadImg || "/img/loading.svg"}" data-srcset="${src}" ${attrEnd} >`
                 }
             )

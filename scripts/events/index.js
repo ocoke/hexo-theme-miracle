@@ -2,6 +2,7 @@
 
 'use strict';
 
+
 hexo.on('generateBefore', () => {
     require('./lib/hello')(hexo);
     require('./lib/footnote')(hexo);
@@ -10,3 +11,4 @@ hexo.on('generateBefore', () => {
 hexo.on('generateAfter', () => {
     require('./lib/version')(hexo);
 });
+
