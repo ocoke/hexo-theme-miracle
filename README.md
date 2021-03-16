@@ -1,5 +1,5 @@
 <h1 align="center">Hexo Theme Miracle</h1>
-<p align="center">一款简洁的单栏 Hexo 主题</p>
+<p align="center">一款简洁、轻量的单栏 Hexo 主题</p>
 <p align="center">
     <a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
     <a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
@@ -27,6 +27,10 @@
 - [x] 文章目录
 - [x] 阅读体验优化
 - [x] Mermaid 流程图
+- [x] [HexoPlusPlus](https://hexoplusplus.js.org) 适配
+- [x] 友链页面（JSON / YAML）
+- [x] 方便排版的 Tag 插件
+
 
 ## 链接
 
