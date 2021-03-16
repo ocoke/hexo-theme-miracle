@@ -306,4 +306,14 @@ header .header__right .dropdown-menus .dropdown-menu {
     left: 0;
     right: 0;
 }
+<% if (theme.global.memorial){ %>
+    html {
+        -webkit-filter: grayscale(100%); 
+        -moz-filter: grayscale(100%); 
+        -ms-filter: grayscale(100%); 
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%); 
+        filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); filter:gray;
+    }
+<% } %>
 </style>

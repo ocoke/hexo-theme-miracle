@@ -82,6 +82,9 @@ global:
         to_year: 2021
         name: "Hexo Theme Miracle"
 
+    # 哀悼模式，网站黑白
+    memorial:
+        enable: false
 
 # 搜索功能
 # Search feature
