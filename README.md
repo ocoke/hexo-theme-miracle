@@ -30,7 +30,7 @@
 - [x] [HexoPlusPlus](https://hexoplusplus.js.org) 适配
 - [x] 友链页面（JSON / YAML）
 - [x] 方便排版的 Tag 插件
-
+- [x] Twikoo 评论懒加载
 
 ## 链接
 
