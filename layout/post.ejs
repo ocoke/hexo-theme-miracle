@@ -31,11 +31,6 @@
 <% } %>
 
 <div class="post-footer">
-  <% if (theme.post.copyright.enable){ %>
-    <div class="note note-warning">
-      <%- theme.post.copyright.content %>
-    </div>
-    <% } %>
   <% if (theme.post.donate.enable){ %>
   <div class="donate text-center">
     <span><%- theme.post.donate.text %></span>
@@ -46,6 +41,11 @@
         </a>
       <% } %>
     </div>
+  </div>
+  <% } %>
+<% if (theme.post.copyright.enable){ %>
+  <div class="note note-warning">
+    <%- theme.post.copyright.content %>
   </div>
   <% } %>
 </div>
