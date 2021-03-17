@@ -8,9 +8,7 @@
     <a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
 </p>
 
-> 我们决定于近期重写部分代码，对样式进行调整，还请期待。
-
-> 您可以前往 [面包多](https://mianbaoduo.com/o/bread/YZebm5tt) 支持作者。
+> 开发不易，您可以前往 [面包多](https://mianbaoduo.com/o/bread/YZebm5tt) 支持作者。
 
 ## 功能特性
 
@@ -51,8 +49,8 @@
 
 1. 将仓库 Fork 到自己的 GitHub，并克隆到本地。
 2. 创建新的分支，在新的分支上开发。
-3. 保持分支与远程 `master` 分支一致（通过 fetch 和 rebase 操作）。
-4. 在本地提交变更（注意 commit log 保持简练、规范，推荐加入 Emoji）。
+3. 保持分支与远程 `develop` 分支一致（通过 `fetch` 和 `rebase` 操作）。
+4. 在本地提交变更（注意 `commit log` 保持简练、规范，推荐加入 Emoji）。
 5. 将所做的提交 Push 到 Fork 的仓库下。
 6. 创建一个 `Pull request` 到 `hifun-team/hexo-theme-miracle` 的 `master` 分支。
 
