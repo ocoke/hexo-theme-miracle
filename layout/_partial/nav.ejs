@@ -6,7 +6,7 @@
 	<div class="navbar__menus">
 		<% for (var i in theme.navbar.menu){ %>
 		<a href="<%- url_for(theme.navbar.menu[i]) %>" class="button">
-			<div class="donate-btn"><%-  __(i) %></div>
+			<div class="navbar-menu"><%-  __(i) %></div>
 		</a>
 		<% } %>
 	</div>
