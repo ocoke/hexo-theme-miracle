@@ -43,7 +43,7 @@ page.subtitle = theme.links.subtitle || __('links.subtitle')
         <a href="${item.link}" class="links-card-body" target="_blank" rel="noopener">
           <div class="links-card-content">
               <div class="link-avatar my-auto">
-                <img class="lazyload-img" data-srcset="${item.image}" srcset="<%= theme.post.lazyload.loadImg || "/img/loading.svg" %>" src="${item.image}" alt="${item.title}" />
+                <img class="lazyload-img" data-srcset="${item.image}" srcset="<%= config.lazyload.loadingImg || "/img/loading.svg" %>" src="${item.image}" alt="${item.title}" />
               </div>
             <div class="link-text">
               <div class="link-title">${item.title}</div>

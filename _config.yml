@@ -272,8 +272,7 @@ post:
     # 图片懒加载
     # Image lazyload
     # 在新版本中已更换至 站点配置 ( _config.yml ) 中设置
-    # See: https://github.cm
-    
+
     mermaid:
         enable: true
         # 开启后，只有在文章 Front-matter 里指定 `mermaid: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
