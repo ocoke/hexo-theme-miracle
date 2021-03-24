@@ -40,6 +40,10 @@ if (page.title) {
             script.async = isAsync;
             document.body.appendChild(script);
         }
+        setTimeout (function () {
+            var cssLoadingEle = document.getElementById("css-loading");
+            cssLoadingEle.innerHTML = "<h3 style='text-align:center;'>加载中...</h3>";
+        },200)
     </script>
     <% if (theme.theme.darkmode){ %>
         <script>
