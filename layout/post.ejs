@@ -44,8 +44,10 @@
   </div>
   <% } %>
 <% if (theme.post.copyright.enable){ %>
-  <div class="note note-warning">
-    <%- theme.post.copyright.content %>
+  <div class="post-copyright">
+    <p>文章作者：<a href="<%= theme.post.copyright.authorURL %>"><%- page.author || config.author %></a></p>
+    <p>文章链接：<a href="<%= theme.post.copyright.authorURL %>"><%- page.author || config.author %></a></p>
+    <p>版权声明：<%- theme.post.copyright.content %></p>
   </div>
   <% } %>
 </div>

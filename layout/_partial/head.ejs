@@ -21,7 +21,7 @@ if (page.title) {
     <% if(theme.global.font.css){ %>
     <link href="<%- theme.global.font.css %>" rel="stylesheet">
     <% } %>
-    <meta name="description" content="<%= page.excerpt ||config.description %>">
+    <meta name="description" content="<%= page.excerpt || config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
     <%- partial('_partial/style.ejs') %>
@@ -43,7 +43,11 @@ if (page.title) {
         setTimeout (function () {
             var cssLoadingEle = document.getElementById("css-loading");
             cssLoadingEle.innerHTML = "<h3 style='text-align:center;'>加载中...</h3>";
-        },200)
+        },200);
+
+        function query(selector) {
+            return Array.from(document.querySelectorAll(selector));
+        }
     </script>
     <% if (theme.theme.darkmode){ %>
         <script>
@@ -91,28 +95,6 @@ if (page.title) {
       
           const applyCustomDarkModeSettings = (mode) => {
               const currentSetting = mode || getLS(darkModeStorageKey);
-      
-              if (document.getElementById('hl-dark-theme')) {
-                  if (validColorModeKeys[currentSetting]) {
-                      if (currentSetting === 'dark') {
-                          document.getElementById('hl-default-theme').media = 'none';
-                          document.getElementById('hl-dark-theme').media = 'all';
-                      } else {
-                          document.getElementById('hl-dark-theme').media = 'none';
-                          document.getElementById('hl-default-theme').media = 'all';
-                      }
-                  } else {
-                      if (getModeFromCSSMediaQuery() === 'dark') {
-                          document.getElementById('hl-default-theme').media = 'none';
-                          document.getElementById('hl-dark-theme').media = 'all';
-                      } else {
-                          document.getElementById('hl-dark-theme').media = 'none';
-                          document.getElementById('hl-default-theme').media = 'all';
-                      }
-                  }
-              } else if (document.getElementById('hl-default-theme')) {
-                  document.getElementById('hl-default-theme').media = 'all';
-              }
       
               if (currentSetting === getModeFromCSSMediaQuery()) {
                   resetRootDarkModeAttributeAndLS();
