@@ -127,12 +127,12 @@ if (page.title) {
       
           applyCustomDarkModeSettings();
       
-          window.onload = () => {
-              const darkModeToggleBottonElement = document.getElementById('btn-toggle-dark');
+          $(document).ready(function () {
+            const darkModeToggleBottonElement = document.getElementById('btn-toggle-dark');
               darkModeToggleBottonElement.addEventListener('click', () => {
                   applyCustomDarkModeSettings(toggleCustomDarkMode());
               });
-          };
+          })
       })();
         </script>
         <% } %>
