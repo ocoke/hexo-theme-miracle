@@ -288,6 +288,12 @@ post:
         enable: true
         authorURL: /
         content: '本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a>。'
+        # CC 版权协议，显示 CC 版权的 SVG
+        cc: true
+        # 复制内容时追加版权
+        clipboard: 
+            enable: false
+            content: ''
 
     donate:
         enable: true
