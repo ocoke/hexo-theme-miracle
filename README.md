@@ -8,7 +8,7 @@
     <a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
 </p>
 
-> 开发不易，您可以前往 [面包多](https://mianbaoduo.com/o/bread/YZebm5tt) 支持作者。
+> 开发不易，欢迎 [点击此处](https://yfun.top/?ref=donate&from=github) 支持作者。
 
 ## 功能特性
 
