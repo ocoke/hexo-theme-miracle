@@ -2,14 +2,15 @@
 
 > 一款简洁、轻量的单栏 Hexo 主题。
 
+> 开发不易，欢迎 [点击此处](https://yfun.top/?ref=donate&from=github) 支持作者。
+
+> V2 版本仍在开发中！
+
 <a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
 <a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
 <a href="https://github.com/hifun-team/hexo-theme-miracle/network/members"><img src="https://badgen.net/github/forks/hifun-team/hexo-theme-miracle" alt="GitHub Forks"></a>
 <a href="https://github.com/hifun-team/hexo-theme-miracle/watchers"><img src="https://badgen.net/github/watchers/hifun-team/hexo-theme-miracle" alt="GitHub Watchers"></a>
 <a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
-
-
-> 开发不易，您可以前往 [面包多](https://mianbaoduo.com/o/bread/YZebm5tt) 支持作者。
 
 ## 功能特性
 
@@ -22,49 +23,30 @@
 - [x] 网页统计
 - [x] 支持脚注语法
 - [x] 深色模式
-- [x] 响应式 / 自适应设计
+- [x] 响应式设计
 - [x] 文章目录
 - [x] 阅读体验优化
 - [x] Mermaid 流程图
 - [x] [HexoPlusPlus](https://hexoplusplus.js.org) 适配
 - [x] 友链页面（JSON / YAML）
 - [x] 方便排版的 Tag 插件
-- [x] Twikoo 评论懒加载
+- [x] Twikoo / Waline 评论懒加载
 
-## 链接
+## 相关链接
 
-- [主题演示](https://miracle-demo.now.sh)
 - [主题文档](https://github.com/hifun-team/hexo-theme-miracle/wiki)
 
-## 安装主题
 
-请参见文档：[下载与安装](https://github.com/hifun-team/hexo-theme-miracle/wiki/Wiki-(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85)
+## 鸣谢
 
-## 更新主题
+### JetBrains
 
-请参见文档：[更新主题](https://github.com/hifun-team/hexo-theme-miracle/wiki/Wiki-(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98)
+> 感谢 JetBrains 免费授权提供开发工具！
 
-## 参与贡献
-
-### 贡献指南
-
-1. 将仓库 Fork 到自己的 GitHub，并克隆到本地。
-2. 创建新的分支，在新的分支上开发。
-3. 保持分支与远程 `develop` 分支一致（通过 `fetch` 和 `rebase` 操作）。
-4. 在本地提交变更（注意 `commit log` 保持简练、规范，推荐加入 Emoji）。
-5. 将所做的提交 Push 到 Fork 的仓库下。
-6. 创建一个 `Pull request` 到 `hifun-team/hexo-theme-miracle` 的 `master` 分支。
+<a title="鸣谢 JetBrains 免费授权开发工具" href="https://www.jetbrains.com/" target="_blank">
+  <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" width="150" alt="JetBrains">
+</a>
 
 ### 贡献者
 
-<a href="https://github.com/oCoke" title="oCoke"><img src="https://avatars0.githubusercontent.com/u/71591824?s=460&u=4e1a04eadb3b23add8f5c9ba14e21b00219142f7&v=4" alt="oCoke" height="68" width="68" style="max-width:100%;"></a>
-
-
-## 参考
-
-本项目参考了一些开源的主题项目，十分感谢！
-
-- [fluid-dev/hexo-theme-fluid](https://github.com/fluid-dev/hexo-theme-fluid)
-- [XPoet/hexo-theme-keep](https://github.com/XPoet/hexo-theme-keep)
-- [ChrAlpha/hexo-theme-cards](https://github.com/ChrAlpha/hexo-theme-cards)
-
+<a href="https://github.com/oCoke" title="oCoke"><img src="https://avatars0.githubusercontent.com/u/71591824?s=460&u=4e1a04eadb3b23add8f5c9ba14e21b00219142f7&v=4" alt="oCoke" height="68" width="68" style="max-width:100%;border-radius:68px;"></a>
