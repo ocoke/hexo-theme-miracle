@@ -1,0 +1,12 @@
+<% if (page.total > 1){ %>
+    <nav aria-label="navigation">
+      <span class="pagination" id="pagination">
+        <%- paginator({
+          prev_text: '&lt;',
+          next_text: '&gt;',
+          mid_size: 1,
+          escape: false
+        }) %>
+      </span>
+    </nav>
+<% } %>

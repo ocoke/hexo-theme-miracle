@@ -1,0 +1,93 @@
+<% if(theme.comment.waline.serverURL){ %>
+  <div id="miracle-comments">
+    <div id="waline">
+      <div style="margin: 0 auto;width: 100%;text-align: center;">
+        <div class="donutSpinner" style="margin: auto;width: 25px;height: 25px;"><div></div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var walineLocale = {
+        nick: '昵称',
+        mail: '邮箱',
+        link: '网址',
+        placeholder: '<%= theme.comment.waline.placeholder %>',
+        sofa: "来发评论吧~",
+        submit: "发送",
+        comment: "评论",
+        more: "加载更多",
+        uploading: "上传中...",
+        login: '登录',
+        admin: "博主",
+        word: "字",
+        nickError: "昵称不能少于 3 个字符",
+        mailError: "请填写正确的邮箱地址",
+        wordHint: '评论字数应在 $0 到 $1 字之间！\n当前字数：$2',
+        seconds: '秒前',
+        minutes: '分钟前',
+        hours: '小时前',
+        days: '天前',
+        now: '刚刚',
+    };
+    function loadComment() {
+      loadScriptFile({
+        url: "<%- theme.static_prefix.waline %>Waline.min.js",
+        loadType: "async",
+        cb: () => {
+          new Waline({
+            el: '#waline',
+            serverURL: '<%= theme.comment.waline.serverURL %>',
+            path: <%= theme.comment.waline.path %>,
+            avatar: '<%= theme.comment.waline.avatar %>',
+            meta: <%- JSON.stringify(theme.comment.waline.meta || []) %>,
+            pageSize: <%= theme.comment.waline.pageSize %>,
+            locale: walineLocale,
+            highlight: <%= theme.comment.waline.highlight %>,
+            avatarCDN: "<%= theme.comment.waline.avatarCDN %>",
+            avatarForce: <%= theme.comment.waline.avatarForce %>,
+            dark: 'html[data-theme="dark"]',
+            requiredMeta: <%- JSON.stringify(theme.comment.waline.requiredMeta || []) %>,
+            login: '<%= theme.comment.waline.login %>',
+            uploadImage: function (file) {
+              const formData = new FormData();
+              formData.append('image', file);
+              return fetch('https://7bu.top/api/upload', {
+                method: 'POST',
+                body: formData,
+                mode: 'cors'
+              }).then(resp => resp.json()).then(resp => resp.data.url);
+            },
+            emoji: [
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+              'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq'
+            ],
+          });
+        }
+      });
+    }
+    
+    
+
+
+    var runningOnBrowser = typeof window !== "undefined";
+
+    var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+
+    var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+    setTimeout(function () {
+      if (!isBot && supportsIntersectionObserver) {
+        var observer = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) {
+            loadComment();
+            observer.disconnect();
+          }
+        }, { threshold: [0] });
+        observer.observe(document.getElementById('miracle-comments'));
+      } else {
+        loadComment();
+      }
+    }, 1);
+  </script>
+  <% } %>

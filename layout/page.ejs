@@ -1,0 +1,26 @@
+
+
+<article class="page">
+<div id="post-meta-m">
+        <h3><%= page.title %></h3>
+</div>
+<div class="article-m">
+    <div class="post-toc">
+        <% if (page.toc == true){ %>
+            <%- toc(page.content) %>
+        <% } %>
+    </div>
+    <div id="article" class="markdown-body textretty">
+        <%- page.content %>
+    </div>
+</div>
+<% if(page.comment) { %>
+    <!-- Comments -->
+    <div class="comments">
+        <% var type = '_partial/comments/' + theme.comment.type %>
+        <%- partial(type) %>
+    </div>
+<% } %>
+</article>
+
+

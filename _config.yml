@@ -1,0 +1,490 @@
+#---------------------------
+# Hexo Theme Miracle
+# Author: HiFun Team
+# GitHub: https://github.com/hifun-team/hexo-theme-miracle
+#---------------------------
+
+#---------------------------
+# 全局
+# Global
+#---------------------------
+
+global:
+
+    # 用于浏览器标签的图标
+    # Icon for browser tab
+    favicon:
+
+    # 用于苹果设备的图标
+    # Icon for Apple touch
+    apple_touch_icon:
+
+    # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
+    # Force all links to be HTTPS (applicable to HTTP mixed error)
+    force_https: true
+
+    # 导航栏左侧的标题，为空则按 hexo config 中 `title` 显示
+    # The title on the left side of the navigation bar. If empty, it is based on `title` in hexo config
+    nav_title: "Theme Miracle"
+
+    # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
+    # Title separator in browser tab, eg: article - site
+    title_join_string: " - "
+
+    # 主题字体设置
+    # Theme font settings
+    font:
+        family: # "'Noto Sans SC', sans-serif"
+        css: # https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap
+
+    # 每次生成页面后，检测主题是否为最新版本
+    # Every time the page is generated, detect whether the theme is the latest version
+    version_check: true
+
+    # 网页访问统计
+    # Analysis of website visitors
+    web_analytics:
+        # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
+        # Baidu analytics, get the string behind `hm.js?`
+        # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
+        baidu:
+        
+        # Google 统计的 Tracking ID
+        # Google analytics, set Tracking ID
+        # See: https://developers.google.com/analytics/devguides/collection/analyticsjs
+        google:
+        
+        # 51.la 站点统计 ID
+        # 51.la analytics
+        # See: https://www.51.la/user/site/index
+        woyaola: 
+
+        # 友盟/cnzz 站点统计 web_id
+        # cnzz analytics
+        # See: https://web.umeng.com/main.php?c=site&a=show
+        cnzz:
+
+        busuanzi:
+            enable: false
+            # 页面显示的文本，{} 是数字的占位符（必须包含)，下同
+            # Displayed text, {} is a placeholder for numbers (must be included), the same below.
+            pv_format: "总访问量 {} 次"
+            uv_format: "总访客数 {} 人"
+
+    # 在页面底部加入 Copyright
+    # Copyright
+    copyright:
+        enable: true
+        # 开始年份，不填不显示
+        # Start year, no display if not filled.
+        from_year: 2020
+        # 结束年份
+        # End year.
+        to_year: 2021
+        name: "Theme Miracle"
+
+    # 哀悼模式，网页黑白
+    # Mourning mode, web page black and white
+    memorial:
+        enable: false
+
+# 搜索
+# Search
+search:
+    enable: true
+    # 搜索索引文件的路径，可以是相对路径或外站的绝对路径
+    # Path for search index file, it can be a relative path or an absolute path.
+    path: /search.json
+
+    # 搜索的范围
+    # Search field
+    # Options: post | page | all
+    field: post
+
+# 中国大陆备案
+# For Chinese mainland website policy, other areas keep disable.
+beian:
+    enable: false
+    # ICP 证号
+    icp_text: 京ICP证 123456 号
+    # 公安备案号，不填则只显示 ICP
+    police_text: 京公网安备 12345678 号
+    # 公安备案的编号，用于链接跳转查询
+    police_code: 12345678
+    # 公安备案的图片. 为空时不显示备案图片
+    police_icon: /img/police_beian.png
+
+# 自定义
+# Custom
+custom:
+    # 页面头部 HTML
+    # Page header HTML
+    header_html: ''
+    # 页面底部 HTML
+    # Page footer HTML
+    footer_html: ''
+    # 页面自定义 JS（底部引入）
+    # Page custom JS (introduced at the bottom)
+    js: 
+    # 页面自定义 CSS
+    # Page custom CSS
+    css: 
+
+##---------------------------
+## 主题
+## Theme
+##---------------------------
+#theme:
+#    # 深色模式
+#    # Dark mode
+#    # 默认开启。
+
+
+#---------------------------
+# 主页
+# Homepage
+#---------------------------
+index:
+    # 名称
+    # Name
+    name: "Theme Miracle"
+    # Slogan
+    slogan: 一款简洁的单栏 Hexo 主题
+
+    # 文章通过 `sticky` 排序
+    # The posts are sorted by `sticky`
+    post_sticky:
+        enable: true
+        text: "[TOP]"
+
+    # 文章卡片是否显示相关信息（时间、分类、标签）
+    # Whether the article card displays relevant information (time, category, label)
+    post_meta:
+        date: true
+        category: true
+        tag: true
+
+    # 自动截取文章摘要，前 200 字符
+    # Auto extract post, First 200 characters.
+    auto_excerpt:
+        enable: true
+
+navbar:
+    # 导航栏菜单，可自行增减.
+    # Navigation bar menu.
+    menu:
+        首页: /
+        归档: /archives/
+        分类: /categories/
+        标签: /tags/
+        说说: /talk/
+        友链: /links/
+        关于: /about/
+
+
+#---------------------------
+# 文章页
+# Post Page
+#---------------------------
+post:
+    # 文章元信息
+    # Post meta
+    meta:
+        # 作者，优先根据 `front-matter` 里 `author` 字段，其次是 `hexo` 配置中 `author` 值
+        # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
+        author: true
+
+        # 文章日期，优先根据 `front-matter` 里 date 字段，其次是 .md 文件日期
+        # Post date, based on `date` field in front-matter, if not set, based on create date of .md file
+        date: true
+
+        # 格式参照 ISO-8601 日期格式化
+        # ISO-8601 date format
+        # See: http://momentjs.cn/docs/#/parsing/string-format/
+        date_format: "YYYY-MM-DD"
+    
+    # 字数统计
+    # Word count
+    wordcount:
+        enable: true
+
+        # 所显示的文本，{} 是数字的占位符（必须包含）
+        # Displayed text, {} is a placeholder for numbers (must be included)
+        format: "共 {} 字"
+
+    # 估计阅读全文需要的时长
+    # Estimate the time required to read the full text
+    min2read:
+        enable: false
+        format: "预计 {} 分钟"
+        # 每分钟阅读多少字，如果是技术文章，建议降低
+        # Words read per minute
+        words: 120
+
+    # 文章阅读量统计
+    # Article reading statistics
+    # 由 不蒜子 提供支持
+    # Supported by busuanzi
+    views:
+        enable: false
+        format: "共 {} 次阅读"
+
+    # 评论插件
+    # Comment plugin
+    comment: true
+
+    # 代码显示设置
+    # Code display setting
+    code:
+        # 代码高亮
+        # Code highlight
+        highlight: true
+    
+    # 文章目录
+    # Article Directory
+    toc:
+        enable: true
+        type: hexo
+        hexo:
+            # 显示编号
+            # Displays list number
+            list_number: true
+            # 生成 TOC 的最大深度
+            # Maximum heading depth of generated toc
+            max_depth: 
+            # 生成 TOC 的最小深度
+            # Minimum heading depth of generated toc
+            min_depth: 
+
+    # 脚注
+    # Footnote
+    footnote:
+        enable: true
+        # 输出在脚注列表前的文字（支持 HTML）
+        # The text before the footnote list (supports HTML)
+        header: ''
+    
+    # 图片灯箱
+    # Picture Fancybox
+    fancybox:
+        enable: true
+    
+    mermaid:
+        enable: true
+        # 开启后，只有在文章 Front-matter 里指定 `mermaid: true` 才会在文章页启动公式转换，以便在页面不包含公式时提高加载速度
+        # If true, only set `mermaid: true` in Front-matter will enable mermaid, to load faster when the page does not contain mermaid
+        specific: true
+
+        # See: http://mermaid-js.github.io/mermaid/
+        options: { theme: 'default' }
+
+    # 版权声明，会显示在每篇文章的结尾
+    # Copyright, will be displayed at the end of each post
+    copyright:
+        enable: true
+        authorURL: /
+        content: '本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处，谢谢。'
+        # CC 版权协议，显示 CC 版权的 SVG
+        cc: true
+        # 复制内容时追加版权
+        clipboard: 
+            enable: false
+            content: ''
+
+    # 文末打赏
+    # Donate
+    donate:
+        enable: true
+        # 打赏文字
+        text: "喜欢这篇文章？为什么不考虑打赏一下作者呢？"
+        # 方式
+        # Way
+        way:
+            赞赏: https://yfun.top/?ref=donate
+
+
+
+#---------------------------
+# 评论插件
+# Comment plugins
+#
+# 开启评论需要先设置上方 `post: comment: true`，然后根据 `type` 设置下方对应的评论插件参数
+# Enable comments need to be set `post: comments: enable: true`, then set the corresponding comment plugin parameters below according to `type`
+#---------------------------
+comment:
+
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: gitalk | valine | waline | twikoo
+    type: waline
+
+    # Gitalk
+    # See: https://github.com/gitalk/gitalk#options
+    gitalk:
+        clientID: 
+        clientSecret: 
+        repo: 
+        owner: 
+        admin: ['name']
+        language: zh-CN
+        labels: ['Gitalk']
+        perPage: 10
+        pagerDirection: last
+        distractionFreeMode: false
+        createIssueManually: true
+
+    # Valine
+    # See: https://valine.js.org/configuration.html
+    # Valine 存在用户隐私泄露问题，可能会泄露用户的隐私信息（IP 等），不再建议使用。
+    valine:
+        appid: 
+        appkey: 
+        placeholder:
+        path: window.location.pathname
+        avatar: mp
+        meta: ['nick','mail','link']
+        pageSize: 10
+        lang: zh-CN
+        highlight: true
+        avatarForce: false
+        recordIP: false
+        serverURLs: 
+        enableQQ: false
+        requiredFields: ['nick','mail']
+
+    # Waline
+    # See: https://waline.js.org/client/basic.html
+    waline:
+        serverURL:
+        placeholder:
+        path: window.location.pathname
+        avatar: mp
+        meta: ['nick','mail','link']
+        pageSize: 10
+        highlight: true
+        avatarCDN:
+        avatarForce: false
+        requiredMeta: ['nick','mail']
+        login: enable
+
+    # Twikoo
+    # See: https://twikoo.js.org/quick-start.html#%E5%89%8D%E7%AB%AF%E9%83%A8%E7%BD%B2
+    twikoo:
+        envid:
+        region: ap-shanghai
+        path: window.location.pathname
+
+#---------------------------
+# 分类页
+# Category Page
+#---------------------------
+category:
+    enable: true
+
+
+#---------------------------
+# 归档页
+# Archive Page
+#---------------------------
+archive:
+    title: 归档
+
+#---------------------------
+# 标签页
+# Tag Page
+#---------------------------
+tag:
+    enable: true
+    subtitle:
+    tagcloud:
+        min_font: 15
+        max_font: 30
+        unit: px
+        start_color: "#acb3c2"
+        end_color: "#454d5d"
+
+#---------------------------
+# 友链页
+# Links Page
+#---------------------------
+links:
+    enable: true
+    items:
+        
+    # JSON 友链
+    # JSON Links
+    json_links:
+        enable: true
+
+        # JSON 文件链接
+        # Link to JSON file
+        item_links:
+
+#---------------------------
+# 说说页
+# Talk Page
+#---------------------------
+talk:
+    enable: true
+
+    # Page Title
+    title: 说说
+
+    # HexoPlusPlus / Artitalk
+    # Options: HPP | Artitalk
+    type: HPP
+
+    # HexoPlusPlus, See: https://hexoplusplus.js.org/use/hexoinit.html
+    HPP:
+        domain:
+        limit: 10
+        start: 0
+
+    # Artitalk, See: https://artitalk.js.org/settings.html
+    Artitalk:
+        appId:
+        appKey:
+        serverURL: 
+        lang: zh
+        pageSize: 6
+        shuoPla: 随便说说...
+        avatarPla: 
+        motion: 1
+        bgImg:
+
+# HexoPlusPlus 签到
+hpp_time:
+    enable: false
+    domain:
+
+
+#---------------------------
+# 404页
+# 404 Page
+#---------------------------
+page404:
+    enable: true
+
+
+#---------------------------
+# 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
+# 如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
+# 在站点上启用 HTTPS 时，请使用 CDN 地址的 HTTPS 协议，
+# ** 如果你不知道如何设置，请不要做任何改动 **
+#
+# Here is the url prefix to configure JS and CSS static assets. Set CDN addresses you want to customize.
+# Be aware that you would better use the same version as default ones to avoid potential problems.
+# Use the HTTPS protocol of CDN url when you enable HTTPS on your site.
+# DO NOT EDIT THE FOLLOWING SETTINGS UNLESS YOU KNOW WHAT YOU ARE DOING
+#---------------------------
+
+static_prefix:
+    busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/
+    gitalk: https://cdn.jsdelivr.net/npm/gitalk@1/dist/
+    valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
+    waline: https://cdn.jsdelivr.net/npm/@waline/client/dist/
+    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
+    mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/ 
+    twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.3.0/dist/
+    artitalk: https://cdn.jsdelivr.net/npm/artitalk
+    hpp: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/

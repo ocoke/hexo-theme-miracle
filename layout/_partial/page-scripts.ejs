@@ -1,0 +1,38 @@
+
+<script>
+    document.getElementById("btn-dropdown").addEventListener('click', () => {
+      toggleClass("#dropdown-menus","display-inline");
+    });
+    console.log('\n' + ' %c Powered by Hexo Theme Miracle ' + ' %c https://github.com/hifun-team/hexo-theme-miracle ' + '\n' + '\n', 'color: #fff; background: #4F9BFA; padding:5px 0;', 'background: #FFF; padding:5px 0;');
+
+    <% if (theme.hpp_time.enable) { %>
+      setTimeout(function(){
+          loadScriptFile({
+            url: "https://<%= theme.hpp_time.domain %>/hpp/api/getblogeractive",
+            loadType: "async"
+          });
+      },0) 
+        
+    <% } %>
+
+    <% if (theme.post.copyright.clipboard.enable) { %>
+      document.addEventListener('copy', function (event) {
+      const clipboardData = event.clipboardData || window.clipboardData;
+      if (!clipboardData) { return; }
+      const text = window.getSelection().toString();
+      if (text) {
+        event.preventDefault();
+        clipboardData.setData('text/plain', text + '<%- theme.post.copyright.clipboard.content %>');
+      }
+    });
+    <% } %>
+    /* 小彩蛋: 饮茶先啦 */
+  setTimeout(() => {
+    var time = new Date();
+    if (time.getHours() == 15) {
+      let comment = document.createComment(' 三点几嚟！饮茶先啦！ ');
+      document.body.insertBefore(comment, document.getElementsByTagName('header')[0]);
+    }
+  },1);
+    
+</script>

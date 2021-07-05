@@ -1,0 +1,90 @@
+#index-banner {
+    z-index: 0;
+    top: 0px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+}
+
+.index-card{
+    border-radius:  0.5rem;
+    margin: auto
+    max-width 700px;
+    box-shadow: var(--shadow)
+    padding: 28px;
+    margin-bottom: 1.8rem;
+    padding-top: 5px; 
+    background-color: var(--post-bkg-color)
+}
+
+.index-card{
+    a{
+        color: var(--first-text-color);
+    }
+}
+/*
+.index-card:hover{
+    box-shadow: 2px 2px 6px var(--shadow-hover-color);
+}
+*/
+.post-card-main{
+    max-width: 650px;
+    position: relative;
+    width: 100%;
+}
+.post-card-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.8rem
+}
+.index-pin{
+
+    color: var(--third-text-color);
+}
+.post-metas{
+    color: var(--third-text-color);
+}
+#index-banner{
+    top: 30px;
+    text-align: center;
+}
+@media (max-width 576px){
+    #index-banner{
+        padding-bottom: 30px;
+    }
+}
+#banner-name{
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    margin: .5em 0;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5em;
+    color: var(--first-text-color);
+}
+#banner-name:before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    bottom: 5px;
+    width: 105%;
+    left: -2.5%;
+    z-index: -1;
+    background-color: var(--home-title-color);
+    opacity: .3;
+    transition: 0.1s ease background-color;
+}
+.slogan{
+    color: var(--third-text-color);
+    margin: .3em 0;
+    max-width: 95%;
+    text-align: center;
+    margin: 0 auto;
+}
+.banner-text {
+    width: 100%;
+}

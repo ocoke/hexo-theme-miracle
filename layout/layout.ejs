@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<%- partial('_partial/head') %>
+    <body>
+        <header>
+            <%- partial('_partial/nav') %>
+        </header>
+        <div id="top"></div>
+        <div id="page-main" class="main-content">
+        <div class="mg-top">
+            <%- body %>
+        </div>
+        <%- partial('_partial/foot') %>
+        </div>
+        <div id="css-loading">
+            <h3 class="text-center">加载中...</h3>
+        </div>
+        
+    </body>
+</html>

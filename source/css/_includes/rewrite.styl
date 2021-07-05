@@ -1,0 +1,97 @@
+@media print {
+    /*隐藏不必要的元素*/
+    header, .post-meta-label,footer{
+        display: none!important;
+    }
+    /*使用下划线标记链接*/
+    article a {
+        text-decoration: underline!important;
+    }
+    /*由于纸张不可交互，在链接后显示链接到的 URL*/
+    article a::after {
+        content: "(" attr(href) ")";
+    }
+    /*强制白底黑字*/
+    html > body {
+        background-color: white!important;
+    }
+    article p {
+        color: rgba(0,0,0,.8)!important;
+    }
+    /*对于纸张上的长文章，衬线字体拥有更好的可读性。以下字体列表来自 fonts.css*/
+    #post-meta,#article {
+        font: 13pt Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif!important;
+    }
+    
+    #article p {
+        page-break-inside: auto;
+    }
+    #article,#post-meta{
+        box-shadow: none;
+    }
+
+}
+.display-none{
+    display: none!important;
+}
+footer,.p-btn{
+    display: inline!important;
+}
+[data-theme='dark'] *{
+    transition: none!important;
+}
+.display-inline{
+    display inline
+}
+#i-up, #i-menu{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: 15px;
+    position: relative;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-indent: -9999px;
+}
+#i-up:before {
+    height: .65em;
+    width: .65em;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    transform: translate(-50%,-25%) rotate(45deg);
+}
+#i-menu:before {
+    box-shadow: 0 -0.35em, 0 0.35em;
+    border-top: 2px solid;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+#i-menu:after, #i-menu:before,#i-up:after, #i-up:before{
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+[data-theme='dark'] #waline {
+  /* 常规颜色 */
+  --waline-white: #181c27;
+  --waline-light-grey: #666;
+  --waline-dark-grey: #999;
+
+  /* 布局颜色 */
+  --waline-text-color: hsla(0,0%,100%,0.86);
+  --waline-bgcolor: #181c27;
+  --waline-bgcolor-light: #272727;
+  --waline-border-color: #333;
+  --waline-disable-bgcolor: #222;
+  --waline-disable-color: #272727;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #3e4b5e;
+
+  /* 其他颜色 */
+  --waline-info-bgcolor: #272727;
+  --waline-info-color: #666;
+}

@@ -1,0 +1,84 @@
+<%
+page.layout = "links"
+page.title = theme.links.title || __('links.title')
+page.subtitle = theme.links.subtitle || __('links.subtitle')
+%>
+<article class="page">
+<div id="post-meta-m" style="padding-bottom:0;">
+  <div class="post-meta" id="post-meta">
+    <h3><%= page.title %></h3>
+  </div>
+</div>
+<div class="links-page" style="padding-top:10px;" id="links-page">
+    <% for(const each of theme.links.items || []) { %>
+      <% if (!each.title || !each.link) continue %>
+      <div class="links-card">
+        <a href="<%= url_for(each.link) %>" class="links-card-body" target="_blank" rel="noopener">
+          <div class="links-card-content">
+            <% if (each.image){ %>
+              <div class="link-avatar my-auto">
+                <img src="<%= each.image %>" alt="<%= each.title %>" />
+              </div>
+            <% } %>
+            <div class="link-text">
+              <div class="link-title"><%- each.title %></div>
+              <div class="link-intro"><%- each.intro %></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% } %>
+    <% if (theme.links.json_links.enable) { %>
+      <script>
+        (async () => {
+          var res = await fetch('<%= theme.links.json_links.item_links %>');
+          var json = await res.json();
+          console.log(json);
+          const Linkscontainer = document.getElementById('links-page');
+          json.forEach(item => {
+            const element = document.createElement('div');
+            element.className = "links-card";
+
+            element.innerHTML = `
+        <a href="${item.link}" class="links-card-body" target="_blank" rel="noopener">
+          <div class="links-card-content">
+              <div class="link-avatar my-auto">
+                <img webp-comp class="lazyload-img" data-srcset="${item.image}" srcset="<%= config.lazyload.loadingImg || "/img/loading.svg" %>" src="${item.image}" alt="${item.title}" />
+              </div>
+            <div class="link-text">
+              <div class="link-title">${item.title}</div>
+              <div class="link-intro">${item.intro}</div>
+            </div>
+          </div>
+        </a>
+            `;
+            Linkscontainer.appendChild(element);
+          });
+          setTimeout(function () {
+  function query(selector) {
+    return Array.from(document.querySelectorAll(selector));
+}
+    
+var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) { 
+            var img = entry.target;
+            img.srcset = img.getAttribute('data-srcset');
+            img.className += ' loaded'
+            io.unobserve(img);
+        }
+    });
+});
+    
+query('.lazyload-img').forEach(function (item) {
+    io.observe(item);
+});
+},0)
+        })();
+
+
+      </script>
+    <% } %>
+</div>
+  </div>
+</article>

@@ -1,0 +1,117 @@
+
+<%- partial('_partial/plugins/analytics.ejs') %>
+<%- partial('_partial/page-scripts.ejs') %>
+<% if (theme.post.fancybox.enable && (is_page() || is_post())) { %>
+<script>
+    var postImg = document.querySelectorAll("article[class=page] img");
+    for (let imgi = 0; imgi < postImg.length; imgi++) {
+        postImg[imgi].onclick = () => {
+            let zoomImg = document.createElement("div");
+            zoomImg.id = "zoomImg";
+            zoomImg.innerHTML = `<div id="zoom-picture"></div>
+    <div class="poptrox-overlay"
+        style="position: fixed; left: 0px; top: 0px; z-index: 20000; width: 100%; height: 100%; text-align: center; cursor: zoom-out; opacity: 1;">
+        <div style="display:inline-block;height:100%;vertical-align:middle;"></div>
+        <div
+            style="position:absolute;left:0;top:0;width:100%;height:100%;background:#000000;opacity:0;filter:alpha(opacity=0);">
+        </div>
+        <div class="poptrox-popup"
+            style="display: inline-block; vertical-align: middle; position: relative; z-index: 1; cursor: zoom-out; min-width: 10px; min-height: 10px; width: auto; height: auto;">
+            <div class="loader" style="display: none;"></div>
+            <div class="pic" style="text-indent: 0px;"><img
+                    src="${ postImg[imgi].srcset || postImg[imgi].src }" alt="Loading..."
+                    style="vertical-align: bottom; max-width: 85vw; max-height: 85vh;"></div>
+        </div>
+    </div>`;
+            document.body.appendChild(zoomImg);
+                document.querySelector("#zoomImg").onclick = () => {
+                    document.querySelector("#zoomImg").remove();
+                }
+        }
+    }
+    
+</script>
+<% } %>
+
+<% if (config.lazyload.enable && (is_page() || is_post())){ %>
+<script>
+        /*
+        function checkWebp() {
+            function recheckWebp() {
+                var img = new Image();
+                img.onload = function () {
+                    try {
+                        localStorage.setItem("wbp", "true");
+                    } catch (e) {
+                        console.info(e);
+                    }
+                };
+                img.onerror = function () {
+                    try {
+                        localStorage.setItem("wbp", "false");
+                    } catch (e) {
+                        console.info(e);
+                    }
+                };
+                img.src = 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA==';
+            }
+            
+            try {
+                if (!localStorage.getItem("wbp")) {
+                    recheckWebp();
+                    checkWebp();
+                } else {
+                    return localStorage.getItem("wbp");
+                }
+            } catch (e) {
+                return "false";
+            }
+        }*/
+        try {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var img = entry.target;
+                        img.srcset = img.getAttribute('data-srcset');
+                        img.className += ' loaded'
+                        io.unobserve(img);
+                    }
+                });
+            });
+        } catch (e) {
+            console.info(e);
+        }
+        query('.lazyload-img').forEach(function (item) {
+            try {
+                io.observe(item);
+            } catch (e) {
+                console.info(e);
+            }
+        });
+    </script>
+<% } %>
+<% if (is_post() && theme.post.toc.enable && page.toc !== false){ %>
+    <script>
+        query("#toc-btn")[0].onclick = () => {
+            if (query(".post-toc")[0].innerHTML) {
+                toggleClass(".post-toc", "display-inline");
+            }
+        }
+
+        if (!query(".post-toc")[0].innerHTML) {
+            addClass("#toc-btn","display-none");
+        }
+    </script>
+<% } %>
+
+<%- partial('_partial/plugins/mermaid.ejs') %>
+<% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>
+    <script>
+        setTimeout(() => {
+            loadScriptFile({
+                url: "<%- theme.static_prefix.busuanzi %>busuanzi.pure.mini.js",
+                loadType: "async"
+            });
+        },0);
+    </script>
+<% } %>

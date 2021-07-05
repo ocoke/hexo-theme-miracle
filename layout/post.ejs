@@ -1,0 +1,62 @@
+
+
+<article class="page">
+<div id="post-meta-m">
+    <%- partial('_partial/plugins/post-meta.ejs') %>
+</div>
+<div class="article-m">
+  <div class="post-toc"><% if (theme.post.toc.enable && theme.post.toc.type == "hexo" && page.toc !== false){ %><%- toc(page.content) %><% } %></div>
+    <div id="article">
+      <div id="post-content" class="markdown-body textretty">
+        <%- page.content %>
+      </div>
+    </div>
+</div>
+<% if((page.categories && page.categories.length > 0) || (page.tags && page.tags.length > 0)){ %>
+<div class="post-category">
+
+    <div id="p-meta-i">
+        <% if (page.categories && page.categories.length > 0) { %>
+              <% page.categories.each(function(cate) { %>
+                <a class="hover-with-bg" href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+              <% }) %>
+          <% } %>
+          <% if (page.tags && page.tags.length > 0 ) { %>
+              <% page.tags.each(function(tag) { %>
+                <a class="hover-with-bg" href="<%= url_for(tag.path) %>"># <%- tag.name %></a>
+              <% }) %>
+          <% } %>
+    </div>
+</div>
+<% } %>
+
+<div class="post-footer">
+  <% if (theme.post.donate.enable){ %>
+  <div class="donate text-center">
+    <span><%- theme.post.donate.text %></span>
+    <div class="donate-way">
+      <% for (var i in theme.post.donate.way){ %>
+        <a href="<%- url_for(theme.post.donate.way[i]) %>" class="donate-btn button">
+          <%-  __(i) %>
+        </a>
+      <% } %>
+    </div>
+  </div>
+  <% } %>
+<% if (theme.post.copyright.enable){ %>
+  <div class="post-copyright">
+    <p style="margin: 5px 0;">文章作者：<a href="<%= page.authorURL || theme.post.copyright.authorURL %>"><%- page.author || config.author %></a></p>
+    <p style="margin: 5px 0;">文章链接：<a href="<%= page.url || page.permalink %>"><%- page.url || page.permalink %></a></p>
+    <p style="margin: 5px 0;">版权声明：<%- page.copyrightText || theme.post.copyright.content %></p>
+  </div>
+  <% } %>
+</div>
+<% if(page.comment || theme.post.comment) { %>
+    <!-- Comments -->
+    <div class="comments">
+        <% var type = '_partial/comments/' + theme.comment.type %>
+        <%- partial(type) %>
+    </div>
+<% } %>
+</article>
+

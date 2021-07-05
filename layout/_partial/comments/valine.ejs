@@ -1,0 +1,25 @@
+<% if(theme.comment.valine.appid && theme.comment.valine.appkey){ %>
+    <script src="<%- theme.static_prefix.valine %>Valine.min.js"></script>
+    <div id="miracle-comments">
+        <div id="miracle-vcomments"></div>
+    </div>
+    <script>
+        new Valine({
+            el: '#miracle-vcomments',
+            appId: '<%= theme.comment.valine.appid %>',
+            appKey: '<%= theme.comment.valine.appkey %>',
+            placeholder: '<%= theme.comment.valine.placeholder %>',
+            path: <%= theme.comment.valine.path %>,
+            avatar: '<%= theme.comment.valine.avatar %>',
+            meta: <%- JSON.stringify(theme.comment.valine.meta || []) %>,
+            pageSize: <%= theme.comment.valine.pageSize %>,
+            lang: '<%= theme.comment.valine.lang %>',
+            highlight: <%= theme.comment.valine.highlight %>,
+            avatarForce: <%= theme.comment.valine.avatarForce %>,
+            recordIP: <%= theme.comment.valine.recordIP %>,
+            serverURLs: '<%= theme.comment.valine.serverURLs %>',
+            enableQQ: <%= theme.comment.valine.enableQQ %>,
+            requiredFields: <%- JSON.stringify(theme.comment.valine.requiredFields || []) %>
+        })
+    </script>
+<% } %>

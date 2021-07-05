@@ -1,0 +1,25 @@
+<% if(theme.comment.gitalk.clientID && theme.comment.gitalk.clientSecret && theme.comment.gitalk.repo){ %>
+    <link rel="stylesheet" href="<%- theme.static_prefix.gitalk %>gitalk.css">
+    <script src="<%- theme.static_prefix.gitalk %>gitalk.min.js"></script>
+    <div id="miracle-comments">
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+            clientID: '<%= theme.comment.gitalk.clientID %>',
+            clientSecret: '<%= theme.comment.gitalk.clientSecret %>',
+            repo: '<%= theme.comment.gitalk.repo %>',
+            owner: '<%= theme.comment.gitalk.owner %>',
+            admin: <%- JSON.stringify(theme.comment.gitalk.admin || []) %>,
+            id: '<%= page.path %>',
+            language: '<%= theme.comment.gitalk.language %>',
+            labels: <%- JSON.stringify(theme.comment.gitalk.labels || []) %>,
+            perPage: <%= theme.comment.gitalk.perPage %>,
+            pagerDirection: '<%= theme.comment.gitalk.pagerDirection %>',
+            createIssueManually: <%= theme.comment.gitalk.createIssueManually %>,
+            distractionFreeMode: <%= theme.comment.gitalk.distractionFreeMode %>
+        });
+        gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+<% } %>

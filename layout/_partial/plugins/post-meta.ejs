@@ -1,0 +1,43 @@
+<div class="post-meta" id="post-meta">
+  <h3><%= page.title %></h3>
+    <% if (theme.post.meta.author && (page.author || config.author)) { %>
+      <span class="post-meta-label">
+        <%- page.author || config.author %>
+      </span>
+    <% } %>
+    <% if (theme.post.meta.date) { %>
+      <span class="post-meta-label">
+        <span class="p-dot"></span>
+        <time datetime="<%= full_date(page.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
+          <%= full_date(page.date, theme.post.meta.date_format) %>
+        </time>
+      </span>
+    <% } %>
+    <% if (theme.post.wordcount.enable) { %>
+      <% var wordcount_texts = theme.post.wordcount.format.split('{}') %>
+      <span class="post-meta">
+        <span class="p-dot"></span>
+        <%- wordcount_texts[0] %><%- wordcount(page.content) %><%- wordcount_texts[1] %>
+      </span>
+    <% } %>
+    <% if (theme.post.min2read.enable) { %>
+      <% var min2read_texts = theme.post.min2read.format.split('{}') %>
+      <span class="post-meta">
+        <span class="p-dot"></span>
+        <% var words = parseInt(theme.post.min2read.words) %>
+        <%- min2read_texts[0] %>
+        <%- min2read(page.content, {cn: words, en: words / 2}) %>
+        <%- min2read_texts[1] %>
+      </span>
+    <% } %>
+    <% if(theme.post.views.enable){ %>
+      <% var views_texts = theme.post.views.format.split('{}') %>
+      <span class="post-meta">
+        <span class="p-dot"></span>
+        <span id="busuanzi_container_page_pv">
+          <%- views_texts[0] %><span id="busuanzi_value_page_pv"></span><%- views_texts[1] %>
+        </span>
+      </span>
+    <% } %>
+  </div>
+  

@@ -1,0 +1,57 @@
+<% if(!page.prev){ %>
+  <div id="index-banner" class="text-center middle-center">
+    <div class="banner-text">
+        <h3 id="banner-name">
+            <%- theme.index.name %>
+        </h3>
+        <p class="slogan">
+          <%- theme.index.slogan %>
+        </p>
+    </div>
+</div>
+<% } %>
+
+<div class="post-card-center">
+<div class="post-card-main">
+<% page.posts.each(function (post) { %>
+    <div class="index-card">
+      <% var post_url = url_for(post.path)%>
+      <article class="index-card-info">
+        <h3 class="index-header">
+          <a href="<%- post_url %>">
+          <% if (theme.index.post_sticky && theme.index.post_sticky.enable && post.sticky > 0) { %>
+            <span class="index-pin"><%= theme.index.post_sticky.text %></span>
+          <% } %>
+          <%= post.title %></a>
+        </h3>
+        <p class="index-excerpt">
+            <% var excerpt = '' %>
+            <% if(post.excerpt) { %>
+              <% excerpt = strip_html(post.excerpt).substr(0, 200) %>
+            <% } else if(theme.index.auto_excerpt.enable){ %>
+              <% excerpt = strip_html(post.content).substr(0, 200) %>
+            <% } %>
+            <%- excerpt %>
+        </p>
+        <div class="index-btm post-metas">
+          <% if(theme.index.post_meta.date ) { %>
+            
+              <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
+                <%- date(post.date, config.date_format) %>
+              </time>
+            
+          <% } %>
+          <% if(theme.index.post_meta.category && post.categories.length > 0) { %>
+            
+              <% post.categories.each(function(cate){ %>
+                <span class="p-dot"></span><a href="<%= url_for(cate.path) %>"><%- cate.name %></a>
+              <% }) %>
+            
+          <% } %>
+        </div>
+      </article>
+    </div>
+  <% }) %>
+</div>
+</div>
+<%- partial('_partial/paginator') %>

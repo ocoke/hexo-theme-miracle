@@ -1,0 +1,354 @@
+@charset 'utf-8'
+/**
+ *  Textretty.css
+ *
+ *  @author:  Eltrac
+ *  @license: MIT
+ *  @repo:    https://github.com/BigCoke233/textretty.css
+ */
+/*
+ * Container
+ */
+.textretty {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: var(--second-text-color)
+    line-height: 1.5;
+    
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    
+    font-size: 16px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.textretty * {
+    box-sizing: border-box;
+}
+
+/*
+ * Content
+ */
+/* Anchor Links */
+.textretty a {
+    background-color: transparent;
+    color: var(--second-text-color);
+    text-decoration: none;
+    border-bottom: 2px solid #ccc;
+    transition: opacity 0.2s;
+}
+
+.textretty a:hover {
+    opacity: 0.8;
+}
+
+.textretty a:active {
+    opacity: 0.7;
+}
+
+/* Emphasize */
+.textretty strong {
+    font-weight: bolder;
+    font-weight: 600;
+}
+
+/* Headings */
+.textretty h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-size: 2em;
+}
+
+.textretty h1, .textretty h2, .textretty h3, .textretty h4, .textretty h5, .textretty h6 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.textretty h1 {
+    font-size: 32px;
+}
+
+.textretty h1, .textretty h2 {
+    font-weight: 600;
+    padding-bottom: 0.3em;
+}
+
+// .textretty:not(.tex-title-no-line) h1, .textretty:not(.tex-title-no-line) h2 {
+//     border-bottom: 1px solid #eaecef;
+// }
+
+.textretty h2 {
+    font-size: 24px;
+    font-size: 1.5em;
+}
+
+.textretty h3 {
+    font-size: 20px;
+    font-size: 1.25em;
+}
+
+.textretty h3, .textretty h4 {
+    font-weight: 600;
+}
+
+.textretty h4 {
+    font-size: 16px;
+    font-size: 1em;
+}
+
+.textretty h5 {
+    font-size: 14px;
+    font-size: 0.875em;
+}
+
+.textretty h5, .textretty h6 {
+    font-weight: 600;
+}
+
+.textretty h6 {
+    font-size: 12px;
+    color: var(--third-text-color)
+    font-size: 0.85em;
+}
+
+.textretty h1, .textretty h2, .textretty h3, .textretty h4, .textretty h5, .textretty h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 1.5rem;
+}
+
+/* Image */
+.textretty img {
+    box-sizing: initial;
+    background-color: transparent;
+    /* cursor: zoom-in; */
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1) !important;
+    max-width: 90%;
+    margin: 1.5rem auto;
+    display: block;
+}
+
+/* Code */
+.textretty code, .textretty kbd, .textretty pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+.textretty code, .textretty pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+    font-size: 12px;
+}
+
+.textretty pre {
+    margin-bottom: 0;
+    margin-top: 0;
+    word-wrap: normal;
+    background-color: #f6f8fa;
+    border-radius: 2px;
+    font-size: 85%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+}
+
+.textretty code {
+    background-color: var(--code-color)
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    padding: 0.2em 0.4em;
+}
+
+.textretty pre>code {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    word-break: normal;
+    line-height: inherit;
+    margin: 0;
+    max-width: auto;
+    overflow: visible;
+    word-wrap: normal;
+    max-height: 80vh;
+    color: var(--second-text-color);
+}
+
+.textretty pre::-webkit-scrollbar {
+    height: 3px;
+    width: 3px;
+    border-radius: 2px;
+}
+
+.textretty pre::-webkit-scrollbar-thumb {
+    background: rgb(200, 200, 200);
+    border-radius: 2px;
+}
+
+.textretty pre::-webkit-scrollbar-button {
+    display: none;
+}
+
+.textretty kbd {
+    background-color: var(--code-color)
+    border-radius: 3px;
+    display: inline-block;
+    font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    box-shadow: inset 0 -1px 0 #959da5;
+    vertical-align: middle;
+}
+
+/* Divider */
+.textretty hr {
+    box-sizing: content-box;
+    border: 0;
+    overflow: hidden;
+    background-color: #e1e4e8;
+    height: 0.2em;
+    margin: 40px auto;
+    width: 200px;
+    padding: 0;
+}
+
+.textretty hr:before {
+    content: '';
+    display: table;
+}
+
+.textretty hr:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/* Table */
+.textretty table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    overflow: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.textretty td, .textretty th {
+    padding: 0;
+}
+
+.textretty table th {
+    font-weight: 600;
+    background: var(--page-bkg-color);
+}
+
+.textretty table td, .textretty table th {
+    border: 1px solid var(--sec-bkg)
+    padding: 6px 13px;
+}
+
+.textretty table tr {
+    background-color: var(--page-bkg-color);
+    border-top: 1px solid #c6cbd1;
+}
+
+.textretty table tr:nth-child(2n+1) {
+    background-color: var(--post-bkg-color);
+}
+
+/* Paragraph */
+.textretty p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Blockquote */
+.textretty blockquote {
+    margin: 0;
+    border-left: 0.25em solid #dfe2e5;
+    color: var(--third-text-color);
+    padding: 0 0.8em;
+}
+
+.textretty blockquote p {
+    margin: 0;
+}
+
+/* List */
+.textretty ol, .textretty ul {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.textretty ol ol, .textretty ul ol {
+    list-style-type: lower-roman;
+}
+
+.textretty ol ol ol, .textretty ol ul ol, .textretty ul ol ol, .textretty ul ul ol {
+    list-style-type: lower-alpha;
+}
+
+.textretty ol, .textretty ul {
+    padding-left: 2em;
+}
+
+.textretty ol ol, .textretty ol ul, .textretty ul ol, .textretty ul ul {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.textretty li {
+    word-wrap: break-all;
+}
+
+.textretty li>p {
+    margin-top: 16px;
+}
+
+.textretty li+li {
+    margin-top: 0.25em;
+}
+
+/* Header & Footer */
+.textretty header {
+    margin-bottom: 30px;
+}
+
+.textretty footer {
+    margin-top: 30px;
+}
+
+/* Margin */
+.textretty blockquote, .textretty ol, .textretty p, .textretty pre, .textretty table, .textretty ul {
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+/*
+ * Custom
+ */
+/* Paragraph Indent */
+p.tex-para-indent, .tex-para-indent p {
+    text-indent: 1.1em;
+}
+
+p.tex-para-indent-full, .tex-para-indent-full p {
+    text-indent: 2em;
+}
+
+/* Remove title underline */
+.tex-title-no-line {
+    /* Defined in line 83, 84 */
+}
+
+.textretty pre {
+    margin-top: 0;
+    margin-bottom: 0;  
+}

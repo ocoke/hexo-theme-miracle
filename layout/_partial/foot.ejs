@@ -1,0 +1,82 @@
+<% if (page.layout !== "404"){ %>
+<footer class="text-center">
+    <%- theme.custom.footer_html %>
+    <% if(theme.global.web_analytics.busuanzi.enable){ %>
+        <% var pv_texts = theme.global.web_analytics.busuanzi.pv_format.split('{}') %>
+        <% var uv_texts = theme.global.web_analytics.busuanzi.uv_format.split('{}') %>
+        <% if (theme.global.web_analytics.busuanzi.pv_format) { %>
+            <!-- 不蒜子统计PV -->
+            <span id="busuanzi_container_site_pv" style="display: none">
+                <%- pv_texts[0] %>
+                <span id="busuanzi_value_site_pv"></span>
+                <%- pv_texts[1] %>
+              </span>
+          <% } %>
+          <% if (theme.global.web_analytics.busuanzi.uv_format) { %>
+            <!-- 不蒜子统计UV -->
+            <span id="busuanzi_container_site_uv" style="display: none">
+                <%- uv_texts[0] %>
+                <span id="busuanzi_value_site_uv"></span>
+                <%- uv_texts[1] %>
+              </span>
+          <% } %>
+    <% } %>
+    <% if (theme.beian.enable){ %>
+        <span>
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+                <%- theme.beian.icp_text %>
+            </a>
+        </span>
+        <% if(theme.beian.police_text) { %>
+            <% if(theme.beian.police_code) { %>
+              <span>
+                <a
+                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%- theme.beian.police_code %>"
+                  rel="nofollow noopener"
+                  class="beian-police"
+                  target="_blank"
+                >
+                  <% if(theme.beian.police_icon) { %>
+                    <span style="visibility: hidden; width: 0">|</span>
+                    <img class="police-icon" src="<%- url_for(theme.beian.police_icon) %>" alt="police-icon"/>
+                  <% } %>
+                  <span><%- theme.beian.police_text %></span>
+                </a>
+              </span>
+            <% } else { %>
+              <span class="beian-police">
+                <% if(theme.beian.police_icon) { %>
+                  <span style="visibility: hidden; width: 0">|</span>
+                  <img class="police-icon" src="<%- url_for(theme.beian.police_icon) %>" alt="police-icon"/>
+                <% } %>
+                <span class="beian-police"><%- theme.beian.police_text %></span>
+              </span>
+            <% } %>
+          <% } %>
+    <% } %>
+    <% if (theme.hpp_time.enable) { %>
+      <p id="bloggeractivetime">[ Loading ]</p>
+    <% } %>
+    <% if (theme.global.copyright.enable) { %>
+    <p>&copy; <% if (theme.global.copyright.from_year){ %> <%- theme.global.copyright.from_year %> - <% } %><%- theme.global.copyright.to_year %>&nbsp;&nbsp;<%- theme.global.copyright.name || hexo.title %></p>
+    <% } %>
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme by <a href="https://github.com/hifun-team/hexo-theme-miracle" target="_blank">Miracle</a></p>
+    
+    
+</footer>
+<% } %>
+<div class="p-btn">
+    <% if((is_post() && theme.post.toc.enable) || (is_page() && page.toc == true)){ %>
+        <a class="toc-btn" id="toc-btn"><i id="i-menu"></i></a>
+    <% } %>
+    <a href="#top" class="click-btn">
+      <i id="i-up"></i>
+    </a>
+</div>
+
+<!-- SCRIPTS -->
+
+<%- partial('_partial/scripts.ejs') %>
+<% if (theme.custom.js){ %>
+  <%- js(theme.custom.js) %>
+<% } %>

@@ -1,0 +1,55 @@
+<% if (theme.comment.twikoo.envid){ %>
+    <script src="<%- theme.static_prefix.twikoo %>twikoo.all.min.js"></script>
+    <div id="miracle-comments">
+        <div id="tcomment">
+          <div style="display: flex;">
+            <a href="javascript:loadTwikoo();" id="loadCommentBtn" style="color:var(--first-text-color);border-radius: 5px;background-color:var(--sec-bkg);font-size: 1.1rem;text-decoration: none;border: none;cursor: pointer;    position: relative;vertical-align: baseline;padding: 10px;margin: 0 auto;">加载评论</a>
+          </div>
+        </div>
+    </div>
+    <script>
+function loadComment() {
+    try {
+      twikoo.init({
+        envId: '<%- theme.comment.twikoo.envid %>',
+        el: '#tcomment',
+        region: '<%- theme.comment.twikoo.region %>',
+        path: '<%- theme.comment.twikoo.path %>'
+      });
+    }
+    catch (e) {
+      document.getElementById("loadCommentBtn").innerText = "无法加载 Twikoo 评论";
+      console.info(e);
+    }
+}
+
+function loadTwikoo() {
+  try {
+    loadComment();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+// var runningOnBrowser = typeof window !== "undefined";
+
+// var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+
+// var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+// setTimeout(function () {
+//   if (!isBot && supportsIntersectionObserver) {
+//     var observer = new IntersectionObserver(function(entries) {
+//       if (entries[0].isIntersecting) {
+//         loadComment();
+//         observer.disconnect();
+//       }
+//     }, { threshold: [0] });
+//     observer.observe(document.getElementById('miracle-comments'));
+//   } else {
+//     loadComment();
+//   }
+// }, 1);
+
+    </script>
+<% } %>

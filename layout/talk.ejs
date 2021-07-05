@@ -1,0 +1,40 @@
+<%
+page.layout = "talk"
+%>
+<article class="page">
+    <div id="post-meta-m">
+            <h3><%= theme.talk.title %></h3>
+    </div>
+    <div class="article-m" style="margin-top: 10px;">
+        <% if (theme.talk.type == "HPP" && theme.talk.HPP.domain) { %>
+        <div id="talkPage"></div>
+        <script src="<%= theme.static_prefix.hpp %>talk_user.js"></script>
+        <script defer>
+        new hpp_talk({
+            id:"talkPage",
+            domain: "<%= theme.talk.HPP.domain %>",
+            limit: <%= theme.talk.HPP.limit %>,
+            start: <%= theme.talk.HPP.start %>,
+            themecss: "<%= theme.static_prefix.hpp %>talk.css"
+        });
+        </script>
+        <% } %>
+        <% if (theme.talk.type == "Artitalk" && theme.talk.Artitalk.appId && theme.talk.Artitalk.appKey) { %>
+        <div id="artitalk_main"></div>
+        <script src="<%= theme.static_prefix.artitalk %>"></script>
+        <script defer>
+            new Artitalk({
+                appId: '<%= theme.talk.Artitalk.appId %>', 
+                appKey: '<%= theme.talk.Artitalk.appKey %>',
+                serverURL: '<%= theme.talk.Artitalk.serverURL %>',
+                lang: '<%= theme.talk.Artitalk.lang %>',
+                pageSize: <%= theme.talk.Artitalk.pageSize %>,
+                shuoPla: '<%= theme.talk.Artitalk.shuoPla %>',
+                avatarPla: '<%= theme.talk.Artitalk.avatarPla %>',
+                motion: <%= theme.talk.Artitalk.motion %>,
+                bgImg: "<%= theme.talk.Artitalk.bgImg %>"
+            })
+        </script>
+        <% } %>
+    </div>
+</article>

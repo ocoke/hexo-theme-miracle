@@ -1,0 +1,19 @@
+<%
+page.layout = "category"
+page.title = theme.category.title || __('category.title')
+page.subtitle = theme.category.subtitle || __('category.subtitle')
+%>
+<article class="page">
+<div id="post-meta-m" style="padding-bottom:0;">
+    <div class="post-meta" id="post-meta">
+      <h3><%= page.title %></h3>
+    </div>
+  </div>
+    <div class="archive-list" style="padding-top:10px;">
+        <div class="category-list-content">
+            <%- list_categories(site.categories, {
+                class: 'all-category'
+            }) %>
+        </div>
+    </div>
+  </article>

@@ -1,0 +1,218 @@
+<%
+page.layout = "search"
+%>
+<article class="page">
+  <div id="post-meta-m" style="padding-bottom:0;">
+      <div class="post-meta" id="post-meta">
+        <h3><%= __('search.title') %></h3>
+      </div>
+    </div>
+      <div>
+        <div id="search-card" style="padding-top:1.5rem;padding-bottom: 1.5rem;">
+          <form class="search-form" autocomplete="off">
+              <div class="search-input">
+                  <input maxlength="80" type="search" class="search-input" id="search-input" name="s" placeholder="<%= __('search.keyword') %>" required>
+              </div>
+              <div class="search-button">
+                  <button class="search-button" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+                  </button>
+              </div>
+          </form>
+      </div>
+      <div id="search-result"></div>
+      <script>
+      var searchDataFile = "<%- url_for(theme.search.path) || '/search.json' %>";
+        function searchEscape(keyword) {
+    const htmlEntityMap = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+        '/': '&#x2F;',
+    };
+
+    return keyword.replace(/[&<>"'/]/g, function (i) {
+        return htmlEntityMap[i];
+    });
+}
+
+function regEscape(keyword) {
+    const regEntityMap = {
+        '{': '\\{',
+        '}': '\\}',
+        '[': '\\[',
+        ']': '\\]',
+        '(': '\\(',
+        ')': '\\)',
+        '?': '\\?',
+        '*': '\\*',
+        '.': '\\.',
+        '+': '\\+',
+        '^': '\\^',
+        $: '\\$',
+    };
+
+    return keyword.replace(/[\{\}\[\]\(\)\?\*\.\+\^\$]/g, function (i) {
+        return regEntityMap[i];
+    });
+}
+
+function getParam(reqParam) {
+    reqParam = reqParam.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    const paraReg = new RegExp('[\\?&]' + reqParam + '=([^&#]*)');
+    const results = paraReg.exec(window.location);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+function clearPosts() {
+    const resultSectionElement = document.getElementById('search-result');
+    resultSectionElement.innerHTML = "<h5 class='text-center'>无搜索结果</h5>";
+}
+
+function createPosts(resArr) {
+    const resultSectionElement = document.getElementById('search-result');
+    let resultString = '';
+
+    resArr.forEach((resInfo) => {
+        resultString += '';
+
+        const pageInfo = resInfo[0];
+        const postTemplate = `
+        <div>
+        <a href="${pageInfo.link}" class="search-result__link">
+            <div class='search-result__item'>
+                <strong class="search-result__title">
+                    ${pageInfo.title}
+                </strong>
+                <div class="search-result__content">
+                    ${pageInfo.content}
+                </div>
+            </div>
+        </a>
+        </div>
+        `;
+
+        resultString += postTemplate;
+    });
+
+    resultSectionElement.innerHTML = resultString;
+}
+
+function loadDataSearch(searchDataFile, skeys) {
+    fetch(searchDataFile)
+        .then((res) => {
+            return res.json();
+        })
+        .then((datas) => {
+            let resultArray = [];
+            let resultCount = 0;
+            let keywords = skeys.trim().toLowerCase().split(/\s/);
+
+            datas.forEach((data) => {
+                if (typeof data.title === 'undefined' || typeof data.content === 'undefined') {
+                    return;
+                }
+
+                let matched = false;
+
+                const dataTitle = data.title.trim().toLowerCase();
+                const dataContent = data.content
+                    ? data.content
+                          .trim()
+                          .replace(/<[^>]+>/g, '')
+                          .toLowerCase()
+                    : '';
+                let dataWeight = 0;
+
+                let indexs = {};
+                indexs.title = -1;
+                indexs.content = -1;
+                indexs.firstOccur = -1;
+                indexs.lastOccur = -1;
+
+                if (dataTitle) {
+                    keywords.forEach((keyword) => {
+                        indexs.title = dataTitle.indexOf(keyword);
+                        indexs.content = dataContent.indexOf(keyword);
+                        if (indexs.title !== -1 || indexs.content !== -1) {
+                            matched = true;
+                            if (indexs.content !== -1) {
+                                if (indexs.firstOccur > indexs.content || indexs.firstOccur === -1) {
+                                    indexs.firstOccur = indexs.content;
+                                }
+                                if (indexs.lastOccur < indexs.content) {
+                                    indexs.lastOccur = indexs.content;
+                                }
+                            }
+                            dataWeight += indexs.title !== -1 ? 2 : 0;
+                            dataWeight += indexs.content !== -1 ? 1 : 0;
+                            resultCount++;
+                        }
+                    });
+                }
+
+                if (matched) {
+                    let tPage = {};
+                    tPage.title = data.title;
+                    tPage.link = data.url;
+                    keywords.forEach((keyword) => {
+                        const regS = new RegExp(regEscape(keyword) + '(?!>)', 'gi');
+                        tPage.title = tPage.title.replace(regS, '<m>$&</m>');
+                    });
+                    if (indexs.firstOccur >= 0) {
+                        const halfLenth = 100;
+                        let start = indexs.firstOccur - halfLenth;
+                        let end = indexs.lastOccur + halfLenth;
+                        if (start < 0) {
+                            start = 0;
+                        }
+                        if (start === 0) {
+                            end = halfLenth * 2;
+                        }
+                        if (end > dataContent.length) {
+                            end = dataContent.length;
+                        }
+                        tPage.content = dataContent.substr(start, end - start);
+                        keywords.forEach((keyword) => {
+                            const regS = new RegExp(regEscape(keyword) + '(?!>)', 'gi');
+                            tPage.content = tPage.content.replace(regS, '<m>$&</m>');
+                        });
+                    }
+                    resultArray.push([tPage, dataWeight]);
+                }
+            });
+            if (resultCount !== 0) {
+                resultArray.sort((a, b) => {
+                    return b[1] - a[1];
+                });
+                createPosts(resultArray);
+            } else {
+                clearPosts();
+            }
+        });
+}
+
+function keySearch(skeys) {
+    loadDataSearch(searchDataFile, searchEscape(skeys));
+}
+
+function inpSearch() {
+    const skeys = document.getElementById('search-input').value;
+    window.history.pushState({}, 0, window.location.href.split('?')[0] + '?s=' + skeys.replace(/\s/g, '+'));
+    keySearch(skeys);
+    return false;
+}
+
+(() => {
+    const skeys = getParam('s');
+    if (skeys !== '') {
+        document.getElementById("search-result").innerHTML = "<h5 class='text-center'>搜索中...</h5>"
+        document.getElementById('search-input').value = skeys;
+        keySearch(skeys);
+    }
+})();
+
+      </script>
+</article>
