@@ -61,7 +61,11 @@
 <a href="https://github.com/oCoke" title="oCoke"><img src="https://avatars0.githubusercontent.com/u/71591824?s=460&u=4e1a04eadb3b23add8f5c9ba14e21b00219142f7&v=4" alt="oCoke" height="68" width="68" style="max-width:100%;"></a>
 
 
-## 参考
+## 鸣谢
+
+<a title="鸣谢 JetBrains 免费授权开发工具" href="https://www.jetbrains.com/" target="_blank">
+  <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" width="150" alt="JetBrains">
+</a>
 
 本项目参考了一些开源的主题项目，十分感谢！
 
