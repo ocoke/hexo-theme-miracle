@@ -1,12 +1,13 @@
-<h1 align="center">Hexo Theme Miracle</h1>
-<p align="center">一款简洁、轻量的单栏 Hexo 主题</p>
-<p align="center">
-    <a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
-    <a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
-    <a href="https://github.com/hifun-team/hexo-theme-miracle/network/members"><img src="https://badgen.net/github/forks/hifun-team/hexo-theme-miracle" alt="GitHub Forks"></a>
-    <a href="https://github.com/hifun-team/hexo-theme-miracle/watchers"><img src="https://badgen.net/github/watchers/hifun-team/hexo-theme-miracle" alt="GitHub Watchers"></a>
-    <a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
-</p>
+# Hexo Theme Miracle
+
+> 一款简洁、轻量的单栏 Hexo 主题。
+
+<a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
+<a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
+<a href="https://github.com/hifun-team/hexo-theme-miracle/network/members"><img src="https://badgen.net/github/forks/hifun-team/hexo-theme-miracle" alt="GitHub Forks"></a>
+<a href="https://github.com/hifun-team/hexo-theme-miracle/watchers"><img src="https://badgen.net/github/watchers/hifun-team/hexo-theme-miracle" alt="GitHub Watchers"></a>
+<a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
+
 
 > 开发不易，您可以前往 [面包多](https://mianbaoduo.com/o/bread/YZebm5tt) 支持作者。
 
