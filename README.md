@@ -10,6 +10,8 @@
 
 > 开发不易，欢迎 [点击此处](https://yfun.top/?ref=donate&from=github) 支持作者。
 
+> V1 版本已停止维护，请等待 V2 版本。
+
 ## 功能特性
 
 - [x] 代码高亮
