@@ -4,7 +4,7 @@
 
 > 开发不易，欢迎 [点击此处](https://yfun.top/?ref=donate&from=github) 支持作者。
 
-> V2 版本仍在开发中！
+> V2 版本仍在开发中，如有任何的建议和反馈，欢迎提交 Issue！
 
 <a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
 <a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
@@ -34,7 +34,7 @@
 
 ## 相关链接
 
-- [主题文档](https://github.com/hifun-team/hexo-theme-miracle/wiki)
+- [主题文档](https://t.yfun.top/theme-miracle)
 
 
 ## 鸣谢
