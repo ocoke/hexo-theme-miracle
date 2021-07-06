@@ -35,7 +35,7 @@
 ## 相关链接
 
 - [主题文档](https://t.yfun.top/theme-miracle)
-
+- [主题预览](https://blog.yfun.top/)
 
 ## 鸣谢
 
