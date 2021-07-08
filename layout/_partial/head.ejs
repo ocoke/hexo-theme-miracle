@@ -44,5 +44,13 @@ if (page.title) {
 
     <%- theme.custom.header_html %>
     <script src="<%- url_for('/js/main.js') %>"></script>
-    
+    <% if (theme.global.memorial.enable) { %>
+    <script>
+        let mdate = "<%- theme.global.memorial.date %>";
+        let ndate = new Date();
+        if (mdate == (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+            addClass("html", "memorial");
+        }
+    </script>
+    <% } %>
 </head>

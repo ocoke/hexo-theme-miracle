@@ -87,6 +87,10 @@ global:
     # Mourning mode, web page black and white
     memorial:
         enable: false
+        # 日期, (M-D)
+        # Date, (M-D)
+        # eg: 7-8, 9-30, 12-1, 12-30 ...
+        date: "7-8"
 
 # 搜索
 # Search

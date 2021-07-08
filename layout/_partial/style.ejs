@@ -31,7 +31,6 @@
         --hr-color: #ddd;
         --bg-t: #f4f4f4;
         --nav-bkg: rgba(255,255,255,0.6);
-        -- 
     }
 
 @media (prefers-color-scheme: dark) {
@@ -308,17 +307,14 @@ header .header__right .dropdown-menus .dropdown-menu {
 }
 
 
-
-<% if (theme.global.memorial.enable){ %>
-    html {
-        -webkit-filter: grayscale(100%); 
-        -moz-filter: grayscale(100%); 
-        -ms-filter: grayscale(100%); 
-        -o-filter: grayscale(100%);
-        filter: grayscale(100%); 
-        filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); filter:gray;
-    }
-<% } %>
+.memorial {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); filter:gray;
+}
 
 <% if (theme.post.copyright.cc){ %>
     .post-copyright:after {

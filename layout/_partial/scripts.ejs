@@ -35,38 +35,6 @@
 
 <% if (config.lazyload.enable && (is_page() || is_post())){ %>
 <script>
-        /*
-        function checkWebp() {
-            function recheckWebp() {
-                var img = new Image();
-                img.onload = function () {
-                    try {
-                        localStorage.setItem("wbp", "true");
-                    } catch (e) {
-                        console.info(e);
-                    }
-                };
-                img.onerror = function () {
-                    try {
-                        localStorage.setItem("wbp", "false");
-                    } catch (e) {
-                        console.info(e);
-                    }
-                };
-                img.src = 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA==';
-            }
-            
-            try {
-                if (!localStorage.getItem("wbp")) {
-                    recheckWebp();
-                    checkWebp();
-                } else {
-                    return localStorage.getItem("wbp");
-                }
-            } catch (e) {
-                return "false";
-            }
-        }*/
         try {
             var io = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {

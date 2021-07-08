@@ -4,7 +4,7 @@
 </div>
 <div class="header__right">
 	<div class="navbar__menus">
-		<% for (var i in theme.navbar.menu){ %>
+		<% for (var i in theme.navbar.menu) { %>
 		<a href="<%- url_for(theme.navbar.menu[i]) %>" class="button">
 			<div class="navbar-menu"><%-  __(i) %></div>
 		</a>
