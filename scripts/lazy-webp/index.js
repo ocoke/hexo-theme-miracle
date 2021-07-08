@@ -7,6 +7,6 @@ if (hexo.config.lazyload && hexo.config.lazyload.enable === true) {
         hexo.extend.filter.register('after_render:html', require('./lib/process').processSite);
     }
 }
-if (hexo.config.lazyload && hexo.config.lazyload.enable === true) {
+if (hexo.config.webp && hexo.config.webp.enable === true) {
     hexo.extend.filter.register('after_render:html', require('./lib/process').processWebP);
 }
