@@ -7,13 +7,9 @@
 > V2 版本仍在开发中，如有任何的建议和反馈，欢迎提交 Issue！
 
 <a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
-
 <a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
-
 <a href="https://github.com/hifun-team/hexo-theme-miracle/network/members"><img src="https://badgen.net/github/forks/hifun-team/hexo-theme-miracle" alt="GitHub Forks"></a>
-
 <a href="https://github.com/hifun-team/hexo-theme-miracle/watchers"><img src="https://badgen.net/github/watchers/hifun-team/hexo-theme-miracle" alt="GitHub Watchers"></a>
-
 <a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
 
 ## 功能特性
