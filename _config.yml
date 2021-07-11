@@ -177,13 +177,14 @@ navbar:
     # 导航栏菜单，可自行增减.
     # Navigation bar menu.
     menu:
-        首页: /
-        归档: /archives/
-        分类: /categories/
-        标签: /tags/
-        说说: /talk/
-        友链: /links/
-        关于: /about/
+        # 首页: /
+        # 归档: /archives/
+        # 分类: /categories/
+        # 标签: /tags/
+        # 说说: /talk/
+        # 友链: /links/
+        # 关于: /about/
+        # ...
 
 
 #---------------------------
@@ -304,7 +305,8 @@ post:
         # 方式
         # Way
         way:
-            赞赏: https://yfun.top/?ref=donate
+            # 赞赏: https://yfun.top/?ref=donate
+            # ...
 
 
 
