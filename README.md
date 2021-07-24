@@ -49,4 +49,4 @@
 
 ### 贡献者
 
-<a href="https://github.com/oCoke" title="oCoke"><img src="https://avatars0.githubusercontent.com/u/71591824?s=460&u=4e1a04eadb3b23add8f5c9ba14e21b00219142f7&v=4" alt="oCoke" height="68" width="68" style="max-width:100%;border-radius:68px;"></a>
+![](https://contrib.rocks/image?repo=hifun-team/hexo-theme-miracle)
