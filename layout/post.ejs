@@ -5,7 +5,15 @@
     <%- partial('_partial/plugins/post-meta.ejs') %>
 </div>
 <div class="article-m">
-  <div class="post-toc"><% if (theme.post.toc.enable && theme.post.toc.type == "hexo" && page.toc !== false){ %><%- toc(page.content) %><% } %></div>
+  <div class="post-toc">
+    <% if (theme.post.toc.enable && theme.post.toc.type == "hexo" && page.toc !== false){ %>
+      <%- toc(page.content, {
+        list_number: theme.post.toc.hexo.list_number,
+        max_depth: theme.post.toc.hexo.max_depth || 6,
+        min_depth: theme.post.toc.hexo.min_depth || 1
+      }) %>
+    <% } %>
+  </div>
     <div id="article">
       <div id="post-content" class="markdown-body textretty">
         <%- page.content %>
