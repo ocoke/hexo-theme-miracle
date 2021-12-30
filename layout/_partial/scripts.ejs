@@ -33,7 +33,7 @@
 </script>
 <% } %>
 
-<% if (config.lazyload.enable && (is_page() || is_post())){ %>
+<% if (config.lazyload && config.lazyload.enable && (is_page() || is_post())){ %>
 <script>
         try {
             var io = new IntersectionObserver(function (entries) {
