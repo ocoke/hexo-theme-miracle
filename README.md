@@ -2,7 +2,7 @@
 
 > 一款简洁、轻量的单栏 Hexo 主题。
 
-> 开发不易，欢迎 [点击此处](https://yfun.top/?ref=donate&from=github) 支持作者。
+> 开发不易，欢迎 [点击此处](https://afdian.net/@ocoke) 支持作者。
 
 > V2 版本仍在开发中，如有任何的建议和反馈，欢迎提交 Issue！
 
