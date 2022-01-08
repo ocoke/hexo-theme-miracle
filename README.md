@@ -37,6 +37,10 @@
 - [主题文档](https://www.notion.so/Miracle-49659de5b1764e908c7496418f06277e)
 - [主题预览](https://blog.yfun.top/)
 
+## 兼容性
+
+> 不支持 IE 11! IE 下无法正常使用。
+
 ## 鸣谢
 
 ### JetBrains
