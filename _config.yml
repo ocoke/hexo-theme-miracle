@@ -379,6 +379,10 @@ comment:
         envid:
         region: ap-shanghai
         path: window.location.pathname
+        # 是否为 Vercel 版本
+        # 这是主题设置，是 Vercel 请填写 true
+        # Vercel 版本不会引入带有腾讯 SDK 的 all.min.js
+        isVercel: 
 
 #---------------------------
 # 分类页
