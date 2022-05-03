@@ -15,9 +15,9 @@ function loadComment() {
     try {
       loadScriptFile({
         <% if (theme.comment.twikoo.isVercel == true) { %>
-          url: "<%- theme.static_prefix.waline %>twikoo.min.js",
+          url: "<%- theme.static_prefix.twikoo %>twikoo.min.js",
         <% } else { %>
-          url: "<%- theme.static_prefix.waline %>twikoo.all.min.js",
+          url: "<%- theme.static_prefix.twikoo %>twikoo.all.min.js",
         <% } %>
         loadType: "async",
         cb: () => {
