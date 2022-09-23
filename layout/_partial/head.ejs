@@ -23,6 +23,7 @@ if (page.title) {
     <meta name="description" content="<%= page.excerpt || config.description %>">
     <meta name="author" content="<%= page.author || config.author %>">
     <meta name="keywords" content="<%= config.keywords %>">
+    <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
     <%- partial('_partial/style.ejs') %>
     
 

@@ -321,7 +321,7 @@ comment:
 
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
-    # Options: gitalk | valine | waline | twikoo
+    # Options: gitalk | valine | waline | twikoo | giscus
     type: waline
 
     # Gitalk
@@ -383,6 +383,23 @@ comment:
         # 这是主题设置，是 Vercel 请填写 true
         # Vercel 版本不会引入带有腾讯 SDK 的 all.min.js
         isVercel: 
+
+    # giscus
+    # See: https://giscus.app/
+    giscus: 
+        repo: 
+        repoID: 
+        category: 
+        categoryID: 
+        mapping: 
+        term: 
+        strict: 
+        reactionsEnabled: 
+        emitMetadata: 
+        inputPosition: 
+        theme: 
+        lang: 
+        loading: 
 
 #---------------------------
 # 分类页
