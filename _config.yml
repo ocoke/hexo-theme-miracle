@@ -302,7 +302,7 @@ post:
     # 文末打赏
     # Donate
     donate:
-        enable: true
+        enable: false
         # 打赏文字
         text: "喜欢这篇文章？为什么不考虑打赏一下作者呢？"
         # 方式
@@ -310,6 +310,12 @@ post:
         way:
             # 赞赏: https://yfun.top/?ref=donate
             # ...
+
+    # 阅读进度
+    readingProgress:
+        enable: true
+
+
 
 
 

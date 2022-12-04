@@ -58,7 +58,7 @@
         });
     </script>
 <% } %>
-<% if (is_post() && theme.post.toc.enable && page.toc !== false){ %>
+<% if ((is_post() || is_page()) && theme.post.toc.enable && page.toc !== false){ %>
     <script>
         query("#toc-btn")[0].onclick = () => {
             if (query(".post-toc")[0].innerHTML) {
@@ -72,6 +72,19 @@
     </script>
 <% } %>
 
+<% if ((is_post() || is_page()) && theme.post.readingProgress.enable){ %>
+    <script>
+        query("#share-btn")[0].onclick = async () => {
+            let url = `${location.protocol}//${location.hostname}${location.port ? ":"+location.port:location.port}${location.pathname}#read=${sessionStorage.getItem("read_y") || ""}`;
+            try {
+                await navigator.clipboard.writeText(url);
+                prompt_core("分享链接已经复制至剪贴板", 4800, true);
+            } catch(e) {
+                prompt_core("分享链接复制失败，请手动复制<br/>"+url, 4800, false);
+            }
+        }
+    </script>
+<% } %>
 <%- partial('_partial/plugins/mermaid.ejs') %>
 <% if (theme.global.web_analytics.busuanzi.enable || theme.post.views.enable){ %>
     <script>
@@ -83,3 +96,72 @@
         },0);
     </script>
 <% } %>
+
+<% if (theme.post.readingProgress.enable && (is_page() || is_post())) { %>
+    <script>
+        const getScrollPosition = (el = window) => ({
+            x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
+            y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
+        });
+        // 此处的 750 是「页面元素的最大宽度」
+        var wx = document.getElementsByClassName("article-m")[0].clientWidth;
+        var wy = document.getElementsByClassName("article-m")[0].clientHeight;
+        function windowScroll() {
+            // 反复修改 确保页面尺寸不改变
+            wx = document.getElementsByClassName("article-m")[0].clientWidth;
+            wy = document.getElementsByClassName("article-m")[0].clientHeight;
+            let y = Math.round(getScrollPosition().y);
+            // console.log(y);
+            // 组合字符串，同时记录页面坐标，页面宽度和高度
+            let p = `${y}:${wx}:${wy}`;
+            // 写入到 sessionStorage 中
+            sessionStorage.setItem("read_y", p);
+        }
+        // URL 中是否包含传递的坐标信息
+        if (location.hash.split("#read=").length > 1) {
+            // 分离字符串
+            let read_y = location.hash.split("#read=")[1];
+            read_y = read_y.split(":");
+            // 组合乘积，顺滑移动至坐标
+            window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
+        } else {
+            // 从 sessionStorage 中获取
+            let read_y = sessionStorage.getItem("read_y") || "0:0:0";
+            read_y = read_y.split(":");
+            window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
+        }
+        window.onscroll = windowScroll;
+    </script>
+<% } %>
+
+<script>
+    function prompt_core(msg, fd_t, click) {
+        let div = document.createElement("div");
+        div.innerHTML = `${msg}`;
+        div.id = "prompt_1";
+        div.style = "position: fixed; top: 20px;text-align: center; background: #fff; color: #000; left: 50vw;padding: 10px 25px; border-radius: 20px;transition: .35s;z-index: 99;font-size: 0.9rem;font-weight: 300;font-family: 'Avenir', Helvetica, Arial, sans-serif;transform: translate(-50%,0)!important";
+        div.style.opacity = 0;
+        // 点击消失
+        if (click) {
+            div.onclick = () => {
+                document.getElementById("prompt_1").style.opacity = 0;
+                setTimeout(() => {
+                    document.getElementById("prompt_1").remove();
+                }, 1000);
+            }
+        }
+        document.body.appendChild(div);
+        // 渐入效果
+        setTimeout(() => {
+            document.getElementById("prompt_1").style.opacity = 1;
+        }, 100);
+        setTimeout(() => {
+            try {
+                document.getElementById("prompt_1").style.opacity = 0;
+                setTimeout(() => {
+                    document.getElementById("prompt_1").remove();
+                }, 1000);
+            } catch (e) {}
+        }, fd_t);
+    }
+</script>
