@@ -12,6 +12,17 @@
   }
 }
 
+article img.lazyload-img  {
+    transition: filter .35s ease 0s!important;
+}
+article img.lazyload-img:not(.loaded) {
+    -webkit-filter:  blur(5px);
+    filter:  blur(5px);
+}
+article img.lazyload-img:not(.loaded):not(.loading) {
+    padding-bottom: 52.286%;
+}
+
 #share-btn {
   display: flex;
   justify-content: center;

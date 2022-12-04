@@ -5,7 +5,7 @@
 const fs = require('hexo-fs');
 
 function lazyProcess(htmlContent)  {
-    let loadingImage = this.config.lazyload.loadingImage || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==';
+    let loadingImage = this.config.lazyload.loadingImage || 'data:image/gif;base64,R0lGODlhAQABAID/AP///wAAACwAAAAAAQABAAACAkQBADs';
     return htmlContent.replace(/<img(.*?)src="(.*?)"(.*?)>/gi, function (str, p1, p2) {
         // might be duplicate
         if (/data-srcset/gi.test(str)){
