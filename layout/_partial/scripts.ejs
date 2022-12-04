@@ -119,6 +119,7 @@
         }
         // URL 中是否包含传递的坐标信息
         if (location.hash.split("#read=").length > 1) {
+            prompt_core("已有阅读进度，正在跳转", 4800, true)
             // 分离字符串
             let read_y = location.hash.split("#read=")[1];
             read_y = read_y.split(":");
