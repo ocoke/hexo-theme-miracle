@@ -16,7 +16,7 @@
 
 - [x] 代码高亮
 - [x] 内置多语言
-- [x] 多款评论插件
+- [x] 支持多款评论插件并优化性能
 - [x] 自定义静态资源 CDN
 - [x] 站内搜索
 - [x] 页脚备案信息
@@ -28,9 +28,10 @@
 - [x] 阅读体验优化
 - [x] Mermaid 流程图
 - [x] [HexoPlusPlus](https://hexoplusplus.js.org) 适配
-- [x] 友链页面（JSON / YAML）
+- [x] 友链页面（支持 JSON / YAML 格式）
 - [x] 方便排版的 Tag 插件
-- [x] Twikoo / Waline 评论懒加载
+- [x] 阅读进度分享
+- [x] 哀悼模式
 
 ## 相关链接
 
