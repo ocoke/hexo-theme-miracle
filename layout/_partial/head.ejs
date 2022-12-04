@@ -48,9 +48,12 @@ if (page.title) {
     <% if (theme.global.memorial.enable) { %>
     <script>
         let mdate = "<%- theme.global.memorial.date %>";
+        mdate = (mdate.split(","));
         let ndate = new Date();
-        if (mdate == (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
-            addClass("html", "memorial");
+        for (let i of mdate) {
+            if (i == (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+                addClass("html", "memorial");
+            }
         }
     </script>
     <% } %>
