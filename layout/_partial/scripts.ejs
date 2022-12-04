@@ -148,20 +148,22 @@
             sessionStorage.setItem("read_y", p);
         }
         // URL 中是否包含传递的坐标信息
-        if (location.hash.split("#read=").length > 1) {
-            prompt_core("已有阅读进度，正在跳转", 4800, true);
-            // 分离字符串
-            let read_y = location.hash.split("#read=")[1];
-            read_y = read_y.split(":");
-            // 组合乘积，顺滑移动至坐标
-            window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
-        } else {
-            // 从 sessionStorage 中获取
-            let read_y = sessionStorage.getItem("read_y") || "0:0:0";
-            if (sessionStorage.getItem("read_y")) prompt_core("已有阅读进度，正在跳转", 4800, true);
-            read_y = read_y.split(":");
-            window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
-        }
+        setTimeout(() => {
+            if (location.hash.split("#read=").length > 1) {
+                prompt_core("已有阅读进度，正在跳转", 4800, true);
+                // 分离字符串
+                let read_y = location.hash.split("#read=")[1];
+                read_y = read_y.split(":");
+                // 组合乘积，顺滑移动至坐标
+                window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
+            } else {
+                // 从 sessionStorage 中获取
+                let read_y = sessionStorage.getItem("read_y") || "0:0:0";
+                if (sessionStorage.getItem("read_y")) prompt_core("已有阅读进度，正在跳转", 4800, true);
+                read_y = read_y.split(":");
+                window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
+            }
+        }, 500);
         window.onscroll = windowScroll;
     </script>
 <% } %>
