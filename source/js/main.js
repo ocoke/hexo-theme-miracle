@@ -7,6 +7,36 @@ function loadScript(isAsync, url, cb, isMoudule) {
     script.async = isAsync;
     document.body.appendChild(script);
 }
+function prompt_core(msg, fd_t, click) {
+    let div = document.createElement("div");
+    div.innerHTML = `${msg}`;
+    div.id = "prompt_1";
+    div.style = "position: fixed; top: 20px;text-align: center; background: #fff; color: #000; left: 50vw;padding: 10px 25px; border-radius: 20px;transition: .35s;z-index: 99;font-size: 0.9rem;font-weight: 300;font-family: 'Avenir', Helvetica, Arial, sans-serif;transform: translate(-50%,0)!important";
+    div.style.opacity = 0;
+    // 点击消失
+    if (click) {
+        div.onclick = () => {
+            document.getElementById("prompt_1").style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById("prompt_1").remove();
+            }, 1000);
+        }
+    }
+    document.body.appendChild(div);
+    // 渐入效果
+    setTimeout(() => {
+        document.getElementById("prompt_1").style.opacity = 1;
+    }, 100);
+    setTimeout(() => {
+        try {
+            document.getElementById("prompt_1").style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById("prompt_1").remove();
+            }, 1000);
+        } catch (e) {}
+    }, fd_t);
+}
+
 /**
  * loadScriptFile
  * option: object
