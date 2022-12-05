@@ -74,7 +74,7 @@
 <% if ((is_post() || is_page()) && theme.post.readingProgress.enable){ %>
     <script>
         query("#share-btn")[0].onclick = async () => {
-            let url = `${location.protocol}//${location.hostname}${location.port ? ":"+location.port:location.port}${location.pathname}#read=${sessionStorage.getItem("read_y") || ""}`;
+            let url = `${location.protocol}//${location.hostname}${location.port ? ":"+location.port:location.port}${location.pathname}#read=${sessionStorage.getItem(location.pathname+"_read_y") || ""}`;
             try {
                 await navigator.clipboard.writeText(url);
                 prompt_core("分享链接已经复制至剪贴板", 4800, true);
@@ -114,7 +114,7 @@
             // 组合字符串，同时记录页面坐标，页面宽度和高度
             let p = `${y}:${wx}:${wy}`;
             // 写入到 sessionStorage 中
-            sessionStorage.setItem("read_y", p);
+            sessionStorage.setItem(location.pathname + "_read_y", p);
         }
         // URL 中是否包含传递的坐标信息
         setTimeout(() => {
@@ -127,7 +127,7 @@
                 window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
             } else {
                 // 从 sessionStorage 中获取
-                let read_y = sessionStorage.getItem("read_y") || "0:0:0";
+                let read_y = sessionStorage.getItem(location.pathname + "_read_y") || "0:0:0";
                 read_y = read_y.split(":");
                 if (read_y[0] != "0") prompt_core("已有阅读进度，正在跳转", 4800, true);
                 window.scrollTo({top: Math.round(Number(read_y[0]) * Number(read_y[1] * Number(read_y[2] / wx / wy))), behavior: "smooth"});
