@@ -40,11 +40,14 @@
 
 ## 兼容性
 
-- Edge: 16+
+**Hexo Theme Miracle** 是为现代浏览器打造的主题。部分过时的浏览器可能无法获得较好的使用体验。
+
+
+- Edge: 79+
 - Firefox: 55+
-- Chrome: 58+
+- Chrome: 61+
 - Safari: 12.1+
-- Opera: 45+
+- Opera: 48+
 
 **此处的兼容性信息仅为部分函数，并未统计插件信息（评论，说说等），兼容性信息来源于 *[Can I Use](https://caniuse.com/)*, 数据不保证准确。**
 
