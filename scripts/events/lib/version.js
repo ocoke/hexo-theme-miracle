@@ -18,7 +18,7 @@ module.exports = (hexo) => {
     }
   };
 
-  https.get('https://api.github.com/repos/hifun-team/hexo-theme-miracle/releases/latest', {
+  https.get('https://api.github.com/repos/oCoke/hexo-theme-miracle/releases/latest', {
     headers: {
       'User-Agent': 'Hexo Theme Miracle Client'
     }
@@ -51,10 +51,10 @@ module.exports = (hexo) => {
         if (isOutdated) {
           if (isZh) {
             hexo.log.warn(`[Miracle] 有新的版本！当前版本: v${current.join('.')}, 最新版本: v${latest.join('.')}`);
-            hexo.log.warn('[Miracle] 请查看 https://github.com/hifun-team/hexo-theme-miracle/releases 获取更多信息.');
+            hexo.log.warn('[Miracle] 请查看 https://github.com/oCoke/hexo-theme-miracle/releases 获取更多信息.');
           } else {
             hexo.log.warn(`[Miracle] There's a new version! Current version: v${current.join('.')}, latest version: v${latest.join('.')}`);
-            hexo.log.warn('[Miracle] Visit https://github.com/hifun-team/hexo-theme-miracle/releases for more information.');
+            hexo.log.warn('[Miracle] Visit https://github.com/oCoke/hexo-theme-miracle/releases for more information.');
           }
         } else {
           if (isZh) {
