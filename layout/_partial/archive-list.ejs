@@ -4,14 +4,16 @@
     <hr>
     <% var dateCursor %>
     <% page.posts.each(function (post) { %>
-      <% if(date(post.date, "YYYY") !== dateCursor) { %>
-        <% dateCursor = date(post.date, "YYYY") %>
-        <p class="h5"><%= dateCursor %></p>
+      <% if (!post.hide) { %>
+        <% if(date(post.date, "YYYY") !== dateCursor) { %>
+          <% dateCursor = date(post.date, "YYYY") %>
+          <p class="h5"><%= dateCursor %></p>
+        <% } %>
+        <a href="<%- url_for(post.path) %>" class="list-group-item list-group-item-action">
+          <span class="archive-post-title"><%= post.title %></span>
+          <time style="float: right;"><%- date(post.date, "MM-DD") %></time>
+        </a>
       <% } %>
-      <a href="<%- url_for(post.path) %>" class="list-group-item list-group-item-action">
-        <span class="archive-post-title"><%= post.title %></span>
-        <time style="float: right;"><%- date(post.date, "MM-DD") %></time>
-      </a>
     <% }) %>
 <%- partial('_partial/paginator') %>
 </div>
