@@ -1,0 +1,74 @@
+<!-- Detalk.js https://detalk.js.org/ -->
+<% if (theme.comment.detalk && theme.comment.detalk.url){ %>
+    <div id="miracle-comments">
+        <div id="detalk">
+            <div style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
+                <svg width="30px" height="30px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><g><animateTransform attributeName="transform" type="rotate" values="0 33 33;270 33 33" begin="0s" dur="1.4s" fill="freeze" repeatCount="indefinite"></animateTransform>
+                    <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" stroke-dasharray="187" stroke-dashoffset="610"><animate attributeName="stroke" values="#4285F4;#DE3E35;#F7C223;#1B9A59;#4285F4" begin="0s" dur="5.6s" fill="freeze" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" values="0 33 33;135 33 33;450 33 33" begin="0s" dur="1.4s" fill="freeze" repeatCount="indefinite"></animateTransform><animate attributeName="stroke-dashoffset" values="187;46.75;187" begin="0s" dur="1.4s" fill="freeze" repeatCount="indefinite"></animate>
+                </circle></g></svg>
+            </div>
+        </div>
+    </div>
+    <style>
+        .comment-title h3 {
+            font-size: 1.25rem;
+        }
+        .detalk-container .input-label label {
+            width: 30% !important;
+        }
+        .detalk-container .input-data .input-area input {
+            width: 70% !important;
+        }
+    </style>
+    <script>
+        function loadComment() {
+            try {
+                loadScriptFile({
+                    url: "<%- theme.static_prefix.detalk %>detalk.js",
+                    loadType: "async",
+                    cb: () => {
+                        detalk.init({
+                            el: "#detalk",
+                            url: '<%- theme.comment.detalk.url %>',
+                            path: <%- theme.comment.detalk.path %>,
+                            <% if (theme.comment.detalk.recaptchaSiteKey) { %>
+                            recaptchaSiteKey: '<%- theme.comment.detalk.recaptchaSiteKey %>',
+                            <% } %>
+                            label: <%- JSON.stringify(theme.comment.detalk.label) %>,
+                        });
+                    },
+                });
+            } catch (e) {
+                document.getElementById("loadCommentBtn").innerText = "无法加载 Detalk.js 评论";
+                console.info(e);
+            }
+        }
+        function loadDetalk() {
+            try {
+                loadComment();
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        var runningOnBrowser = typeof window !== "undefined";
+
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var observer = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) {
+                    loadDetalk();
+                    observer.disconnect();
+                }
+                }, { threshold: [0] });
+                observer.observe(document.getElementById('miracle-comments'));
+            } else {
+                loadDetalk();
+            }
+        }, 1);
+    </script>
+
+<% } %>
