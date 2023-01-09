@@ -424,6 +424,8 @@ comment:
                 class: label-green
         # reCAPTCHA
         recaptchaSiteKey: 
+        login:
+            github: 
 
 
 
