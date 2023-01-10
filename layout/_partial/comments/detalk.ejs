@@ -1,5 +1,5 @@
 <!-- Detalk.js https://detalk.js.org/ -->
-<% if (theme.comment.detalk && theme.comment.detalk.url){ %>
+<% if (theme.comment.detalk){ %>
     <div id="miracle-comments">
         <div id="detalk">
             <div style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">
@@ -27,16 +27,7 @@
                     url: "<%- theme.static_prefix.detalk %>detalk.js",
                     loadType: "async",
                     cb: () => {
-                        detalk.init({
-                            el: "#detalk",
-                            url: '<%- theme.comment.detalk.url %>',
-                            path: <%- theme.comment.detalk.path %>,
-                            <% if (theme.comment.detalk.recaptchaSiteKey) { %>
-                            recaptchaSiteKey: '<%- theme.comment.detalk.recaptchaSiteKey %>',
-                            <% } %>
-                            label: <%- JSON.stringify(theme.comment.detalk.label) %>,
-                            login: <%- JSON.stringify(theme.comment.detalk.login) %>,
-                        });
+                        detalk.init(<%- JSON.stringify(theme.comment.detalk.config) %>);
                     },
                 });
             } catch (e) {

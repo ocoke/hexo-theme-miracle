@@ -414,18 +414,19 @@ comment:
     # https://detalk.js.org/
     # Free, Simple and Powerful Comment Plugin.
     detalk:
-        # Backend URL
-        url: ''
-        path: window.location.pathname
-        # Label
-        label:
-            admin:
-                name: 博主
-                class: label-green
-        # reCAPTCHA
-        recaptchaSiteKey: 
-        login:
-            github: 
+        config:
+            # Backend URL
+            url: ''
+            path: window.location.pathname
+            # Label
+            label:
+                admin:
+                    name: 博主
+                    class: label-green
+            # reCAPTCHA
+            recaptchaSiteKey: 
+            login:
+                github: 
 
 
 
