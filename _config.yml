@@ -417,7 +417,9 @@ comment:
         config:
             # Backend URL
             url: ''
-            path: window.location.pathname
+            # 不要修改此项
+            # DO NOT edit this config.
+            el: '#detalk'
             # Label
             label:
                 admin:
@@ -427,6 +429,7 @@ comment:
             recaptchaSiteKey: 
             login:
                 github: 
+            owo: 
 
 
 
@@ -487,9 +490,9 @@ talk:
     # Page Title
     title: 说说
 
-    # HexoPlusPlus / Artitalk
-    # Options: HPP | Artitalk
-    type: HPP
+    # HexoPlusPlus / Artitalk / Detalk
+    # Options: HPP | Artitalk | Detalk
+    type: Detalk
 
     # HexoPlusPlus, See: https://hexoplusplus.js.org/use/hexoinit.html
     HPP:
@@ -508,6 +511,24 @@ talk:
         avatarPla: 
         motion: 1
         bgImg:
+    
+    Detalk:
+        config:
+            # Backend URL
+            url: ''
+            # 不要修改此项
+            # DO NOT edit this config.
+            el: '#detalk'
+            # Label
+            label:
+                admin:
+                    name: 博主
+                    class: label-green
+            # reCAPTCHA
+            recaptchaSiteKey: 
+            login:
+                github: 
+            owo: 
 
 # HexoPlusPlus 签到
 hpp_time:
@@ -545,4 +566,4 @@ static_prefix:
     twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.3.0/dist/
     artitalk: https://cdn.jsdelivr.net/npm/artitalk
     hpp: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/
-    detalk: https://cdn.jsdelivr.net/npm/@detalk/static@1.2.0/dist/
+    detalk: https://cdn.jsdelivr.net/npm/@detalk/static@1.3.1/dist/
