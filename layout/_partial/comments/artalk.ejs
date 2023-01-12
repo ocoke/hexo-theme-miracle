@@ -1,0 +1,14 @@
+<% if (theme.comment.artalk.envid){ %>
+<div id="miracle-comments">
+  <link href="<%- theme.static_prefix.artalk %>Artalk.min.css" rel="stylesheet">
+  <script src="<%- theme.static_prefix.artalk %>Artalk.min.js"></script>
+  <div id="Comments"></div>
+  <script>
+    var artalk = new Artalk({
+      el: '#Comments',
+      server: '<%= theme.comment.artalk.envid %>',
+      site: '<%= config.title %>',
+    })
+  </script>
+</div>
+<% } %>
