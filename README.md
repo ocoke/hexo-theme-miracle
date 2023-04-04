@@ -4,13 +4,14 @@
 
 > 开发不易，欢迎 [点击此处](https://afdian.net/@ocoke) 支持作者。
 
-> V2 版本仍在开发中，如有任何的建议和反馈，欢迎提交 Issue！
+> 感谢使用 Miracle 主题，目前主题功能已经完善，进入维护阶段。
 
-<a href="https://github.com/hifun-team/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/hifun-team/hexo-theme-miracle" alt="GitHub Release"></a>
-<a href="https://github.com/hifun-team/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/hifun-team/hexo-theme-miracle" alt="GitHub Stars"></a>
-<a href="https://github.com/hifun-team/hexo-theme-miracle/network/members"><img src="https://badgen.net/github/forks/hifun-team/hexo-theme-miracle" alt="GitHub Forks"></a>
-<a href="https://github.com/hifun-team/hexo-theme-miracle/watchers"><img src="https://badgen.net/github/watchers/hifun-team/hexo-theme-miracle" alt="GitHub Watchers"></a>
-<a href="https://github.com/hifun-team/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/hifun-team/hexo-theme-miracle" alt="MIT License"></a>
+
+<a href="https://github.com/oCoke/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/oCoke/hexo-theme-miracle" alt="GitHub Release"></a>
+<a href="https://github.com/oCoke/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/oCoke/hexo-theme-miracle" alt="GitHub Stars"></a>
+<a href="https://github.com/oCoke/hexo-theme-miracle/network/members"><img src="https://badgen.net/github/forks/oCoke/hexo-theme-miracle" alt="GitHub Forks"></a>
+<a href="https://github.com/oCoke/hexo-theme-miracle/watchers"><img src="https://badgen.net/github/watchers/oCoke/hexo-theme-miracle" alt="GitHub Watchers"></a>
+<a href="https://github.com/oCoke/hexo-theme-miracle/blob/master/LICENSE"><img src="https://badgen.net/github/license/oCoke/hexo-theme-miracle" alt="MIT License"></a>
 
 ## 功能特性
 
@@ -55,14 +56,14 @@
 
 ## 鸣谢
 
-### JetBrains
+<!-- ### JetBrains
 
 > 感谢 JetBrains 免费授权提供开发工具！
 
 <a title="鸣谢 JetBrains 免费授权开发工具" href="https://www.jetbrains.com/" target="_blank">
   <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" width="150" alt="JetBrains">
-</a>
+</a> -->
 
 ### 贡献者
 
-![](https://contrib.rocks/image?repo=hifun-team/hexo-theme-miracle)
+![](https://contrib.rocks/image?repo=oCoke/hexo-theme-miracle)
