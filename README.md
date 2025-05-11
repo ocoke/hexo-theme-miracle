@@ -2,10 +2,6 @@
 
 > 一款简洁、轻量的单栏 Hexo 主题。
 
-> 开发不易，欢迎 [点击此处](https://afdian.net/@ocoke) 支持作者。
-
-> 感谢使用 Miracle 主题，目前主题功能已经完善，进入维护阶段。
-
 
 <a href="https://github.com/oCoke/hexo-theme-miracle/releases/"><img src="https://badgen.net/github/release/oCoke/hexo-theme-miracle" alt="GitHub Release"></a>
 <a href="https://github.com/oCoke/hexo-theme-miracle/stargazers"><img src="https://badgen.net/github/stars/oCoke/hexo-theme-miracle" alt="GitHub Stars"></a>
